@@ -14,13 +14,15 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
     }, {
       name: 'いいおか', url: 'https://twitter.com/iiokayama8929',
       details: 'Internal translation'
-    },
+    }
   ],
   Website: [
     { name: 'tam（タム）', url: 'https://twitter.com/tam_vaccount' },
     { name: 'monoAI', url: 'https://twitter.com/monoai_' }
   ],
   Artwork: [
+    // Please input their main name, and Twitter URL
+    // If no Twitter URL then Pixiv URL
     {
       name: 'mop', url: 'https://www.pixiv.net/en/users/2083795',
       artworks: [
@@ -30,19 +32,46 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
         }
       ]
     },
-    // Please input their main name, and Twitter URL
-    // If no Twitter URL then Pixiv URL
-    //
-    // [OK!!!] Cozy Gen 4 [EN] [REQUESTED ON TWITTER]
-    // https://www.pixiv.net/en/artworks/89126212
-    // https://www.pixiv.net/en/artworks/86730174
-
-    // [OK!!!] chibi yonksei [JP] [PRELIMINARY DM REQUEST ON TWITTER]
-    // https://www.pixiv.net/en/artworks/89232325
-
-    // [OK!!!] Pixel art yonksei [JP]
-    // https://www.pixiv.net/en/artworks/88113908
-
+    {
+      name: 'Yuusachii', url: 'https://twitter.com/SachiiHappy',
+      artworks: [
+        {
+          title: 'Cozy Gen 4',
+          url: 'https://www.pixiv.net/en/artworks/89126212'
+        },
+        {
+          title: 'New Year Hololive Gen4 Comfy',
+          url: 'https://www.pixiv.net/en/artworks/86730174'
+        }
+      ]
+    },
+    {
+      name: 'エニモ', url: 'https://twitter.com/ANYMORE_vvv',
+      artworks: [
+        {
+          title: 'ほろふぉーす愛',
+          url: 'https://www.pixiv.net/en/artworks/89232325'
+        }
+      ]
+    },
+    {
+      name: '銀鏡にと', url: 'https://twitter.com/shiromi_nito',
+      artworks: [
+        {
+          title: '4期生アイドル衣装',
+          url: 'https://www.pixiv.net/en/artworks/88113908'
+        }
+      ]
+    },
+    {
+      name: 'colonel_AKI', url: 'https://twitter.com/ColonelAki',
+      artworks: [
+        {
+          title: 'Chibi Hololive #6',
+          url: 'https://www.pixiv.net/en/artworks/84002989'
+        }
+      ]
+    }
   ],
   Clipping: [
     { name: 'Cain Chin', url: 'https://twitter.com/cain_chin' },
@@ -57,7 +86,7 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
     // activities.
     // ask them if needed.
     { name: 'Cain Chin', url: 'https://twitter.com/cain_chin' },
-    { name: 'Marshall Lee', url: 'https://twitter.com/Marshall_Lee_A' },
+    { name: 'Marshall Lee', url: 'https://twitter.com/Marshall_Lee_A' }
   ]
 }) as OrderedMap<CreditCategory, Contributor[]>
 
@@ -84,4 +113,3 @@ interface Artwork {
   title: string,
   url: string
 }
-

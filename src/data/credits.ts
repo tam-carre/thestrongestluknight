@@ -1,27 +1,6 @@
 import { OrderedMap } from 'immutable'
 
 export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
-  Organization: [
-    {
-      name: 'tam（タム）', url: 'https://twitter.com/tam_vaccount',
-      details: 'Project leader, internal translation'
-    }, {
-      name: 'みらい', url: 'https://twitter.com/Mirai_Malekith/',
-      details: 'Internal translation'
-    }, {
-      name: 'こーでー', url: 'https://twitter.com/kody_lu',
-      details: 'Internal translation'
-    }, {
-      name: 'いいおか', url: 'https://twitter.com/iiokayama8929',
-      details: 'Internal translation'
-    }
-  ],
-  Website: [
-    { name: 'tam（タム）', url: 'https://twitter.com/tam_vaccount' },
-    { name: 'monoAI', url: 'https://twitter.com/monoai_' },
-    { name: 'Tom' },
-    { name: 'BetaLixT' }
-  ],
   Artwork: [
     {
       name: 'mop', url: 'https://www.pixiv.net/en/users/2083795',
@@ -31,15 +10,13 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
       }]
     }, {
       name: 'Yuusachii', url: 'https://twitter.com/SachiiHappy',
-      artworks: [
-        {
-          title: 'Cozy Gen 4',
-          url: 'https://www.pixiv.net/en/artworks/89126212'
-        }, {
-          title: 'New Year Hololive Gen4 Comfy',
-          url: 'https://www.pixiv.net/en/artworks/86730174'
-        }
-      ]
+      artworks: [{
+        title: 'Cozy Gen 4',
+        url: 'https://www.pixiv.net/en/artworks/89126212'
+      }, {
+        title: 'New Year Hololive Gen4 Comfy',
+        url: 'https://www.pixiv.net/en/artworks/86730174'
+      }]
     }, {
       name: 'エニモ', url: 'https://twitter.com/ANYMORE_vvv',
       artworks: [{
@@ -59,6 +36,33 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
           url: 'https://www.pixiv.net/en/artworks/84002989'
         }]
     }
+  ],
+  Organization: [
+    {
+      name: 'タム・tam', url: 'https://twitter.com/tam_vaccount',
+      details: 'Project leader, internal translation',
+      imageUrl: 'https://pbs.twimg.com/profile_images/1352886724066742273/TbZ1Mxf-_bigger.jpg'
+    }, {
+      name: 'みらい', url: 'https://twitter.com/Mirai_Malekith/',
+      details: 'Internal translation'
+    }, {
+      name: 'こーでー', url: 'https://twitter.com/kody_lu',
+      details: 'Internal translation'
+    }, {
+      name: 'いいおか', url: 'https://twitter.com/iiokayama8929',
+      details: 'Internal translation'
+    }
+  ],
+  Website: [
+    {
+      name: 'タム・tam', url: 'https://twitter.com/tam_vaccount',
+      imageUrl: 'https://pbs.twimg.com/profile_images/1352886724066742273/TbZ1Mxf-_bigger.jpg'
+    },
+    {
+      name: 'monoAI', url: 'https://twitter.com/monoai_', details: 'Contributor'
+    },
+    { name: 'Tom', details: 'Contributor' },
+    { name: 'BetaLixT', details: 'Contributor' }
   ],
   Clipping: [
     { name: 'Cain Chin', url: 'https://twitter.com/cain_chin' },
@@ -92,6 +96,7 @@ type CreditCategory = typeof contributorCategories[number]
 interface Contributor {
   name: string,
   url?: string,
+  imageUrl?: string,
   details?: string,
   artworks?: Artwork[]
 }

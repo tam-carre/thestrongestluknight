@@ -1,3 +1,31 @@
-$border: #702413;
 $header-text-color: #310700;
-$text-border: #FFFFFF;
+
+$dark0: #310700;
+$dark1: #8E2800;
+
+$faded1: #755F56;
+
+$med1: #FFB03B;
+
+$light1: #FFF0A5;
+
+$text-border: #FFF;
+$page-bg: #FFF;
+
+$stylized-font: italic 500 12px 'Playfair Display', serif;
+$normal-font: regular 12px 'Volkhov', serif;
+
+@mixin gradient-title {
+  font: $stylized-font;
+  background: linear-gradient(45deg, $dark1, $med1);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+@mixin gradient-title-dark {
+  font: $stylized-font;
+  background: linear-gradient(45deg, $dark1, $dark0);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

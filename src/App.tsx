@@ -1,14 +1,12 @@
-import { FunctionComponent, useEffect } from 'react'
-
-import logo from './logo.svg'
-import './App.scss'
+import './styles/App.scss'
 import { Header } from './sections/1_header_luna_tatoo'
+import { Credits } from './sections/9_credits'
 
-export const App: FunctionComponent = () => {
+export function App () {
   return (
     <div className="App">
       <Header />
-
+      <Credits />
     </div>
   );
 }

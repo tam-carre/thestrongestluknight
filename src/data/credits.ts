@@ -57,12 +57,15 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
     {
       name: 'タム・tam', url: 'https://twitter.com/tam_vaccount',
       imageUrl: 'https://pbs.twimg.com/profile_images/1352886724066742273/TbZ1Mxf-_bigger.jpg'
-    },
-    {
+    }, {
       name: 'monoAI', url: 'https://twitter.com/monoai_', details: 'Contributor'
-    },
-    { name: 'Tom', details: 'Contributor' },
-    { name: 'BetaLixT', details: 'Contributor' }
+    }, {
+      name: 'Tom "Skeletom" Farro', url: 'https://www.twitter.com/fomtarro',
+      details: 'Contributor'
+    }, {
+      name: 'BetaLixT', url: 'https://twitter.com/BetaLixT',
+      details: 'Contributor'
+    }
   ],
   Clipping: [
     { name: 'Cain Chin', url: 'https://twitter.com/cain_chin' },

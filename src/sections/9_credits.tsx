@@ -1,14 +1,26 @@
 import { credits } from '../data/credits'
 import '../styles/9_credits.scss'
 import '../images/coco_looking_at_horizon.png'
+import { useInView } from 'react-intersection-observer'
+import { useSpring, animated } from 'react-spring'
+import { shortEaseOut } from 'utils/springs'
 
 export function Credits () {
+  const [ref, inView] = useInView ({ threshold: 1 })
+  const slideUp = useSpring ({
+    from: inView ? {opacity: 1, transform: "translateY(0px)"} : { opacity: 0, transform: "translateY(50px)" },
+    to: inView ? { opacity: 1, transform: "translateY(0px)" } : { opacity: 0, transform: "translateY(50px)" },
+    config: shortEaseOut
+  })
+
   return (
     <>
-      <div id="credits-title">Credits</div>
+      <animated.div id="credits-title" ref={ref} style={slideUp}>
+        Credits
+      </animated.div>
       <div id="credits">
         {credits.map ((categoryContent, categoryName) => (
-          <div className="credit-block">
+          <animated.div className="credit-block" style={slideUp}>
             <div className="credit-category">{categoryName}</div>
 
             {categoryContent.map (credit => (
@@ -39,7 +51,7 @@ export function Credits () {
               </div>
             ))}
 
-          </div>
+          </animated.div>
         )).toList ()}
 
       </div>

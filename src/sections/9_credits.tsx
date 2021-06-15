@@ -3,24 +3,30 @@ import '../styles/9_credits.scss'
 import '../images/coco_looking_at_horizon.png'
 import { useInView } from 'react-intersection-observer'
 import { useSpring, animated } from 'react-spring'
-import { shortEaseOut } from 'utils/springs'
+import { configs, anims } from 'utils/springs'
 
 export function Credits () {
-  const [ref, inView] = useInView ({ threshold: 1 })
-  const slideUp = useSpring ({
-    from: inView ? {opacity: 1, transform: "translateY(0px)"} : { opacity: 0, transform: "translateY(50px)" },
-    to: inView ? { opacity: 1, transform: "translateY(0px)" } : { opacity: 0, transform: "translateY(50px)" },
-    config: shortEaseOut
+  const [title, inViewTitle]          = useInView ({ threshold: 1 })
+  const [creditBlocks, inViewCredits] = useInView ({ threshold: .2 })
+
+  const slideUpTitle = useSpring ({
+    ...(inViewTitle ? anims.fadeInSlideUp : anims.fadeOutSlideDown),
+    config: configs.shortEaseOut
+  })
+
+  const slideUpCredits = useSpring ({
+    ...(inViewCredits ? anims.fadeInSlideUp : anims.fadeOutSlideDown),
+    config: configs.shortEaseOut
   })
 
   return (
     <>
-      <animated.div id="credits-title" ref={ref} style={slideUp}>
+      <animated.div id="credits-title" ref={title} style={slideUpTitle}>
         Credits
       </animated.div>
-      <div id="credits">
+      <animated.div id="credits" ref={creditBlocks} style={slideUpCredits}>
         {credits.map ((categoryContent, categoryName) => (
-          <animated.div className="credit-block" style={slideUp}>
+          <div className="credit-block">
             <div className="credit-category">{categoryName}</div>
 
             {categoryContent.map (credit => (
@@ -51,10 +57,10 @@ export function Credits () {
               </div>
             ))}
 
-          </animated.div>
+          </div>
         )).toList ()}
 
-      </div>
+      </animated.div>
 
       <div id="coco-looking-at-horizon">
       </div>

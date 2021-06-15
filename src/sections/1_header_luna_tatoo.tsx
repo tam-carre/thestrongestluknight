@@ -2,21 +2,20 @@ import cocoWithLunaTatoo from '../images/coco_with_luna_back_tatoo.png'
 import '../styles/1_header_luna_tatoo.scss'
 import { useInView } from 'react-intersection-observer'
 import { useSpring, animated } from 'react-spring'
-import { longEaseOut, mediumEaseOut, shortEaseOut } from '../utils/springs'
+import { configs, anims } from '../utils/springs'
 
 export function Header () {
   const [ref, inView] = useInView ({ threshold: .5, initialInView: true })
 
 	const getAnimToCenter = (start: string|number, exit: string|number) => ({
-    from: inView ? { left: start } : { left: '50%' },
-    to:   inView ? { left: '50%' } : { left: exit  },
-    config: longEaseOut
+    ...(inView ? { from: { left: start }, to: { left: '50%' } }
+               : { from: { left: '50%' }, to: { left: exit  } }),
+    config: configs.longEaseOut
   })
 
   const zoomIn = useSpring ({
-    from: inView ? { opacity:  0  } : { opacity: 1 },
-    to:   inView ? { opacity: 1  } : { opacity:  0 },
-    config: mediumEaseOut
+    ...(inView ? anims.fadeIn : anims.fadeOut),
+    config: configs.mediumEaseOut
   })
 
   return (

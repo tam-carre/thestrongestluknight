@@ -100,6 +100,14 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
   ]
 }) as OrderedMap<CreditCategory, Contributor[]>
 
+export interface Contributor {
+  name: string,
+  url?: string,
+  imageUrl?: string,
+  details?: string,
+  artworks?: Artwork[]
+}
+
 ///////////////////////////////////////////////////////////////////////////////
 
 const contributorCategories = [
@@ -111,14 +119,6 @@ const contributorCategories = [
 ] as const
 
 type CreditCategory = typeof contributorCategories[number]
-
-interface Contributor {
-  name: string,
-  url?: string,
-  imageUrl?: string,
-  details?: string,
-  artworks?: Artwork[]
-}
 
 interface Artwork {
   title: string,

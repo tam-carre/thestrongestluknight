@@ -4,8 +4,12 @@
   width: 100%;
   padding: 0;
 
-  a.is-current {
-    color: red;
+  a {
+    color: #907361;
+
+    &.is-current {
+      color: #995a64;
+    }
   }
 
   #progress-bar {
@@ -14,7 +18,7 @@
     position: relative;
     width: 90%;
     max-width: 600px;
-    background: blue;
+    background: #5a3b38;
     height: 3px;
     margin: auto;
 
@@ -28,7 +32,7 @@
   ul {
     padding: 0;
     position: relative;
-    margin: 15px auto 0;
+    margin: 18px auto 0;
     display: flex;
     justify-content: space-around;
     width: 90%;

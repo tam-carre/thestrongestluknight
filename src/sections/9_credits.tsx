@@ -18,9 +18,8 @@ export function Credits () {
     </animated.div>
 
     <div id="credits">
-      {credits.map ((content, category) =>
-        <CreditBlock categoryContent={content} categoryName={category}/>
-      ).toList ()}
+      {credits.map ((cont, cat) => <Credit category={cat} content={cont} />)
+              .toList ()}
     </div>
 
     <div id="coco-looking-at-horizon"></div>
@@ -29,12 +28,12 @@ export function Credits () {
 
 ///////////////////////////////////////////////////////////////////////////////
 
-interface CreditBlockProps {
-  categoryContent: Contributor[],
-  categoryName: string
+interface CreditProps {
+  category: string,
+  content: Contributor[],
 }
 
-function CreditBlock ({categoryContent, categoryName}: CreditBlockProps) {
+function Credit ({category, content}: CreditProps) {
   const [ref, inView] = useInView ({ threshold: .4 })
   const slideUpCredits = useSpring ({
     ...(inView ? anims.fadeInSlideUp : anims.fadeOutSlideDown),
@@ -46,9 +45,9 @@ function CreditBlock ({categoryContent, categoryName}: CreditBlockProps) {
       ref={ref}
       style={slideUpCredits}
     >
-      <div className="credit-category">{categoryName}</div>
+      <div className="credit-category">{category}</div>
 
-      {categoryContent.map (credit => (
+      {content.map (credit => (
         <div className="credit-one-person">
           <div className="credit-name">
             {credit.url

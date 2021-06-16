@@ -6,8 +6,7 @@ import { useSpring, animated } from 'react-spring'
 import { configs, anims } from 'utils/springs'
 
 export function Credits () {
-  const [title, inViewTitle]          = useInView ({ threshold: 1 })
-
+  const [title, inViewTitle] = useInView ({ threshold: 1 })
   const slideUpTitle = useSpring ({
     ...(inViewTitle ? anims.fadeInSlideUp : anims.fadeOutSlideDown),
     config: configs.shortEaseOut
@@ -17,15 +16,14 @@ export function Credits () {
     <animated.div id="credits-title" ref={title} style={slideUpTitle}>
       Credits
     </animated.div>
-    <animated.div id="credits">
+
+    <div id="credits">
       {credits.map ((content, category) =>
-      <CreditBlock categoryContent={content} categoryName={category}/>
-                   ).toList ()}
-
-    </animated.div>
-
-    <div id="coco-looking-at-horizon">
+        <CreditBlock categoryContent={content} categoryName={category}/>
+      ).toList ()}
     </div>
+
+    <div id="coco-looking-at-horizon"></div>
   </>)
 }
 
@@ -37,7 +35,7 @@ interface CreditBlockProps {
 }
 
 function CreditBlock ({categoryContent, categoryName}: CreditBlockProps) {
-  const [ref, inView] = useInView ({ threshold: 0 })
+  const [ref, inView] = useInView ({ threshold: .4 })
   const slideUpCredits = useSpring ({
     ...(inView ? anims.fadeInSlideUp : anims.fadeOutSlideDown),
     config: configs.shortEaseOut
@@ -57,8 +55,8 @@ function CreditBlock ({categoryContent, categoryName}: CreditBlockProps) {
               ? <a href={credit.url}>
                 {credit.imageUrl
                   ? <div className="credit-avatar">
-                    {/* <img src={credit.imageUrl} alt="" /> */}
-                  </div>
+                      {/* <img src={credit.imageUrl} alt="" /> */}
+                    </div>
                   : ''}
                 {credit.name}
               </a>
@@ -83,4 +81,3 @@ function CreditBlock ({categoryContent, categoryName}: CreditBlockProps) {
     </animated.div>
   )
 }
-

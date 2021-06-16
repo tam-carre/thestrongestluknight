@@ -4,14 +4,14 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
   Artwork: [
     {
       name: 'mop', url: 'https://www.pixiv.net/en/users/2083795',
-      imageUrl: 'https://i.imgur.com/o0WSKZv.png',
+      imageUrl: '../images/avatar/mop.png',
       artworks: [{
         title: 'どこの組のもんじゃい？',
         url: 'https://www.pixiv.net/en/artworks/79038147'
       }]
     }, {
       name: 'Yuusachii', url: 'https://twitter.com/SachiiHappy',
-      imageUrl: 'https://pbs.twimg.com/profile_images/1404768807286022155/h3B2Vcrk_mini.jpg',
+      imageUrl: '../images/avatar/SachiiHappy.jpg',
       artworks: [{
         title: 'Cozy Gen 4',
         url: 'https://www.pixiv.net/en/artworks/89126212'
@@ -21,21 +21,21 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
       }]
     }, {
       name: 'エニモ', url: 'https://twitter.com/ANYMORE_vvv',
-      imageUrl: 'https://pbs.twimg.com/profile_images/1366061609504763911/JYlQFkyh_mini.jpg',
+      imageUrl: '../images/avatar/ANYMORE_vvv.jpg',
       artworks: [{
           title: 'ほろふぉーす愛',
           url: 'https://www.pixiv.net/en/artworks/89232325'
         }]
     }, {
       name: '銀鏡にと', url: 'https://twitter.com/shiromi_nito',
-      imageUrl: 'https://pbs.twimg.com/profile_images/1399731439529172993/dGYLbwAh_mini.jpg',
+      imageUrl: '../images/avatar/shiromi_nito.jpg',
       artworks: [{
           title: '4期生アイドル衣装',
           url: 'https://www.pixiv.net/en/artworks/88113908'
         }]
     }, {
       name: 'colonel_AKI', url: 'https://twitter.com/ColonelAki',
-      imageUrl: 'https://pbs.twimg.com/profile_images/1215612633660846080/moHGefzP_mini.jpg',
+      imageUrl: '../images/avatar/ColonelAki.jpg',
       artworks: [{
           title: 'Chibi Hololive #6',
           url: 'https://www.pixiv.net/en/artworks/84002989'
@@ -46,40 +46,40 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
     {
       name: 'タム・tam', url: 'https://twitter.com/tam_vaccount',
       details: 'Project leader, internal translation',
-      imageUrl: 'https://pbs.twimg.com/profile_images/1352886724066742273/TbZ1Mxf-_mini.jpg'
+      imageUrl: '../images/avatar/tam_vaccount.jpg'
     }, {
       name: 'みらい', url: 'https://twitter.com/Mirai_Malekith/',
       details: 'Internal translation',
-      imageUrl: 'https://pbs.twimg.com/profile_images/1309924988820942848/of_moOeY_mini.jpg'
+      imageUrl: '../images/avatar/Mirai_Malekith.jpg'
     }, {
       name: 'こーでー', url: 'https://twitter.com/kody_lu',
       details: 'Internal translation',
-      imageUrl: 'https://pbs.twimg.com/profile_images/1385640460593422336/ZOffs-0s_mini.jpg'
+      imageUrl: '../images/avatar/kody_lu.jpg'
     }, {
       name: 'いいおか', url: 'https://twitter.com/iiokayama8929',
       details: 'Internal translation',
-      imageUrl: 'https://abs.twimg.com/sticky/default_profile_images/default_profile_mini.png'
+      imageUrl: '../images/avatar/default_profile.png'
     }
   ],
   Website: [
     {
       name: 'タム・tam', url: 'https://twitter.com/tam_vaccount',
-      imageUrl: 'https://pbs.twimg.com/profile_images/1352886724066742273/TbZ1Mxf-_mini.jpg'
+      imageUrl: '../images/avatar/tam_vaccount.jpg'
     },
     {
       name: 'monoAI', url: 'https://twitter.com/monoai_',
       details: 'Contributor',
-      imageUrl: 'https://pbs.twimg.com/profile_images/1322893440909103104/DI7CIANj_mini.jpg'
+      imageUrl: '../images/avatar/monoai_.jpg'
     },
     {
       name: 'Tom "Skeletom" Farro', url: 'https://www.twitter.com/fomtarro',
       details: 'Contributor',
-      imageUrl: 'https://pbs.twimg.com/profile_images/1392942071770722312/BNu2RfS0_mini.jpg'
+      imageUrl: '../images/avatar/FomTarro.jpg'
     },
     {
       name: 'BetaLixT', url: 'https://twitter.com/BetaLixT',
       details: 'Contributor',
-      imageUrl: 'https://pbs.twimg.com/profile_images/1392870556714749952/AHXjmKv1_mini.jpg'
+      imageUrl: '../images/avatar/BetaLixT.jpg'
     },
     {
       name: 'donmk',

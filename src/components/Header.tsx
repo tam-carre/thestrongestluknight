@@ -1,8 +1,8 @@
-import cocoWithLunaTatoo from '../images/coco_with_luna_back_tatoo.png'
-import '../styles/Header.scss'
+import cocoWithLunaTatoo from 'images/coco_with_luna_back_tatoo.png'
+import 'styles/Header.scss'
 import { useInView } from 'react-intersection-observer'
 import { useSpring, animated } from 'react-spring'
-import { configs, anims } from '../utils/springs'
+import { configs, anims } from 'utils/springs'
 
 export function Header () {
   const [ref, inView] = useInView ({ threshold: .5, initialInView: true })

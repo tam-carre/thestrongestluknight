@@ -1,6 +1,6 @@
-import './styles/App.scss'
-import { Header } from './components/Header'
-import { Credits } from './components/Credits'
+import 'styles/App.scss'
+import { Header } from 'components/Header'
+import { Credits } from 'components/Credits'
 
 export function App () {
   return (

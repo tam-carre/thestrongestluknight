@@ -48,30 +48,29 @@ function Credit ({category, content}: CreditProps) {
       {content.map (credit => (
         <div className="credit-one-person">
           <div className="credit-name">
-            {credit.url
-              ? <a href={credit.url}>
-                  {credit.imageUrl
-                    ? <div className="credit-avatar">
-                        {/* <img src={credit.imageUrl} alt="" /> */}
-                      </div>
-                    : ''}
-                  {credit.name}
-                </a>
-              : credit.name}
+            {credit.url ? <a href={credit.url}>
+                            {credit.imageUrl &&
+                              <div className="credit-avatar">
+                                {/* <img src={credit.imageUrl} alt="" /> */}
+                              </div>
+                            }
+                            {credit.name}
+                          </a>
+                        : credit.name}
           </div>
-          {credit.details
-            ? <div className="credit-details">{credit.details}</div>
-            : ''}
+          {credit.details &&
+            <div className="credit-details">{credit.details}</div>
+          }
 
-          {credit.artworks && credit.artworks.length > 0
-            ? <div className="credit-artworks">
-                {credit.artworks!.map (artwork => (
-                  <div className="credit-artwork">
-                    <a href={artwork.url}>{artwork.title}</a>
-                  </div>
-                ))}
-              </div>
-            : ''}
+          {credit.artworks && credit.artworks.length > 0 &&
+            <div className="credit-artworks">
+              {credit.artworks!.map (artwork => (
+                <div className="credit-artwork">
+                  <a href={artwork.url}>{artwork.title}</a>
+                </div>
+              ))}
+            </div>
+          }
         </div>
       ))}
   </IntersectionAnimator>

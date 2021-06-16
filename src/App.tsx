@@ -1,8 +1,6 @@
 import './styles/App.scss'
-import { Header } from './sections/1_header_luna_tatoo'
-import { Credits } from './sections/9_credits'
-import { useSpring, animated } from 'react-spring'
-import { useCallback, useState } from 'react'
+import { Header } from './components/Header'
+import { Credits } from './components/Credits'
 
 export function App () {
   return (
@@ -14,6 +12,5 @@ export function App () {
       </div>
       <Credits />
     </div>
-  );
+  )
 }
-

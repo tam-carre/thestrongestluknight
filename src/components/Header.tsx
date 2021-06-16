@@ -1,5 +1,5 @@
 import cocoWithLunaTatoo from '../images/coco_with_luna_back_tatoo.png'
-import '../styles/1_header_luna_tatoo.scss'
+import '../styles/Header.scss'
 import { useInView } from 'react-intersection-observer'
 import { useSpring, animated } from 'react-spring'
 import { configs, anims } from '../utils/springs'

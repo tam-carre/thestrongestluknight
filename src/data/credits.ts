@@ -80,7 +80,11 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
       name: 'BetaLixT', url: 'https://twitter.com/BetaLixT',
       details: 'Contributor',
       imageUrl: 'https://pbs.twimg.com/profile_images/1392870556714749952/AHXjmKv1_mini.jpg'
-    }
+    },
+    {
+      name: 'donmk',
+      details: 'Contributor',
+    },
   ],
   Clipping: [
     { name: 'Cain Chin', url: 'https://twitter.com/cain_chin' },

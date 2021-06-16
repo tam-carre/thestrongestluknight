@@ -1,5 +1,5 @@
 import { Contributor, credits } from '../data/credits'
-import '../styles/9_credits.scss'
+import '../styles/Credits.scss'
 import '../images/coco_looking_at_horizon.png'
 import { configs, anims } from 'utils/springs'
 import { IntersectionAnimator } from 'components/IntersectionAnimator'

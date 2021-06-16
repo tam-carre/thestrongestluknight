@@ -46,6 +46,7 @@
     transform: translateY(-300%);
     // transform: translateY(-280%) translateX(-83%) translateZ(0);
   }
+
   #text-luknight {
     position: absolute;
     position: fixed;
@@ -65,7 +66,7 @@
     #cocoTatooCircle {
       position: fixed;
       width: Min(60vw, 600px);
-      height: Min(90vh, 600px);
+      height: Min(90vh, 650px);
       top: 0;
       left: 0;
       right: 0;

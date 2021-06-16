@@ -7,16 +7,16 @@
 
   #header-bg {
     position: fixed;
-    height: 85vh;
+    height: 90vh;
     width: 100%;
     // background-image: linear-gradient(43deg, #d9a7c7 0%, #fffcdc 100%);
     background: center / cover url(../images/kanata_looking_at_dragon.png);
   }
 
   #dark-overlay {
-    background: rgba(0,0,0,.4);
+    background: rgba(0,0,0,.5);
     position: fixed;
-    height: 85vh;
+    height: 90vh;
     width: 100%;
   }
 
@@ -43,7 +43,7 @@
     backface-visibility: hidden;
     top: 50%;
     margin-left: -43%;
-    transform: translateY(-200%);
+    transform: translateY(-300%);
     // transform: translateY(-280%) translateX(-83%) translateZ(0);
   }
   #text-luknight {
@@ -55,7 +55,7 @@
     margin-right: -43%;
     // margin-left: -43%;
     // left: 50%;
-    transform: translateY(100%);
+    transform: translateY(-100%);
   }
 
   #cocoTatooContainer {
@@ -64,8 +64,8 @@
 
     #cocoTatooCircle {
       position: fixed;
-      width: Min(60vw, 800px);
-      height: Min(90vh, 800px);
+      width: Min(60vw, 600px);
+      height: Min(90vh, 600px);
       top: 0;
       left: 0;
       right: 0;

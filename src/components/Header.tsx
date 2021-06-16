@@ -9,7 +9,7 @@ export function Header () {
 
   const getTextAnim = (prop: 'right'|'left') => ({
     ...(inView ? { from: { [prop]: '80%' }, to: { [prop]: '50%'  } }
-               : { from: { [prop]: '50%' }, to: { [prop]: '-10%' } }),
+               : { from: { [prop]: '50%' }, to: { [prop]: '-20%' } }),
     config: configs.longEaseOut
   })
 

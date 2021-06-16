@@ -4,14 +4,14 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
   Artwork: [
     {
       name: 'mop', url: 'https://www.pixiv.net/en/users/2083795',
-      imageUrl: '../images/avatar/mop.png',
+      icon: 'avatars/mop.png',
       artworks: [{
         title: 'どこの組のもんじゃい？',
         url: 'https://www.pixiv.net/en/artworks/79038147'
       }]
     }, {
       name: 'Yuusachii', url: 'https://twitter.com/SachiiHappy',
-      imageUrl: '../images/avatar/SachiiHappy.jpg',
+      icon: 'avatars/SachiiHappy.jpg',
       artworks: [{
         title: 'Cozy Gen 4',
         url: 'https://www.pixiv.net/en/artworks/89126212'
@@ -21,65 +21,71 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
       }]
     }, {
       name: 'エニモ', url: 'https://twitter.com/ANYMORE_vvv',
-      imageUrl: '../images/avatar/ANYMORE_vvv.jpg',
+      icon: 'avatars/ANYMORE_vvv.jpg',
       artworks: [{
           title: 'ほろふぉーす愛',
           url: 'https://www.pixiv.net/en/artworks/89232325'
         }]
     }, {
       name: '銀鏡にと', url: 'https://twitter.com/shiromi_nito',
-      imageUrl: '../images/avatar/shiromi_nito.jpg',
+      icon: 'avatars/shiromi_nito.jpg',
       artworks: [{
           title: '4期生アイドル衣装',
           url: 'https://www.pixiv.net/en/artworks/88113908'
         }]
     }, {
       name: 'colonel_AKI', url: 'https://twitter.com/ColonelAki',
-      imageUrl: '../images/avatar/ColonelAki.jpg',
+      icon: 'avatars/ColonelAki.jpg',
       artworks: [{
           title: 'Chibi Hololive #6',
           url: 'https://www.pixiv.net/en/artworks/84002989'
         }]
+    }, {
+      name: 'advarcher', url: 'https://twitter.com/Anonamos_701',
+      artworks: [{
+        title: '桐生会は不滅なり！',
+        url: 'https://twitter.com/Anonamos_701/status/1402504337293643776'
+      }]
     }
   ],
   Organization: [
     {
       name: 'タム・tam', url: 'https://twitter.com/tam_vaccount',
       details: 'Project leader, internal translation',
-      imageUrl: '../images/avatar/tam_vaccount.jpg'
+      icon: 'avatars/tam_vaccount.jpg'
     }, {
       name: 'みらい', url: 'https://twitter.com/Mirai_Malekith/',
       details: 'Internal translation',
-      imageUrl: '../images/avatar/Mirai_Malekith.jpg'
+      icon: 'avatars/Mirai_Malekith.jpg'
     }, {
       name: 'こーでー', url: 'https://twitter.com/kody_lu',
       details: 'Internal translation',
-      imageUrl: '../images/avatar/kody_lu.jpg'
+      icon: 'avatars/kody_lu.jpg'
     }, {
       name: 'いいおか', url: 'https://twitter.com/iiokayama8929',
       details: 'Internal translation',
-      imageUrl: '../images/avatar/default_profile.png'
+      icon: 'avatars/default_profile.png'
     }
   ],
   Website: [
     {
       name: 'タム・tam', url: 'https://twitter.com/tam_vaccount',
-      imageUrl: '../images/avatar/tam_vaccount.jpg'
+      icon: 'avatars/tam_vaccount.jpg'
     },
     {
       name: 'monoAI', url: 'https://twitter.com/monoai_',
       details: 'Contributor',
-      imageUrl: '../images/avatar/monoai_.jpg'
+      icon: 'avatars/monoai_.jpg'
     },
     {
       name: 'Tom "Skeletom" Farro', url: 'https://www.twitter.com/fomtarro',
       details: 'Contributor',
-      imageUrl: '../images/avatar/FomTarro.jpg'
+      icon: 'avatars/FomTarro.jpg'
     },
     {
       name: 'BetaLixT', url: 'https://twitter.com/BetaLixT',
       details: 'Contributor',
-      imageUrl: '../images/avatar/BetaLixT.jpg'
+      icon: 'avatars/BetaLixT.jpg'
     },
     {
       name: 'donmk',
@@ -107,7 +113,7 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
 export interface Contributor {
   name: string,
   url?: string,
-  imageUrl?: string,
+  icon?: string,
   details?: string,
   artworks?: Artwork[]
 }

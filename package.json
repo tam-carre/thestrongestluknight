@@ -48,6 +48,7 @@
     "react-spring": "^8.0.27"
   },
   "devDependencies": {
-    "@types/aos": "^3.0.3"
+    "@types/aos": "^3.0.3",
+    "@types/webpack-env": "^1.16.0"
   }
 }

@@ -3,6 +3,8 @@ import 'styles/Credits.scss'
 import 'images/coco_looking_at_horizon.png'
 import { configs, anims } from 'utils/springs'
 import { IntersectionAnimator } from 'components/IntersectionAnimator'
+// import { importImages } from 'utils/general'
+// const images = importImages ('../images/avatars')
 
 export function Credits () {
   return (<div id="credit-wrapper">
@@ -49,9 +51,9 @@ function Credit ({category, content}: CreditProps) {
         <div className="credit-one-person">
           <div className="credit-name">
             {credit.url ? <a href={credit.url}>
-                            {credit.imageUrl &&
+                            {credit.icon &&
                               <div className="credit-avatar">
-                                {/* <img src={credit.imageUrl} alt="" /> */}
+                                <img src={process.env.PUBLIC_URL + credit.icon} alt="" />
                               </div>
                             }
                             {credit.name}

@@ -39,6 +39,7 @@ function Credit ({category, content}: CreditProps) {
     ...(inView ? anims.fadeInSlideUp : anims.fadeOutSlideDown),
     config: configs.shortEaseOut
   })
+
   return (
     <animated.div
       className="credit-block"
@@ -52,13 +53,13 @@ function Credit ({category, content}: CreditProps) {
           <div className="credit-name">
             {credit.url
               ? <a href={credit.url}>
-                {credit.imageUrl
-                  ? <div className="credit-avatar">
-                      {/* <img src={credit.imageUrl} alt="" /> */}
-                    </div>
-                  : ''}
-                {credit.name}
-              </a>
+                  {credit.imageUrl
+                    ? <div className="credit-avatar">
+                        {/* <img src={credit.imageUrl} alt="" /> */}
+                      </div>
+                    : ''}
+                  {credit.name}
+                </a>
               : credit.name}
           </div>
           {credit.details
@@ -67,12 +68,12 @@ function Credit ({category, content}: CreditProps) {
 
           {credit.artworks && credit.artworks.length > 0
             ? <div className="credit-artworks">
-              {credit.artworks!.map (artwork => (
-                <div className="credit-artwork">
-                  <a href={artwork.url}>{artwork.title}</a>
-                </div>
-              ))}
-            </div>
+                {credit.artworks!.map (artwork => (
+                  <div className="credit-artwork">
+                    <a href={artwork.url}>{artwork.title}</a>
+                  </div>
+                ))}
+              </div>
             : ''}
         </div>
       ))}

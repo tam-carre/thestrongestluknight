@@ -1,21 +1,21 @@
 import { Contributor, credits } from '../data/credits'
 import '../styles/9_credits.scss'
 import '../images/coco_looking_at_horizon.png'
-import { useInView } from 'react-intersection-observer'
-import { useSpring, animated } from 'react-spring'
 import { configs, anims } from 'utils/springs'
+import { IntersectionAnimator } from 'components/IntersectionAnimator'
 
 export function Credits () {
-  const [title, inViewTitle] = useInView ({ threshold: 1 })
-  const slideUpTitle = useSpring ({
-    ...(inViewTitle ? anims.fadeInSlideUp : anims.fadeOutSlideDown),
-    config: configs.shortEaseOut
-  })
-
   return (<>
-    <animated.div id="credits-title" ref={title} style={slideUpTitle}>
+    <IntersectionAnimator
+      threshold={1}
+      inViewAnimation={anims.fadeInSlideUp}
+      notInViewAnimation={anims.fadeOutSlideDown}
+      config={configs.shortEaseOut}
+      innerProps={{id: 'credits-title'}}
+    >
       Credits
-    </animated.div>
+    </IntersectionAnimator>
+    
 
     <div id="credits">
       {credits.map ((cont, cat) => <Credit category={cat} content={cont} />)
@@ -34,17 +34,13 @@ interface CreditProps {
 }
 
 function Credit ({category, content}: CreditProps) {
-  const [ref, inView] = useInView ({ threshold: .4 })
-  const slideUpCredits = useSpring ({
-    ...(inView ? anims.fadeInSlideUp : anims.fadeOutSlideDown),
-    config: configs.shortEaseOut
-  })
-
   return (
-    <animated.div
-      className="credit-block"
-      ref={ref}
-      style={slideUpCredits}
+    <IntersectionAnimator
+      threshold={.4}
+      inViewAnimation={anims.fadeInSlideUp}
+      notInViewAnimation={anims.fadeOutSlideDown}
+      config={configs.shortEaseOut}
+      innerProps={{className: 'credit-block'}}
     >
       <div className="credit-category">{category}</div>
 
@@ -78,6 +74,6 @@ function Credit ({category, content}: CreditProps) {
         </div>
       ))}
 
-    </animated.div>
+  </IntersectionAnimator>
   )
 }

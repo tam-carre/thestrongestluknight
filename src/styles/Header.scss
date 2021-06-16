@@ -13,6 +13,13 @@
     background: center / cover url(../images/kanata_looking_at_dragon.png);
   }
 
+  #dark-overlay {
+    background: rgba(0,0,0,.4);
+    position: fixed;
+    height: 85vh;
+    width: 100%;
+  }
+
   #header-text-container {
     user-select: none;
     font: $stylized-font;
@@ -20,7 +27,7 @@
     width: 80vw;
     height: Min(90vh, 800px);
     position: relative;
-    z-index: 2;
+    z-index: 3;
     white-space: nowrap;
     text-shadow: $textBorder4px;
 

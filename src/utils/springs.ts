@@ -24,6 +24,8 @@ export const anims = {
   fadeOutSlideDown: { to: { opacity: 0, transform: "translateY(50px)" } },
 }
 
+export type Animation = typeof anims[keyof typeof anims]
+
 ///////////////////////////////////////////////////////////////////////////////
 
 

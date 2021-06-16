@@ -18,8 +18,9 @@ export function Credits () {
     
 
     <div id="credits">
-      {credits.map ((cont, cat) => <Credit category={cat} content={cont} />)
-              .toList ()}
+      {credits
+        .map ((cont, cat) => <Credit category={cat} content={cont} />)
+        .toList ()}
     </div>
 
     <div id="coco-looking-at-horizon"></div>
@@ -73,7 +74,6 @@ function Credit ({category, content}: CreditProps) {
             : ''}
         </div>
       ))}
-
   </IntersectionAnimator>
   )
 }

@@ -5,7 +5,7 @@ import { configs, anims } from 'utils/springs'
 import { IntersectionAnimator } from 'components/IntersectionAnimator'
 
 export function Credits () {
-  return (<>
+  return (<div id="credit-wrapper">
     <IntersectionAnimator
       threshold={1}
       inViewAnimation={anims.fadeInSlideUp}
@@ -24,7 +24,7 @@ export function Credits () {
     </div>
 
     <div id="coco-looking-at-horizon"></div>
-  </>)
+  </div>)
 }
 
 ///////////////////////////////////////////////////////////////////////////////

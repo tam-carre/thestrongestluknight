@@ -4,6 +4,12 @@
   width: 100%;
   padding: 0;
 
+  &.blur {
+    padding-bottom: 1rem;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255,255,255,0.8);
+  }
+
   a {
     color: #907361;
 

@@ -1,5 +1,5 @@
 import 'styles/App.scss'
-import * as React from 'react'
+import { useState } from 'react'
 import { Header } from 'components/Header'
 import { Credits } from 'components/Credits'
 import { Messages } from 'components/Messages'
@@ -8,17 +8,23 @@ import { ScrollNotifier } from 'components/ScrollNotifier'
 import classNames from 'classnames'
 
 export function App () {
-  const [onMessages, setOnMessages] = React.useState(true);
-  return (
+  const [atMessages, setAtMessages] = useState (false)
+  const [atTop, setAtTop]           = useState (true)
+
+  return (<>
     <div className="App">
-      <Navbar className={classNames({
-        blur: onMessages,
+      <Navbar className={classNames ({
+        'on-top': atTop,
+        'on-messages': atMessages,
       })} />
-        <Header />
-      <ScrollNotifier callback={setOnMessages}>
-        <Messages />
-        <Credits />
+      <ScrollNotifier callback={setAtTop}>
+        <div id="top"></div>
       </ScrollNotifier>
+      <Header />
+      <ScrollNotifier callback={setAtMessages}>
+        <Messages />
+      </ScrollNotifier>
+      <Credits />
     </div>
-  )
+  </>)
 }

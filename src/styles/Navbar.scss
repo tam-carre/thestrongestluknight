@@ -3,12 +3,32 @@
   z-index:9;
   width: 100%;
   padding: 0;
+  height: 100px;
+
+  &.on-messages {
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+  }
+  &.on-top, &.on-messages {
+    #progress-bar {
+      background: #5a3b38;
+      #progress-bar-elapsed {
+        background: #dab6b6;
+      }
+    }
+    a {
+      color: #907361;
+
+      &.is-current {
+        color: #995a64;
+      }
+    }
+  }
 
   a {
-    color: #907361;
+    color: #f9f7f4;
 
     &.is-current {
-      color: #995a64;
+      color: #d8c4c3;
     }
   }
 
@@ -18,7 +38,7 @@
     position: relative;
     width: 90%;
     max-width: 600px;
-    background: #5a3b38;
+    background: #ab8591;
     height: 3px;
     margin: auto;
 

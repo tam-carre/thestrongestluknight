@@ -9,7 +9,7 @@ import { IntersectionAnimator } from 'components/IntersectionAnimator'
 export function Credits () {
   return (<div id="credit-wrapper">
     <IntersectionAnimator
-      threshold={1}
+      threshold={.8}
       inViewAnimation={anims.fadeInSlideUp}
       notInViewAnimation={anims.fadeOutSlideDown}
       config={configs.shortEaseOut}

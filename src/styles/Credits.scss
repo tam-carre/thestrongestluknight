@@ -21,6 +21,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    position: relative;
+    z-index: 2;
 
     .credit-block {
       width: 300px;
@@ -67,9 +69,13 @@
   background: center bottom / contain no-repeat url(../images/coco_looking_at_horizon.png);
   width: 100%;
   max-width: 1400px;
-  margin: -200px auto;
+  margin: -200px 0;
   height: auto;
   min-height: 350px;
+  position: relative;
+  min-width: 700px;
+  left: 50%;
+  transform: translateX(-50%);
 
   @media (max-width: 768px) {
     min-height: 280px;

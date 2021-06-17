@@ -10,7 +10,7 @@ export function AssetLoader (props: AssetLoaderProps)  {
   const [loads, setLoads] = useState <Record<href, boolean | undefined>> ({})
   const [links, setLinks] = useState <JSX.Element[]> ([])
 
-  useEffect(() => {
+  useEffect (() => {
     const assetStatuses = Object.fromEntries (
        props.assets.map (asset => [asset.href, undefined])
     )

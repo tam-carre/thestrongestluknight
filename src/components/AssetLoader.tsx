@@ -30,8 +30,8 @@ export function AssetLoader (props: AssetLoaderProps)  {
   }, [props.assets])
 
   const loadedStates = Object.values (loads ?? {})
-  const isPending    = loadedStates.some (loaded => loaded === undefined)
-  const isSuccess    = loadedStates.some (loaded => loaded !== false)
+  const isPending    = loadedStates.some  (loaded => loaded === undefined)
+  const isSuccess    = loadedStates.every (loaded => loaded === true)
 
   const loadStatus   = isPending ? LoadStatus.PENDING
                      : isSuccess ? LoadStatus.SUCCESS

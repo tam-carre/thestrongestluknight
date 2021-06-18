@@ -4,6 +4,7 @@ import { Header } from 'components/Header'
 import { Credits } from 'components/Credits'
 import { Messages } from 'components/Messages'
 import { Navbar } from 'components/Navbar'
+import { Playlist } from 'components/Playlist'
 import { ScrollNotifier } from 'components/ScrollNotifier'
 import classNames from 'classnames'
 import cocoLuna from 'images/coco_with_luna_back_tatoo.png'
@@ -36,14 +37,15 @@ function LoadedApp (status: LoadStatus) {
     ? <div>Loading!!!</div>
     : <>
         <Navbar className={classNames ({
-          'on-top': atTop,
-          'on-messages': atMessages,
+          'at-top': atTop,
+          'at-messages': atMessages,
         })} />
           <ScrollNotifier callback={setAtTop}>
             <div id="top"></div>
           </ScrollNotifier>
             <Header />
             <ScrollNotifier callback={setAtMessages} threshold={30}>
+              <Playlist className={classNames ({ 'at-top': atTop })} />
               <Messages />
               <Credits />
             </ScrollNotifier>

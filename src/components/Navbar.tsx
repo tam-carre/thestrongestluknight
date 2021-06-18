@@ -5,7 +5,7 @@ import { useScrollIndicator } from 'react-use-scroll-indicator'
 export function Navbar (props: { className?: string}) {
   const [scroll] = useScrollIndicator ()
   return (
-    <div id="navbar" className={props.className || ''}>
+    <div id="navbar" className={props.className ?? ''}>
       <div id="progress-bar">
         <div id="progress-bar-elapsed" style={{width: scroll.value+'%'}}></div>
       </div>

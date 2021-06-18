@@ -28,6 +28,7 @@
 }
 
 #header {
+  background: $playlist-bg;
   position: relative;
   color: $header-text-color;
   // z-index:10;
@@ -56,7 +57,7 @@
     backface-visibility: hidden;
     top: 50%;
     margin-left: -43%;
-    transform: translateY(-300%);
+    transform: translateY(-200%);
     // transform: translateY(-280%) translateX(-83%) translateZ(0);
   }
 
@@ -68,7 +69,7 @@
     margin-right: -43%;
     // margin-left: -43%;
     // left: 50%;
-    transform: translateY(-100%);
+    transform: translateY(-00%);
   }
 
   #cocoTatooContainer {

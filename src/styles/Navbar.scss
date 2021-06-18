@@ -5,10 +5,10 @@
   padding: 0;
   height: 100px;
 
-  &.on-messages {
+  &.at-messages {
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
   }
-  &.on-top, &.on-messages {
+  &.at-top, &.at-messages {
     #progress-bar {
       background: #5a3b38;
       #progress-bar-elapsed {

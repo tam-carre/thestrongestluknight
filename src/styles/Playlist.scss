@@ -1,0 +1,52 @@
+@import 'theme.scss';
+
+
+
+#playlist {
+  background: $playlist-bg;
+  position: relative;
+  z-index: 3;
+  margin-top: -33px;
+  padding: 50px 0px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    top: -30px;
+    background: linear-gradient(
+      180deg,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,.4) 100%,
+    );
+  }
+
+  &::after {
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.4);
+    transition: .5s;
+  }
+  &.at-top::after {
+    opacity: 1;
+  }
+  
+  #playlist-introduction {
+    margin: 0 auto;
+    padding: 0 25px;
+    // width: 100vw;
+    max-width: 800px;
+    font-size: Clamp(22px, 2.75vw, 36px);
+    color: white;
+
+    #playlist-introduction-paragraph-2 {
+      margin-top: 25px;
+    }
+  }
+}

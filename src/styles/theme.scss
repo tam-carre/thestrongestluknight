@@ -15,6 +15,14 @@ $page-bg: #FFFCFD;
 $stylized-font: italic 500 12px 'Playfair Display', serif;
 $normal-font: regular 12px 'Volkhov', serif;
 
+$red-at-night-1: #FFF587;
+$red-at-night-2: #FF8C64;
+$red-at-night-3: #FF665A;
+$red-at-night-4: #7D6B7D;
+$red-at-night-5: #A3A1A8;
+
+$playlist-bg: $red-at-night-3;
+
 @mixin gradient-title {
   font: $stylized-font;
   background: linear-gradient(45deg, $dark1, $med1);

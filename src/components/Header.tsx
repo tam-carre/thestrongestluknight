@@ -25,7 +25,6 @@ export function Header () {
     <Parallax className="header-bg" y={[-75, 60]} >
       <animated.div id="dark-overlay" style={fade}></animated.div>
       <img src={kanataLookingAtDragon} alt="" />
-      {/*<div id="header-bg"></div>*/}
     </Parallax>
       <div id="cocoTatooContainer">
         <div id="cocoTatooCircle">

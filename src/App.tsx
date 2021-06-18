@@ -43,7 +43,7 @@ function LoadedApp (status: LoadStatus) {
             <div id="top"></div>
           </ScrollNotifier>
             <Header />
-            <ScrollNotifier callback={setAtMessages}>
+            <ScrollNotifier callback={setAtMessages} threshold={30}>
               <Messages />
               <Credits />
             </ScrollNotifier>

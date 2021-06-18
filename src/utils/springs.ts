@@ -14,6 +14,11 @@ export const configs = {
     tension: 800,
     friction: 120,
     mass: .6,
+  },
+  veryShortEaseOut: {
+    tension: 800,
+    friction: 120,
+    mass: .6,
   }
 }
 

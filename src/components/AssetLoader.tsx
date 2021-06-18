@@ -15,11 +15,11 @@ export function AssetLoader (props: AssetLoaderProps)  {
        props.assets.map (asset => [asset.href, undefined])
     )
 
-    const links = props.assets.map (({href, as}, i) => <link
+    const links = props.assets.map (({href, as}) => <link
       rel="preload"
       href={href}
       as={as}
-      key={i}
+      key={href}
       onLoad={ () => setLoads (prevState => ({ ...prevState, [href]: true,  }))}
       onError={() => setLoads (prevState => ({ ...prevState, [href]: false, }))}
     />)

@@ -6,11 +6,12 @@ import 'styles/Messages.scss'
 export function Messages () {
   return (
     <div id="messages">
-      {messages.map (msg => (
+      {messages.map ((msg, i) => (
         <Message
           content={msg.content}
           signature={msg.signature}
           imageUrl={msg.imageUrl}
+          key={i}
         />
       ))}
     </div>

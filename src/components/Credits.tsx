@@ -21,7 +21,7 @@ export function Credits () {
 
     <div id="credits">
       {credits
-        .map ((cont, cat) => <Credit category={cat} content={cont} />)
+        .map ((cont, cat) => <Credit key={cat} category={cat} content={cont} />)
         .toList ()}
     </div>
 
@@ -47,8 +47,8 @@ function Credit ({category, content}: CreditProps) {
     >
       <div className="credit-category">{category}</div>
 
-      {content.map (credit => (
-        <div className="credit-one-person">
+      {content.map ((credit, i) => (
+        <div className="credit-one-person" key={i}>
           <div className="credit-name">
             {credit.url ? <a href={credit.url}>
                             {credit.icon &&
@@ -66,9 +66,9 @@ function Credit ({category, content}: CreditProps) {
 
           {credit.artworks && credit.artworks.length > 0 &&
             <div className="credit-artworks">
-              {credit.artworks!.map (artwork => (
-                <div className="credit-artwork">
-                  <a href={artwork.url}>{artwork.title}</a>
+              {credit.artworks!.map (({url, title}) => (
+                <div className="credit-artwork" key={url}>
+                  <a href={url}>{title}</a>
                 </div>
               ))}
             </div>

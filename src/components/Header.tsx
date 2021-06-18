@@ -3,6 +3,8 @@ import 'styles/Header.scss'
 import { useInView } from 'react-intersection-observer'
 import { useSpring, animated } from 'react-spring'
 import { configs, anims } from 'utils/springs'
+import { Parallax } from 'react-scroll-parallax'
+import kanataLookingAtDragon from 'images/kanata_looking_at_dragon.png'
 
 export function Header () {
   const [ref, inView] = useInView ({ threshold: .95, initialInView: true })
@@ -15,13 +17,16 @@ export function Header () {
 
   const fade = useSpring ({
     ...(inView ? anims.fadeIn : anims.fadeOut),
-    config: configs.shortEaseOut
+    config: configs.veryShortEaseOut
   })
 
-  return (
+  return (<>
     <div id="header" ref={ref}>
-      <div id="header-bg"></div>
+    <Parallax className="header-bg" y={[-75, 60]} >
       <animated.div id="dark-overlay" style={fade}></animated.div>
+      <img src={kanataLookingAtDragon} alt="" />
+      {/*<div id="header-bg"></div>*/}
+    </Parallax>
       <div id="cocoTatooContainer">
         <div id="cocoTatooCircle">
           <animated.div style={fade}>
@@ -43,5 +48,5 @@ export function Header () {
         </div>
       </div>
     </div>
-  )
+  </>)
 }

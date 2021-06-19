@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/thestrongestluknight/static/css/main.a045c736.chunk.css",
-    "main.js": "/thestrongestluknight/static/js/main.a50eb281.chunk.js",
-    "main.js.map": "/thestrongestluknight/static/js/main.a50eb281.chunk.js.map",
+    "main.js": "/thestrongestluknight/static/js/main.d7087417.chunk.js",
+    "main.js.map": "/thestrongestluknight/static/js/main.d7087417.chunk.js.map",
     "runtime-main.js": "/thestrongestluknight/static/js/runtime-main.52d771e6.js",
     "runtime-main.js.map": "/thestrongestluknight/static/js/runtime-main.52d771e6.js.map",
     "static/js/2.1c8b2e44.chunk.js": "/thestrongestluknight/static/js/2.1c8b2e44.chunk.js",
@@ -29,6 +29,6 @@
     "static/js/runtime-main.52d771e6.js",
     "static/js/2.1c8b2e44.chunk.js",
     "static/css/main.a045c736.chunk.css",
-    "static/js/main.a50eb281.chunk.js"
+    "static/js/main.d7087417.chunk.js"
   ]
 }

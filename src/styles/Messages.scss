@@ -83,7 +83,9 @@
     .messages-column {
       padding-left: 40px;
       @media (max-width: 850px) {
-        padding-right: 40px;
+        padding-right: 20px;
+        padding-right: 0;
+        padding-right: 0;
       }
       img {
         // max-width: 100%;

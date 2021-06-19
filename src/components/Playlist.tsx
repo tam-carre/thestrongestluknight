@@ -1,23 +1,20 @@
 import 'styles/Playlist.scss'
-import { IntersectionAnimator } from 'components/IntersectionAnimator'
-import { configs, anims } from 'utils/springs'
+import { FadeInSlideUp } from 'components/IntersectionAnimator'
+import cocoDream from 'images/coco_dream.gif'
 
-export function Playlist (props: { className?: string}) {
+export function Playlist () {
   return (
-    <div id="playlist" className={props.className ?? ''}>
-      <div id="playlist-introduction">
-        <div>
-          Hey Kaichou, we Luknights want you to know that everyone is going to miss you dearly.
-        </div>
-        <IntersectionAnimator
-          threshold={.3}
-          inViewAnimation={anims.fadeInSlideUp}
-          notInViewAnimation={anims.fadeOutSlideDown}
-          config={configs.shortEaseOut}
-          innerProps={{id: 'playlist-introduction-paragraph-2'}}
-        >
-            Here's our HimeCoco playlist so everyone, including you, can remember the good times—and just a little further down, you can read everyone's parting words for you.
-        </IntersectionAnimator>
+    <div id="playlist-section">
+      <div id="playlist-video-wrapper">
+        <FadeInSlideUp innerProps={{id: 'playlist-title'}} >
+        <img src={cocoDream} alt="" />
+          <span>HimeCoco playlist</span>
+        </FadeInSlideUp>
+        <FadeInSlideUp innerProps={{id: 'playlist-iframe'}}>
+          <div id="video-responsive">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLAW64Usi0SJFIRk-2RzTVk9vExyIBhTHw" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          </div>
+        </FadeInSlideUp>
       </div>
     </div>
   )

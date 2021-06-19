@@ -8,6 +8,7 @@ export function ScrollNotifier ({
 
   useEffect (() => {
     const handleScroll = () => {
+      if (watchedElRef.current == null) return
       const { top, height } = watchedElRef.current!.getBoundingClientRect ()
       const isNotTooFarUp   = top + height >= bottomThreshold
       const hasBecomeAtTop  = top <= threshold && isNotTooFarUp

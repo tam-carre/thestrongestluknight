@@ -4,6 +4,7 @@ import { Header } from 'components/Header'
 import { Credits } from 'components/Credits'
 import { Messages } from 'components/Messages'
 import { Navbar } from 'components/Navbar'
+import { IntroductionText } from 'components/IntroductionText'
 import { Playlist } from 'components/Playlist'
 import { ScrollNotifier } from 'components/ScrollNotifier'
 import classNames from 'classnames'
@@ -30,24 +31,37 @@ export function App () {
 ///////////////////////////////////////////////////////////////////////////////
 
 function LoadedApp (status: LoadStatus) {
-  const [atMessages, setAtMessages] = useState (false)
   const [atTop, setAtTop]           = useState (true)
+  const [atIntro, setAtIntro]       = useState (false)
+  const [atPlaylist, setAtPlaylist] = useState (false)
+  const [atMessages, setAtMessages] = useState (false)
+  const [atCredits, setAtCredits]   = useState (false)
 
   return status === LoadStatus.PENDING
     ? <div>Loading!!!</div>
     : <>
         <Navbar className={classNames ({
           'at-top': atTop,
+          'at-intro': atIntro,
+          'at-playlist': atPlaylist,
           'at-messages': atMessages,
+          'at-credits': atCredits,
         })} />
           <ScrollNotifier callback={setAtTop}>
             <div id="top"></div>
           </ScrollNotifier>
-            <Header />
-            <ScrollNotifier callback={setAtMessages} threshold={30}>
-              <Playlist className={classNames ({ 'at-top': atTop })} />
-              <Messages />
-              <Credits />
-            </ScrollNotifier>
+          <Header />
+          <ScrollNotifier callback={setAtIntro} threshold={60}>
+            <IntroductionText className={classNames ({ 'at-top': atTop })} />
+          </ScrollNotifier>
+          <ScrollNotifier callback={setAtPlaylist} threshold={30}>
+            <Playlist />
+          </ScrollNotifier>
+          <ScrollNotifier callback={setAtMessages} threshold={30}>
+            <Messages />
+          </ScrollNotifier>
+          <ScrollNotifier callback={setAtCredits} threshold={30}>
+          <Credits />
+          </ScrollNotifier>
       </>
 }

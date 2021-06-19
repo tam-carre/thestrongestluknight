@@ -17,7 +17,7 @@ export const configs = {
   },
   veryShortEaseOut: {
     tension: 800,
-    friction: 120,
+    friction: 80,
     mass: .6,
   }
 }
@@ -26,7 +26,7 @@ export const anims = {
   fadeIn:  { from: { opacity: 0 }, to: { opacity: 1 } },
   fadeOut: { from: { opacity: 1 }, to: { opacity: 0 } },
   fadeInSlideUp:    { to: { opacity: 1, transform: "translateY(0px)" } },
-  fadeOutSlideDown: { to: { opacity: 0, transform: "translateY(50px)" } },
+  fadeOutSlideDown: { to: { opacity: 0, transform: "translateY(20px)" } },
 }
 
 export type Animation = typeof anims[keyof typeof anims]

@@ -1,17 +1,39 @@
 @import './theme';
+@import './utils';
 
 #credit-wrapper {
+  #credits-strip-under-nav {
+    @include strip-under-nav;
+    background: $page-bg;
+    z-index: 4;
+  }
+
   overflow-x: hidden;
   position: relative;
   z-index: 3;
-  background: white;
+  background: $page-bg;
 
   #credits-title {
     // @include gradient-title-dark;
+    @include gradient-title;
     font: $stylized-font;
-    font-size: 64px;
+    font-size: 46px;
     text-align: center;
-    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 86px;
+    margin-top: -20px;
+    span {
+      margin-left: 15px;
+    }
+    img {
+      width: 60px;
+      height: 60px;
+      position: relative;
+      top: 5px;
+      display: inline-block;
+    }
   }
 
   #credits {
@@ -31,6 +53,9 @@
     @media (max-width: 900px) {
       margin-bottom: -150px;
     }
+    @media (max-width: 600px) {
+      margin-bottom: -60px;
+    }
 
     .credit-block {
       width: 300px;
@@ -38,6 +63,8 @@
 
       .credit-category {
         @include gradient-title;
+        // @include gradient-title-dark;
+        color: black;
         font: $stylized-font;
         font-size: 38px;
         margin-top: 40px;

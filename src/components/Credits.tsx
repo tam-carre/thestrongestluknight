@@ -1,24 +1,18 @@
 import { Contributor, credits } from 'data/credits'
 import 'styles/Credits.scss'
 import 'images/coco_looking_at_horizon.png'
-import { configs, anims } from 'utils/springs'
-import { IntersectionAnimator } from 'components/IntersectionAnimator'
-// import { importImages } from 'utils/general'
-// const images = importImages ('../images/avatars')
+import { FadeInSlideUp } from 'components/IntersectionAnimator'
+// import dragonTail from 'images/dragon_tail.png'
+import combinedEmoji from 'images/message_images/combined_emoji.png'
 
 export function Credits () {
-  return (<div id="credit-wrapper">
-    <IntersectionAnimator
-      threshold={.8}
-      inViewAnimation={anims.fadeInSlideUp}
-      notInViewAnimation={anims.fadeOutSlideDown}
-      config={configs.shortEaseOut}
-      innerProps={{id: 'credits-title'}}
-    >
-      Credits
-    </IntersectionAnimator>
+  return (
+  <div id="credit-wrapper">
+    <FadeInSlideUp threshold={.8} innerProps={{id: 'credits-title'}} >
+      <img src={combinedEmoji} alt="" />
+      <span>Credits</span>
+    </FadeInSlideUp>
     
-
     <div id="credits">
       {credits
         .map ((cont, cat) => <Credit key={cat} category={cat} content={cont} />)
@@ -38,13 +32,7 @@ interface CreditProps {
 
 function Credit ({category, content}: CreditProps) {
   return (
-    <IntersectionAnimator
-      threshold={.4}
-      inViewAnimation={anims.fadeInSlideUp}
-      notInViewAnimation={anims.fadeOutSlideDown}
-      config={configs.shortEaseOut}
-      innerProps={{className: 'credit-block'}}
-    >
+    <FadeInSlideUp innerProps={{className: 'credit-block'}} >
       <div className="credit-category">{category}</div>
 
       {content.map ((credit, i) => (
@@ -75,6 +63,6 @@ function Credit ({category, content}: CreditProps) {
           }
         </div>
       ))}
-  </IntersectionAnimator>
+  </FadeInSlideUp>
   )
 }

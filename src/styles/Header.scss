@@ -28,7 +28,8 @@
 }
 
 #header {
-  background: $playlist-bg;
+  // background: $playlist-bg;
+   background: transparent;
   position: relative;
   color: $header-text-color;
   // z-index:10;

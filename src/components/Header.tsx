@@ -10,8 +10,8 @@ export function Header () {
   const [ref, inView] = useInView ({ threshold: .95, initialInView: true })
 
   const getTextAnim = (prop: 'right'|'left') => ({
-    ...(inView ? { from: { [prop]: '80%' }, to: { [prop]: '50%'  } }
-               : { from: { [prop]: '50%' }, to: { [prop]: '-20%' } }),
+    ...(inView ? { from: { [prop]: '55%' }, to: { [prop]: '50%'  } }
+               : { from: { [prop]: '50%' }, to: { [prop]: '40%' } }),
     config: configs.longEaseOut
   })
 
@@ -37,12 +37,14 @@ export function Header () {
           <animated.div
             id="text-to-the-strongest"
             style={useSpring (getTextAnim ('left'))}
-          > To the strongest
+          >
+            <animated.div style={fade}>To the strongest</animated.div>
           </animated.div>
           <animated.div
             id="text-luknight"
             style={useSpring (getTextAnim ('right'))}
-          > Luknight
+          >
+            <animated.div style={fade}>Luknight</animated.div>
           </animated.div>
         </div>
       </div>

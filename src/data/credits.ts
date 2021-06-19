@@ -70,6 +70,7 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
   Website: [
     {
       name: 'タム・tam', url: 'https://twitter.com/tam_vaccount',
+      details: 'Creator',
       icon: 'avatars/tam_vaccount.jpg'
     },
     {
@@ -89,6 +90,10 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
     },
     {
       name: 'donmk',
+      details: 'Contributor',
+    },
+    {
+      name: 'MegGal',
       details: 'Contributor',
     },
   ],

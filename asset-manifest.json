@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/thestrongestluknight/static/css/main.70277d09.chunk.css",
+    "main.css": "/thestrongestluknight/static/css/main.426777c4.chunk.css",
     "main.js": "/thestrongestluknight/static/js/main.e267728f.chunk.js",
     "main.js.map": "/thestrongestluknight/static/js/main.e267728f.chunk.js.map",
     "runtime-main.js": "/thestrongestluknight/static/js/runtime-main.4284d24f.js",
@@ -10,7 +10,7 @@
     "static/js/3.c308309b.chunk.js": "/thestrongestluknight/static/js/3.c308309b.chunk.js",
     "static/js/3.c308309b.chunk.js.map": "/thestrongestluknight/static/js/3.c308309b.chunk.js.map",
     "index.html": "/thestrongestluknight/index.html",
-    "static/css/main.70277d09.chunk.css.map": "/thestrongestluknight/static/css/main.70277d09.chunk.css.map",
+    "static/css/main.426777c4.chunk.css.map": "/thestrongestluknight/static/css/main.426777c4.chunk.css.map",
     "static/js/2.9cd2245c.chunk.js.LICENSE.txt": "/thestrongestluknight/static/js/2.9cd2245c.chunk.js.LICENSE.txt",
     "static/media/chibi_yonkisei.c7668e4d.png": "/thestrongestluknight/static/media/chibi_yonkisei.c7668e4d.png",
     "static/media/coco_dream.6bb12db3.gif": "/thestrongestluknight/static/media/coco_dream.6bb12db3.gif",
@@ -28,7 +28,7 @@
   "entrypoints": [
     "static/js/runtime-main.4284d24f.js",
     "static/js/2.9cd2245c.chunk.js",
-    "static/css/main.70277d09.chunk.css",
+    "static/css/main.426777c4.chunk.css",
     "static/js/main.e267728f.chunk.js"
   ]
 }

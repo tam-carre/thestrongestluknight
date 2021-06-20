@@ -10,41 +10,48 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
         url: 'https://www.pixiv.net/en/artworks/79038147'
       }]
     }, {
+      name: 'advarcher', url: 'https://twitter.com/Anonamos_701',
+      icon: process.env.PUBLIC_URL + '/avatars/Anonamos_701.jpg',
+      artworks: [{
+        title: '桐生会は不滅なり！',
+        url: 'https://twitter.com/Anonamos_701/status/1402504337293643776'
+      }]
+    }, {
+      name: 'Shuuzo', url: 'https://twitter.com/shuuzo3',
+      icon: process.env.PUBLIC_URL + '/avatars/shuuzo3.jpg',
+      artworks: [{
+        title: '天使とドラゴン',
+        url: 'https://www.pixiv.net/en/artworks/90510056'
+      }]
+    }, {
       name: 'Yuusachii', url: 'https://twitter.com/SachiiHappy',
       icon: process.env.PUBLIC_URL + '/avatars/SachiiHappy.jpg',
       artworks: [{
         title: 'Cozy Gen 4',
         url: 'https://www.pixiv.net/en/artworks/89126212'
-      }, {
-        title: 'New Year Hololive Gen4 Comfy',
-        url: 'https://www.pixiv.net/en/artworks/86730174'
-      }]
+      },
+      // { title: 'New Year Hololive Gen4 Comfy', url: 'https://www.pixiv.net/en/artworks/86730174' }
+      ]
     }, {
       name: 'エニモ', url: 'https://twitter.com/ANYMORE_vvv',
       icon: process.env.PUBLIC_URL + '/avatars/ANYMORE_vvv.jpg',
       artworks: [{
-          title: 'ほろふぉーす愛',
-          url: 'https://www.pixiv.net/en/artworks/89232325'
-        }]
+        title: 'ほろふぉーす愛',
+        url: 'https://www.pixiv.net/en/artworks/89232325'
+      }]
     }, {
       name: '銀鏡にと', url: 'https://twitter.com/shiromi_nito',
       icon: process.env.PUBLIC_URL + '/avatars/shiromi_nito.jpg',
       artworks: [{
-          title: '4期生アイドル衣装',
-          url: 'https://www.pixiv.net/en/artworks/88113908'
-        }]
+        title: '4期生アイドル衣装',
+        url: 'https://www.pixiv.net/en/artworks/88113908'
+      }]
     }, {
       name: 'colonel_AKI', url: 'https://twitter.com/ColonelAki',
       icon: process.env.PUBLIC_URL + '/avatars/ColonelAki.jpg',
       artworks: [{
-          title: 'Chibi Hololive #6',
-          url: 'https://www.pixiv.net/en/artworks/84002989'
-        }]
-    }, {
-      name: 'advarcher', url: 'https://twitter.com/Anonamos_701',
-      artworks: [{
-        title: '桐生会は不滅なり！',
-        url: 'https://twitter.com/Anonamos_701/status/1402504337293643776'
+        title: 'Chibi Hololive #6',
+        url: 'https://www.pixiv.net/en/artworks/84002989'
       }]
     }
   ],
@@ -89,29 +96,44 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
       icon: process.env.PUBLIC_URL + '/avatars/BetaLixT.jpg'
     },
     {
-      name: 'donmk',
+      name: 'donmk', url: 'https://twitter.com/donmk_ssbm',
       details: 'Contributor',
+      icon: process.env.PUBLIC_URL + '/avatars/donmk_ssbm.jpg',
     },
     {
-      name: 'MegGal',
+      name: 'MegGal', url: 'https://twitter.com/Meggal_SA',
       details: 'Contributor',
+      icon: process.env.PUBLIC_URL + '/avatars/Meggal_SA.jpg',
     },
   ],
   Clipping: [
-    { name: 'Cain Chin', url: 'https://twitter.com/cain_chin' },
-    // Please include the clipping channels' names and their Twitter URL
-    // if no Twitter URL then their YouTube ch URL
-
-    // https://www.youtube.com/playlist?list=PLAW64Usi0SJFIRk-2RzTVk9vExyIBhTHw&jct=HVa9mT52CFQx49UuCLQQNy1RsNLt0g
+    {
+      name: 'Cain Chin', url: 'https://twitter.com/cain_chin',
+      icon: process.env.PUBLIC_URL + '/avatars/cain_chin.png',
+    },
   ],
   'HimeCoco playlist': [
-    // Please include the playlist contributors' names and
-    // twitter url if they have a twitter account they use for luknight
-    // activities.
-    // ask them if needed.
-    { name: 'Cain Chin', url: 'https://twitter.com/cain_chin' },
-    { name: 'Marshall Lee', url: 'https://twitter.com/Marshall_Lee_A' },
-    { name: 'Dodoliy', url: 'https://twitter.com/dodoliy'}
+    { name: 'Marshall Lee',
+      url: 'https://twitter.com/Marshall_Lee_A',
+      icon: process.env.PUBLIC_URL + '/avatars/Marshall_Lee_A.jpg',
+    },
+    {
+      name: 'Cain Chin', url: 'https://twitter.com/cain_chin',
+      icon: process.env.PUBLIC_URL + '/avatars/cain_chin.png',
+    },
+    {
+      name: 'Dodoliy',
+      url: 'https://twitter.com/dodoliy',
+      icon: process.env.PUBLIC_URL + '/avatars/dodoliy.jpg',
+    },
+    {
+      name: 'monoAI', url: 'https://twitter.com/monoai_',
+      icon: process.env.PUBLIC_URL + '/avatars/monoai_.jpg'
+    },
+    {
+      name: 'タム・tam', url: 'https://twitter.com/tam_vaccount',
+      icon: process.env.PUBLIC_URL + '/avatars/tam_vaccount.jpg'
+    },
   ]
 }) as OrderedMap<CreditCategory, Contributor[]>
 

@@ -25,6 +25,8 @@
     padding-top: 86px;
     margin-top: -20px;
     span {
+      background: -webkit-linear-gradient(45deg, $dark1, $med1);
+      -webkit-background-clip: text;
       margin-left: 15px;
     }
     img {

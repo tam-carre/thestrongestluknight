@@ -20,7 +20,7 @@ export function AssetLoader (props: AssetLoaderProps)  {
       href={href}
       as={as}
       key={href}
-      onLoad={ () => setLoads (prevState => ({ ...prevState, [href]: true,  }))}
+      onLoad={() => setLoads (prevState => ({ ...prevState, [href]: true,  }))}
       onError={() => setLoads (prevState => ({ ...prevState, [href]: false, }))}
     />)
 

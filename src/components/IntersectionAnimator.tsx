@@ -28,7 +28,7 @@ export function FadeInSlideUp (props: FadeInSlideUpProps) {
       inViewAnimation={anims.fadeInSlideUp}
       notInViewAnimation={anims.fadeOutSlideDown}
       config={configs.shortEaseOut}
-      innerProps={props.innerProps ?? {}}
+      innerProps={props.innerProps}
     >
       {props.children}
     </IntersectionAnimator>
@@ -43,7 +43,7 @@ type IntersectionAnimatorProps = {
   inViewAnimation: Animation,
   notInViewAnimation: Animation,
   config?: SpringConfig | ((key: string) => SpringConfig),
-  innerProps?: React.HTMLAttributes<HTMLDivElement>
+  innerProps?: React.HTMLAttributes<HTMLDivElement> | undefined
 }
 
 type FadeInSlideUpProps = {

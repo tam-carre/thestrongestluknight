@@ -79,31 +79,30 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
       name: 'タム・tam', url: 'https://twitter.com/tam_vaccount',
       details: 'Creator',
       icon: process.env.PUBLIC_URL + '/avatars/tam_vaccount.jpg'
-    },
-    {
+    }, {
       name: 'monoAI', url: 'https://twitter.com/monoai_',
       details: 'Contributor',
       icon: process.env.PUBLIC_URL + '/avatars/monoai_.jpg'
-    },
-    {
+    }, {
       name: 'Tom "Skeletom" Farro', url: 'https://www.twitter.com/fomtarro',
       details: 'Contributor',
       icon: process.env.PUBLIC_URL + '/avatars/FomTarro.jpg'
-    },
-    {
+    }, {
       name: 'BetaLixT', url: 'https://twitter.com/BetaLixT',
       details: 'Contributor',
       icon: process.env.PUBLIC_URL + '/avatars/BetaLixT.jpg'
-    },
-    {
+    }, {
       name: 'donmk', url: 'https://twitter.com/donmk_ssbm',
       details: 'Contributor',
       icon: process.env.PUBLIC_URL + '/avatars/donmk_ssbm.jpg',
-    },
-    {
+    }, {
       name: 'MegGal', url: 'https://twitter.com/Meggal_SA',
       details: 'Contributor',
       icon: process.env.PUBLIC_URL + '/avatars/Meggal_SA.jpg',
+    }, {
+      name: 'こーでー', url: 'https://twitter.com/kody_lu',
+      details: 'Translation',
+      icon: process.env.PUBLIC_URL + '/avatars/kody_lu.jpg'
     },
   ],
   Clipping: [
@@ -116,21 +115,17 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
     { name: 'Marshall Lee',
       url: 'https://twitter.com/Marshall_Lee_A',
       icon: process.env.PUBLIC_URL + '/avatars/Marshall_Lee_A.jpg',
-    },
-    {
+    }, {
       name: 'Cain Chin', url: 'https://twitter.com/cain_chin',
       icon: process.env.PUBLIC_URL + '/avatars/cain_chin.png',
-    },
-    {
+    }, {
       name: 'Dodoliy',
       url: 'https://twitter.com/dodoliy',
       icon: process.env.PUBLIC_URL + '/avatars/dodoliy.jpg',
-    },
-    {
+    }, {
       name: 'monoAI', url: 'https://twitter.com/monoai_',
       icon: process.env.PUBLIC_URL + '/avatars/monoai_.jpg'
-    },
-    {
+    }, {
       name: 'タム・tam', url: 'https://twitter.com/tam_vaccount',
       icon: process.env.PUBLIC_URL + '/avatars/tam_vaccount.jpg'
     },

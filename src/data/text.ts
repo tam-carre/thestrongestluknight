@@ -84,6 +84,10 @@ export const text: TranslationData = {
       en: 'Internal translation',
       jp: 'チーム内通訳'
     },
+    Translation: {
+      en: 'Translation',
+      jp: '翻訳'
+    },
     Creator: {
       en: 'Creator',
       jp: 'クリエーター'

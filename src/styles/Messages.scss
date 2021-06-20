@@ -64,7 +64,7 @@
     }
     span {
       background: -webkit-linear-gradient(45deg, $dark1, $med1);
-      -webkit-background-clip: text;
+      background-clip: text;
       //Other fix, delete if no longer needed
       //@include gradient-title;
       //font-size: 46px;
@@ -87,9 +87,9 @@
     left: -20px;
     .messages-column {
       padding-left: 40px;
-      @media (max-width: 850px) {
-        padding-right: 20px;
-      }
+      // @media (max-width: 850px) {
+        // padding-right: 20px;
+      // }
       img {
         // max-width: 100%;
         max-width: 200px;

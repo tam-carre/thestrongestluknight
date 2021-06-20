@@ -1,0 +1,12 @@
+#language-switcher {
+  position: fixed;
+  font-size: 25px;
+  top: 5px;
+  right: 10px;
+  transition: .5s;
+  z-index: 9;
+
+  &.at-top {
+    opacity: .4;
+  }
+}

@@ -2,10 +2,10 @@ import Scrollspy from 'react-scrollspy'
 import 'styles/Navbar.scss'
 import { useScrollIndicator } from 'react-use-scroll-indicator'
 
-export function Navbar (props: { className?: string}) {
+export function Navbar ({ className }: { className?: string}) {
   const [scroll] = useScrollIndicator ()
   return (
-    <div id="navbar" className={props.className ?? ''}>
+    <div id="navbar" className={className ?? ''}>
       <div id="progress-bar">
         <div id="progress-bar-elapsed" style={{width: scroll.value+'%'}}></div>
       </div>
@@ -19,7 +19,6 @@ export function Navbar (props: { className?: string}) {
         <a href="#messages">Messages</a>
         <a href="#credit-wrapper">Credits</a>
       </Scrollspy>
-    <div id="language-switcher">🇯🇵</div>
     </div>
   )
 }

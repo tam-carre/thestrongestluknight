@@ -1,3 +1,5 @@
+export type LanguageCode = 'en' | 'jp'
+
 export const text: TranslationData = {
   navbar: {
     top: {
@@ -6,7 +8,7 @@ export const text: TranslationData = {
     },
     playlist: {
       en: 'Playlist',
-      jp: 'プレーリスト'
+      jp: 'プレイリスト'
     },
     messages: {
       en: 'Messages',
@@ -40,13 +42,13 @@ export const text: TranslationData = {
   playlist: {
     himeCocoPlaylist: {
       en: 'HimeCoco playlist',
-      jp: '姫ココプレーリスト'
+      jp: '姫ココプレイリスト'
     }
   },
   messages: {
     messagesFromLuknights: {
       en: 'Messages from Luknights',
-      jp: 'ルーナイトからメッセージ'
+      jp: 'ルーナイトからのメッセージ'
     }
   },
   credits: {
@@ -74,6 +76,22 @@ export const text: TranslationData = {
       en: 'HimeCoco playlist',
       jp: '姫ココプレーリスト',
     },
+    projectLeader: {
+      en: 'Project leader',
+      jp: 'プロジェクトリーダー'
+    },
+    internalTranslation: {
+      en: 'Internal translation',
+      jp: 'チーム内通訳'
+    },
+    creator: {
+      en: 'Creator',
+      jp: 'クリエーター'
+    },
+    contributor: {
+      en: 'Contributor',
+      jp: 'コントリビューター'
+    }
   }
 }
 
@@ -85,4 +103,3 @@ type Translation      = Record<LanguageCode, string>
 
 type TranslationCategory = string
 type ItemName            = string
-type LanguageCode        = "en" | "jp"

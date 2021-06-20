@@ -1,9 +1,9 @@
 import 'styles/IntroductionText.scss'
 import { FadeInSlideUp } from 'components/IntersectionAnimator'
 
-export function IntroductionText (props: { className?: string}) {
+export function IntroductionText ({ className }: { className?: string}) {
   return (
-    <div id="playlist-introduction-wrapper" className={props.className ?? ''}>
+    <div id="playlist-introduction-wrapper" className={className ?? ''}>
       <div id="playlist-introduction">
         {/*
         <div id="flags">

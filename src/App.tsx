@@ -1,9 +1,10 @@
 import 'styles/App.scss'
-import { useState } from 'react'
+import { createContext, useState } from 'react'
 import { Header } from 'components/Header'
 import { Credits } from 'components/Credits'
 import { Messages } from 'components/Messages'
 import { Navbar } from 'components/Navbar'
+import { LanguageButton } from 'components/LanguageButton'
 import { IntroductionText } from 'components/IntroductionText'
 import { Playlist } from 'components/Playlist'
 import { ScrollNotifier } from 'components/ScrollNotifier'
@@ -31,6 +32,9 @@ export function App () {
 ///////////////////////////////////////////////////////////////////////////////
 
 function LoadedApp (status: LoadStatus) {
+  const SelectedLanguage = createContext ('en')
+
+  const [language, setLanguage]     = useState ('en')
   const [atTop, setAtTop]           = useState (true)
   const [atIntro, setAtIntro]       = useState (false)
   const [atPlaylist, setAtPlaylist] = useState (false)
@@ -39,7 +43,7 @@ function LoadedApp (status: LoadStatus) {
 
   return status === LoadStatus.PENDING
     ? <div>Loading!!!</div>
-    : <>
+    : <SelectedLanguage.Provider value={language}>
         <Navbar className={classNames ({
           'at-top': atTop,
           'at-intro': atIntro,
@@ -47,21 +51,25 @@ function LoadedApp (status: LoadStatus) {
           'at-messages': atMessages,
           'at-credits': atCredits,
         })} />
-          <ScrollNotifier callback={setAtTop}>
-            <div id="top"></div>
-          </ScrollNotifier>
-          <Header />
-          <ScrollNotifier callback={setAtIntro} threshold={60}>
-            <IntroductionText className={classNames ({ 'at-top': atTop })} />
-          </ScrollNotifier>
-          <ScrollNotifier callback={setAtPlaylist} threshold={30}>
-            <Playlist />
-          </ScrollNotifier>
-          <ScrollNotifier callback={setAtMessages} threshold={30}>
-            <Messages />
-          </ScrollNotifier>
-          <ScrollNotifier callback={setAtCredits} threshold={30}>
-          <Credits />
-          </ScrollNotifier>
-      </>
+      <LanguageButton
+        className={classNames ({ 'at-top': atTop })}
+        callback={setLanguage}
+      />
+        <ScrollNotifier callback={setAtTop}>
+          <div id="top"></div>
+        </ScrollNotifier>
+        <Header />
+        <ScrollNotifier callback={setAtIntro} threshold={60}>
+          <IntroductionText className={classNames ({ 'at-top': atTop })} />
+        </ScrollNotifier>
+        <ScrollNotifier callback={setAtPlaylist} threshold={30}>
+          <Playlist />
+        </ScrollNotifier>
+        <ScrollNotifier callback={setAtMessages} threshold={30}>
+          <Messages />
+        </ScrollNotifier>
+        <ScrollNotifier callback={setAtCredits} threshold={30}>
+        <Credits />
+        </ScrollNotifier>
+      </SelectedLanguage.Provider>
 }

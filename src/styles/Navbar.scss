@@ -13,14 +13,6 @@
   width: 100%;
   z-index:9;
 
-  #language-switcher {
-    position: absolute;
-    font-size: 25px;
-    top: 5px;
-    right: 10px;
-    transition: .5s;
-  }
-
   a {
     color: var(--inactive-items);
     &.is-current { color: var(--active-item); }

@@ -6,14 +6,19 @@ import { configs, anims } from 'utils/springs'
 import { Parallax } from 'react-scroll-parallax'
 import kanataLookingAtDragon from 'images/kanata_looking_at_dragon.png'
 
+const getTextAnim = (prop: 'right'|'left', inView: boolean) => ({
+  ...(inView ? { from: { [prop]: '55%' }, to: { [prop]: '50%'  } }
+             : { from: { [prop]: '50%' }, to: { [prop]: '40%' } }),
+  config: configs.longEaseOut
+})
+
+const parallaxValues = [-75, 60];
+
 export function Header () {
   const [ref, inView] = useInView ({ threshold: .95, initialInView: true })
+  const topTextStyle = useSpring (getTextAnim ('left', inView));
+  const bottomTextStyle = useSpring (getTextAnim ('right', inView));
 
-  const getTextAnim = (prop: 'right'|'left') => ({
-    ...(inView ? { from: { [prop]: '55%' }, to: { [prop]: '50%'  } }
-               : { from: { [prop]: '50%' }, to: { [prop]: '40%' } }),
-    config: configs.longEaseOut
-  })
 
   const fade = useSpring ({
     ...(inView ? anims.fadeIn : anims.fadeOut),
@@ -22,7 +27,7 @@ export function Header () {
 
   return (<>
     <div id="header" ref={ref}>
-    <Parallax className="header-bg" y={[-75, 60]} >
+    <Parallax className="header-bg" y={parallaxValues} >
       <animated.div id="dark-overlay" style={fade}></animated.div>
       <img src={kanataLookingAtDragon} alt="" />
     </Parallax>
@@ -36,13 +41,13 @@ export function Header () {
         <div id="header-text-container">
           <animated.div
             id="text-to-the-strongest"
-            style={useSpring (getTextAnim ('left'))}
+            style={topTextStyle}
           >
             <animated.div style={fade}>To the strongest</animated.div>
           </animated.div>
           <animated.div
             id="text-luknight"
-            style={useSpring (getTextAnim ('right'))}
+            style={bottomTextStyle}
           >
             <animated.div style={fade}>Luknight</animated.div>
           </animated.div>

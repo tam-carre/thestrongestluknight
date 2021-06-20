@@ -5,18 +5,22 @@ import { FadeInSlideUp } from 'components/IntersectionAnimator'
 // import dragonTail from 'images/dragon_tail.png'
 import combinedEmoji from 'images/message_images/combined_emoji.png'
 
+const creditList = credits
+  .map ((cont, cat) => <Credit key={cat} category={cat} content={cont} />)
+  .toList ();
+
+const innerCreditProps = { id: 'credits-title' };
+
 export function Credits () {
   return (
   <div id="credit-wrapper">
-    <FadeInSlideUp threshold={.8} innerProps={{id: 'credits-title'}} >
+    <FadeInSlideUp threshold={.8} innerProps={innerCreditProps} >
       <img src={combinedEmoji} alt="" />
       <span>Credits</span>
     </FadeInSlideUp>
     
     <div id="credits">
-      {credits
-        .map ((cont, cat) => <Credit key={cat} category={cat} content={cont} />)
-        .toList ()}
+      {creditList}
     </div>
 
     <div id="coco-looking-at-horizon"></div>

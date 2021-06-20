@@ -6,61 +6,61 @@ export const text: TranslationData = {
     },
     playlist: {
       en: 'Playlist',
-      jp: 'Playlist'
+      jp: 'プレーリスト'
     },
     messages: {
       en: 'Messages',
-      jp: 'Messages'
+      jp: 'メッセージ'
     },
     credits: {
       en: 'Credits',
-      jp: 'Credits'
+      jp: 'クレジット'
     },
   },
   header: {
     toTheStrongest: {
       en: 'To the strongest',
-      jp: 'To the strongest'
+      jp: '最強の'
     },
     luknight: {
       en: 'Luknight',
-      jp: 'Luknight'
+      jp: 'ルーナイトへ'
     },
   },
   playlist: {
     firstParagraph: {
       en: 'Hey Kaichou, we Luknights want you to know that everyone is going to miss you dearly.',
-      jp: 'マリオ（英: Mario）は、任天堂が開発・発売しているコンピューターゲーム｢スーパーマリオシリーズ｣に登場する架空の人物で、同社の登録商標（第2343144号ほか）。',
+      jp: '我々ルーナイトは、みんなが会長のことを心から寂しく思っていることを知ってほしいのです。',
     },
     secondParagraph: {
       en: "Here's our HimeCoco playlist so everyone, including you, can remember the good times—and just a little further down, you can read everyone's parting words for you.",
-      jp: "Here's our HimeCoco playlist so everyone, including you, can remember the good times—and just a little further down, you can read everyone's parting words for you.",
+      jp: "会長もみんなも楽しかった頃を思い出せるように、姫ココのプレイリストを紹介します。さらにその下には、みんなからのお別れの言葉が書かれています。",
     }
   },
   credits: {
     credits: {
       en: 'Credits',
-      jp: 'Credits',
+      jp: 'クレジット',
     },
     artwork: {
       en: 'Artwork',
-      jp: 'Artwork',
+      jp: 'アート',
     },
     organization: {
       en: 'Organization',
-      jp: 'Organization',
+      jp: 'オルグ',
     },
     website: {
       en: 'Website',
-      jp: 'Website',
+      jp: 'ウェブサイト',
     },
     clipping: {
       en: 'Clipping',
-      jp: 'Clipping',
+      jp: '切り抜き',
     },
     himeCocoPlaylist: {
       en: 'HimeCoco playlist',
-      jp: 'HimeCoco playlist',
+      jp: '姫ココプレーリスト',
     },
   }
 }

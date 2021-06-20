@@ -23,7 +23,11 @@ const images = [
   pixartCoco,
 ]
 
-const imageEls = images.map (src => <img src={src} alt="" key={src} />)
+const imageEls = images.map (src => (
+  <FadeInSlideUp key={src}>
+    <img src={src} alt=""/>
+  </FadeInSlideUp>
+))
 
 const messageEls = messages.map ((msg, i) => (
   <Message
@@ -80,7 +84,7 @@ function Message ({content, signature, imageUrl = undefined}: MessageProps) {
     : signature
 
   return (
-    <FadeInSlideUp innerProps={{className: 'message'}}>
+    <div className="message">
       <div className="message-content">{content}</div>
       
       <div className="message-signature">
@@ -89,6 +93,6 @@ function Message ({content, signature, imageUrl = undefined}: MessageProps) {
         }
         <span>{signatureEl}</span>
       </div>
-    </FadeInSlideUp>
+    </div>
   )
 }

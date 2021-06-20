@@ -19,6 +19,7 @@ export function Navbar (props: { className?: string}) {
         <a href="#messages">Messages</a>
         <a href="#credit-wrapper">Credits</a>
       </Scrollspy>
+    <div id="language-switcher">🇯🇵</div>
     </div>
   )
 }

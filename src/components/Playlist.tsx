@@ -10,11 +10,13 @@ export function Playlist () {
         <img src={cocoDream} alt="" />
           <span>HimeCoco playlist</span>
         </FadeInSlideUp>
-        <FadeInSlideUp innerProps={{id: 'playlist-iframe'}}>
+        {/*<FadeInSlideUp innerProps={{id: 'playlist-iframe'}}>*/}
+        <div id="playlist-iframe">
           <div id="video-responsive">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLAW64Usi0SJFIRk-2RzTVk9vExyIBhTHw" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           </div>
-        </FadeInSlideUp>
+        </div>
+        {/*</FadeInSlideUp>*/}
       </div>
     </div>
   )

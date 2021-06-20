@@ -74,7 +74,7 @@
 
   .messages-list {
     @include message-size;
-    text-shadow: $textBorder4pxPageBg;
+    // text-shadow: $textBorder4pxPageBg;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -84,8 +84,6 @@
       padding-left: 40px;
       @media (max-width: 850px) {
         padding-right: 20px;
-        padding-right: 0;
-        padding-right: 0;
       }
       img {
         // max-width: 100%;
@@ -94,18 +92,15 @@
         display: block;
       }
     }
-    .animationWrapper {
-      margin: 25% 0;
+      .message {
+      margin: 25% auto;
       width: 100%;
       max-width: 600px;
       position: relative;
-      .message {
-        margin: 0 auto;
         p {
           margin-block-start: 0em;
           margin-block-end: 0em;
         }
-      }
 
       &::before {
         content: '“';
@@ -139,6 +134,6 @@
           }
         }
       }
-    }
+      
   }
-}
+}}

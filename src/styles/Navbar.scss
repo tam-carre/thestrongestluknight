@@ -4,14 +4,22 @@
 #navbar {
   --elapsed-scroll: #d69f95;
   --remaining-scroll: #ab8591;
-  --active-item: #f9f7f4;
+  --active-item: #FFFFFF;
   --inactive-items: #d8c4c3;
 
-  height: 48px;
+  height: 49px;
   padding: 0;
   position: fixed;
   width: 100%;
   z-index:9;
+
+  #language-switcher {
+    position: absolute;
+    font-size: 25px;
+    top: 5px;
+    right: 10px;
+    transition: .5s;
+  }
 
   a {
     color: var(--inactive-items);
@@ -19,25 +27,34 @@
   }
 
   &.at-top {
-  --elapsed-scroll: #dab6b6;
-  --remaining-scroll: #5a3b38;
-  --active-item: #99675A;
-  --inactive-items: #907361;
+    --elapsed-scroll: #dab6b6;
+    --remaining-scroll: #5a3b38;
+    --active-item: #99675A;
+    --inactive-items: #907361;
+    #language-switcher {
+      opacity: .5;
+    }
   }
 
   &.at-intro {
+    background: $playlist-bg;
     --elapsed-scroll: #F9F7F4;
-    --remaining-scroll: #E48682;
-    --active-item: #f9f7f4;
-    --inactive-items: #F8BFBC;
+    --remaining-scroll: #ECBAAC;
+    --active-item: #FFFFFF;
+    --inactive-items: #FFDDCF;
   }
 
   &.at-playlist, &.at-messages, &.at-credits {
     background: $page-bg;
+    // background: linear-gradient(180deg,
+      // $page-bg 0px,
+      // $page-bg 48px,
+      // rgba($page-bg, 0), 78px
+    // );
     --elapsed-scroll: #{$med1};
     --remaining-scroll: #F2E1D7;
-    --active-item: #E89A26;
-    --inactive-items: #D6B59C;
+    --active-item: #E38E10;
+    --inactive-items: #C9A488;
   }
   // &.at-messages {
     // background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);

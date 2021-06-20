@@ -39,7 +39,7 @@
   #credits {
     width: 100%;
     max-width: 1060px;
-    margin: 0 auto -130px;
+    margin: 0 auto -230px;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -48,7 +48,7 @@
     z-index: 2;
 
     @media (max-width: 1000px) {
-      margin-bottom: -200px;
+      margin-bottom: -270px;
     }
     @media (max-width: 900px) {
       margin-bottom: -150px;

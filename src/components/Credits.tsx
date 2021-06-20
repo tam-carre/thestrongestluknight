@@ -32,7 +32,8 @@ interface CreditProps {
 
 function Credit ({category, content}: CreditProps) {
   return (
-    <FadeInSlideUp innerProps={{className: 'credit-block'}} >
+    <div className="credit-block">
+    {/*<FadeInSlideUp innerProps={{className: 'credit-block'}} >*/}
       <div className="credit-category">{category}</div>
 
       {content.map ((credit, i) => (
@@ -63,6 +64,7 @@ function Credit ({category, content}: CreditProps) {
           }
         </div>
       ))}
-  </FadeInSlideUp>
+    {/*</FadeInSlideUp>*/}
+    </div>
   )
 }

@@ -44,10 +44,12 @@ const allEls = [
   ...insertEveryN (6, messageEls.slice (4), imageEls)
 ]
 
+const messageInnerProps = {id: 'messages-title'};
+
 export function Messages () {
   return (
     <div id="messages">
-      <FadeInSlideUp innerProps={{id: 'messages-title'}} >
+      <FadeInSlideUp innerProps={messageInnerProps} >
         <img src={chibiYonkisei} alt="" />
         <span>Messages from Luknights</span>
       </FadeInSlideUp>

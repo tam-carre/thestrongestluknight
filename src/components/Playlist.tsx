@@ -2,11 +2,13 @@ import 'styles/Playlist.scss'
 import { FadeInSlideUp } from 'components/IntersectionAnimator'
 import cocoDream from 'images/coco_dream.gif'
 
+const animationInnerProps = {id: 'playlist-title'};
+
 export function Playlist () {
   return (
     <div id="playlist-section">
       <div id="playlist-video-wrapper">
-        <FadeInSlideUp innerProps={{id: 'playlist-title'}} >
+        <FadeInSlideUp innerProps={animationInnerProps} >
         <img src={cocoDream} alt="" />
           <span>HimeCoco playlist</span>
         </FadeInSlideUp>

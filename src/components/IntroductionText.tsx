@@ -1,5 +1,4 @@
 import 'styles/IntroductionText.scss'
-import { FadeInSlideUp } from 'components/IntersectionAnimator'
 
 export function IntroductionText (props: { className?: string}) {
   return (

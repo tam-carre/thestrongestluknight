@@ -1,6 +1,13 @@
 @import 'theme.scss';
 @import 'utils.scss';
 
+@media (max-width: 425px) {
+  #site.jp #navbar {
+    font-size: 15px;
+    letter-spacing: -1px;
+  }
+}
+
 #navbar {
   --elapsed-scroll: #d69f95;
   --remaining-scroll: #ab8591;

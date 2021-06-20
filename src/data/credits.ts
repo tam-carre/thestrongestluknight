@@ -4,14 +4,14 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
   Artwork: [
     {
       name: 'mop', url: 'https://www.pixiv.net/en/users/2083795',
-      icon: '/avatars/mop.png',
+      icon: process.env.PUBLIC_URL + '/avatars/mop.png',
       artworks: [{
         title: 'どこの組のもんじゃい？',
         url: 'https://www.pixiv.net/en/artworks/79038147'
       }]
     }, {
       name: 'Yuusachii', url: 'https://twitter.com/SachiiHappy',
-      icon: '/avatars/SachiiHappy.jpg',
+      icon: process.env.PUBLIC_URL + '/avatars/SachiiHappy.jpg',
       artworks: [{
         title: 'Cozy Gen 4',
         url: 'https://www.pixiv.net/en/artworks/89126212'
@@ -21,21 +21,21 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
       }]
     }, {
       name: 'エニモ', url: 'https://twitter.com/ANYMORE_vvv',
-      icon: '/avatars/ANYMORE_vvv.jpg',
+      icon: process.env.PUBLIC_URL + '/avatars/ANYMORE_vvv.jpg',
       artworks: [{
           title: 'ほろふぉーす愛',
           url: 'https://www.pixiv.net/en/artworks/89232325'
         }]
     }, {
       name: '銀鏡にと', url: 'https://twitter.com/shiromi_nito',
-      icon: '/avatars/shiromi_nito.jpg',
+      icon: process.env.PUBLIC_URL + '/avatars/shiromi_nito.jpg',
       artworks: [{
           title: '4期生アイドル衣装',
           url: 'https://www.pixiv.net/en/artworks/88113908'
         }]
     }, {
       name: 'colonel_AKI', url: 'https://twitter.com/ColonelAki',
-      icon: '/avatars/ColonelAki.jpg',
+      icon: process.env.PUBLIC_URL + '/avatars/ColonelAki.jpg',
       artworks: [{
           title: 'Chibi Hololive #6',
           url: 'https://www.pixiv.net/en/artworks/84002989'
@@ -51,42 +51,42 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
   Organization: [
     {
       name: 'タム・tam', url: 'https://twitter.com/tam_vaccount',
-      details: 'Project leader, internal translation',
-      icon: '/avatars/tam_vaccount.jpg'
+      details: 'Project leader',
+      icon: process.env.PUBLIC_URL + '/avatars/tam_vaccount.jpg'
     }, {
       name: 'みらい', url: 'https://twitter.com/Mirai_Malekith/',
       details: 'Internal translation',
-      icon: '/avatars/Mirai_Malekith.jpg'
+      icon: process.env.PUBLIC_URL + '/avatars/Mirai_Malekith.jpg'
     }, {
       name: 'こーでー', url: 'https://twitter.com/kody_lu',
       details: 'Internal translation',
-      icon: '/avatars/kody_lu.jpg'
+      icon: process.env.PUBLIC_URL + '/avatars/kody_lu.jpg'
     }, {
       name: 'いいおか', url: 'https://twitter.com/iiokayama8929',
       details: 'Internal translation',
-      icon: '/avatars/default_profile.png'
+      icon: process.env.PUBLIC_URL + '/avatars/default_profile.png'
     }
   ],
   Website: [
     {
       name: 'タム・tam', url: 'https://twitter.com/tam_vaccount',
       details: 'Creator',
-      icon: '/avatars/tam_vaccount.jpg'
+      icon: process.env.PUBLIC_URL + '/avatars/tam_vaccount.jpg'
     },
     {
       name: 'monoAI', url: 'https://twitter.com/monoai_',
       details: 'Contributor',
-      icon: '/avatars/monoai_.jpg'
+      icon: process.env.PUBLIC_URL + '/avatars/monoai_.jpg'
     },
     {
       name: 'Tom "Skeletom" Farro', url: 'https://www.twitter.com/fomtarro',
       details: 'Contributor',
-      icon: '/avatars/FomTarro.jpg'
+      icon: process.env.PUBLIC_URL + '/avatars/FomTarro.jpg'
     },
     {
       name: 'BetaLixT', url: 'https://twitter.com/BetaLixT',
       details: 'Contributor',
-      icon: '/avatars/BetaLixT.jpg'
+      icon: process.env.PUBLIC_URL + '/avatars/BetaLixT.jpg'
     },
     {
       name: 'donmk',

@@ -3,7 +3,8 @@ import { messages } from 'data/messages'
 import 'styles/Messages.scss'
 import chibiYonkisei from 'images/chibi_yonkisei.png'
 import Masonry from 'react-masonry-css'
-import { Parallax } from 'react-scroll-parallax'
+import { Lang } from 'App'
+import { text } from 'data/text'
 import { insertEveryN } from 'utils/general'
 import runningLuna from 'images/message_images/running_luna.png'
 import comfyCoco from 'images/message_images/comfy_coco2.png'
@@ -51,7 +52,9 @@ export function Messages () {
     <div id="messages">
       <FadeInSlideUp innerProps={messageInnerProps} >
         <img src={chibiYonkisei} alt="" />
-        <span>Messages from Luknights</span>
+        <Lang.Consumer>
+          {lang => <span>{text.messages.messagesFromLuknights[lang]}</span>}
+        </Lang.Consumer>
       </FadeInSlideUp>
 
       <Masonry

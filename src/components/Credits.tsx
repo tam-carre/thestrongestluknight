@@ -2,8 +2,9 @@ import { Contributor, credits } from 'data/credits'
 import 'styles/Credits.scss'
 import 'images/coco_looking_at_horizon.png'
 import { FadeInSlideUp } from 'components/IntersectionAnimator'
-// import dragonTail from 'images/dragon_tail.png'
 import combinedEmoji from 'images/message_images/combined_emoji.png'
+import { Lang } from 'App'
+import { text } from 'data/text'
 
 const creditList = credits
   .map ((cont, cat) => <Credit key={cat} category={cat} content={cont} />)
@@ -16,7 +17,9 @@ export function Credits () {
   <div id="credit-wrapper">
     <FadeInSlideUp threshold={.8} innerProps={innerCreditProps} >
       <img src={combinedEmoji} alt="" />
-      <span>Credits</span>
+      <Lang.Consumer>
+        {lang => <span>{text.credits.credits[lang]}</span>}
+      </Lang.Consumer>
     </FadeInSlideUp>
     
     <div id="credits">
@@ -36,39 +39,46 @@ interface CreditProps {
 
 function Credit ({category, content}: CreditProps) {
   return (
-    <div className="credit-block">
-    {/*<FadeInSlideUp innerProps={{className: 'credit-block'}} >*/}
-      <div className="credit-category">{category}</div>
-
-      {content.map ((credit, i) => (
-        <div className="credit-one-person" key={i}>
-          <div className="credit-name">
-            {credit.url ? <a href={credit.url}>
-                            {credit.icon &&
-                              <div className="credit-avatar">
-                                <img src={process.env.PUBLIC_URL + credit.icon} alt="" />
-                              </div>
-                            }
-                            {credit.name}
-                          </a>
-                        : credit.name}
+    <Lang.Consumer>
+      {lang => (
+        <div className="credit-block">
+          <div className="credit-category">
+            {text.credits[category][lang]}
           </div>
-          {credit.details &&
-            <div className="credit-details">{credit.details}</div>
-          }
 
-          {credit.artworks && credit.artworks.length > 0 &&
-            <div className="credit-artworks">
-              {credit.artworks!.map (({url, title}) => (
-                <div className="credit-artwork" key={url}>
-                  <a href={url}>{title}</a>
+          {content.map ((credit, i) => (
+            <div className="credit-one-person" key={i}>
+              <div className="credit-name">
+                {credit.url
+                  ? <a href={credit.url}>
+                      {credit.icon &&
+                        <div className="credit-avatar">
+                          <img src={credit.icon} alt="" />
+                        </div>
+                      }
+                      {credit.name}
+                    </a>
+                  : credit.name}
+              </div>
+              {credit.details &&
+                <div className="credit-details">
+                  {text.credits[credit.details][lang]}
                 </div>
-              ))}
+              }
+
+              {credit.artworks && credit.artworks.length > 0 &&
+                <div className="credit-artworks">
+                  {credit.artworks!.map (({url, title}) => (
+                    <div className="credit-artwork" key={url}>
+                      <a href={url}>{title}</a>
+                    </div>
+                  ))}
+                </div>
+              }
             </div>
-          }
+          ))}
         </div>
-      ))}
-    {/*</FadeInSlideUp>*/}
-    </div>
+      )}
+    </Lang.Consumer>
   )
 }

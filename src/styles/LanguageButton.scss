@@ -1,4 +1,7 @@
 #language-switcher {
+  cursor: pointer;
+  user-select: none;
+
   position: fixed;
   font-size: 25px;
   top: 5px;
@@ -8,5 +11,10 @@
 
   &.at-top {
     opacity: .4;
+  }
+
+  @media (max-width: 700px) {
+    top: unset;
+    bottom: 5px;
   }
 }

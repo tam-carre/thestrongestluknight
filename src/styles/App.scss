@@ -1,5 +1,10 @@
 @import './theme';
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Volkhov&display=block');
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Playfair+Display:ital,wght@1,500&family=Volkhov&family=Noto+Sans+JP&family=Noto+Serif+JP&family=M+PLUS+Rounded+1c&display=block');
+@import url('https://fonts.cdnfonts.com/css/abyssinica-sil');
+
+:root {
+  --title-style: normal;
+}
 
 html {
   scroll-behavior: smooth;
@@ -24,4 +29,16 @@ a, a:visited {
   height: 20px;
   width: 100%;
   top: 0px;
+}
+
+#site.jp {
+  --title-style: normal;
+}
+
+::selection {
+  background: #F6E6BD;
+}
+
+img::selection {
+  background: transparent;
 }

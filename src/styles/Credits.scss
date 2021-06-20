@@ -22,11 +22,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 86px;
+    padding-top: 38px;
     margin-top: -20px;
     span {
       background: -webkit-linear-gradient(45deg, $dark1, $med1);
-      -webkit-background-clip: text;
+      background-clip: text;
       margin-left: 15px;
     }
     img {

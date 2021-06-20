@@ -1,23 +1,22 @@
 import 'styles/IntroductionText.scss'
+import { Lang } from 'App'
+import { text } from 'data/text'
 
 export function IntroductionText ({ className }: { className?: string}) {
   return (
-    <div id="playlist-introduction-wrapper" className={className ?? ''}>
-      <div id="playlist-introduction">
-        {/*
-        <div id="flags">
-          <div id="en-flag">🇬🇧</div>
-          <div id="jp-flag">🇯🇵</div>
-        </div>*/}
-        <div>
-          Hey Kaichou, we Luknights want you to know that everyone is going to miss you dearly.
+    <Lang.Consumer>
+      {lang => (
+        <div id="playlist-introduction-wrapper" className={className ?? ''}>
+          <div id="playlist-introduction">
+            <div>
+              {text.introduction.firstParagraph[lang]}
+            </div>
+            <div id="playlist-introduction-paragraph-2">
+              {text.introduction.secondParagraph[lang]}
+            </div>
+          </div>
         </div>
-        {/*<FadeInSlideUp innerProps={{id: 'playlist-introduction-paragraph-2'}} >*/}
-        <div id="playlist-introduction-paragraph-2">
-            Here's our HimeCoco playlist so all of us, you included, can remember the good times—and just a little further down, you can read everyone's parting words for you.
-        </div>
-          {/*</FadeInSlideUp>*/}
-      </div>
-    </div>
+      )}
+    </Lang.Consumer>
   )
 }

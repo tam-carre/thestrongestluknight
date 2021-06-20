@@ -1,4 +1,5 @@
 import { LanguageCode } from 'data/text'
+import { Lang } from 'App'
 import 'styles/LanguageButton.scss'
 
 export function LanguageButton ({className, callback}: LanguageButtonProps) {
@@ -8,9 +9,17 @@ export function LanguageButton ({className, callback}: LanguageButtonProps) {
     callback (newLang)
   }
   return (
-    <div id="language-switcher" className={className ?? ''}>
-      🇯🇵
-    </div>
+    <Lang.Consumer>
+      {lang => (
+        <div
+          id="language-switcher"
+          className={className ?? ''}
+          onClick={() => toggleLang (lang)}
+        >
+          {lang === 'en' ? '\u{1F1EF}\u{1F1F5}' : '\u{1F1EC}\u{1F1E7}'}
+        </div>
+      )}
+    </Lang.Consumer>
   )
 }
 
@@ -18,5 +27,5 @@ export function LanguageButton ({className, callback}: LanguageButtonProps) {
 
 interface LanguageButtonProps {
   className?: string,
-  callback: React.Dispatch<React.SetStateAction<string>>
+  callback: React.Dispatch<React.SetStateAction<LanguageCode>>
 }

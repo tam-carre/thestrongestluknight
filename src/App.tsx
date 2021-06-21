@@ -11,7 +11,6 @@ import { ScrollNotifier } from 'components/ScrollNotifier'
 import classNames from 'classnames'
 import cocoLuna from 'images/coco_with_luna_back_tatoo.png'
 import kanaCoco from 'images/kanata_looking_at_dragon.png'
-import { ParallaxProvider } from 'react-scroll-parallax'
 import { AssetLoader, AssetLoaderProps, LoadStatus } from 'components/AssetLoader'
 import { LanguageCode } from 'data/text'
 
@@ -19,11 +18,9 @@ export const Lang: Context<LanguageCode> = createContext ('en' as LanguageCode)
 
 export function App () {
   return (
-    <ParallaxProvider>
-      <AssetLoader assets={preloadAssets}>
-        {LoadedApp}
-      </AssetLoader>
-    </ParallaxProvider>
+    <AssetLoader assets={preloadAssets}>
+      {LoadedApp}
+    </AssetLoader>
   )
 }
 
@@ -43,28 +40,32 @@ function LoadedApp (status: LoadStatus) {
   return status === LoadStatus.PENDING
     ? <div>Loading!!!</div>
     : <Lang.Provider value={language}>
-        <div id="site" className={language === 'jp' ? 'jp' : ''}>
-          <Navbar className={classNames ({
+        <Navbar className={classNames ({
             'at-top': atTop,
             'at-intro': atIntro,
             'at-playlist': atPlaylist,
           })} />
+        <div id="site" className={classNames('parallax-container', {
+          jp: language === 'jp'
+        })}>
         <LanguageButton
           className={classNames ({ 'at-top': atTop })}
           callback={setLanguage}
         />
           <ScrollNotifier callback={setAtTop}>
-            <div id="top"></div>
+            <div id="top" />
           </ScrollNotifier>
           <Header />
-          <ScrollNotifier callback={setAtIntro} threshold={60}>
-            <IntroductionText className={classNames ({ 'at-top': atTop })} />
-          </ScrollNotifier>
-          <ScrollNotifier callback={setAtPlaylist} threshold={30}>
-            <Playlist />
-            <Messages />
-          <Credits />
-          </ScrollNotifier>
+          <div className='main-content'>
+            <ScrollNotifier callback={setAtIntro} threshold={60}>
+              <IntroductionText className={classNames ({ 'at-top': atTop })} />
+            </ScrollNotifier>
+            <ScrollNotifier callback={setAtPlaylist} threshold={30}>
+              <Playlist />
+              <Messages />
+            <Credits />
+            </ScrollNotifier>
+          </div>
         </div>
       </Lang.Provider>
 }

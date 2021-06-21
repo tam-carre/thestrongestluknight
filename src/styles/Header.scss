@@ -1,6 +1,8 @@
 @import './theme';
 @import './utils';
 
+$scale: 0.1;
+
 .header-bg {
   overflow: hidden;
   position: absolute;
@@ -29,12 +31,13 @@
 
 #header {
   // background: $playlist-bg;
-   background: transparent;
-  position: relative;
+  background: transparent;
   color: $header-text-color;
   // z-index:10;
   height: 90vh;
   width: 100%;
+  position: absolute;
+  top: 0;
 
   #header-text-container {
     user-select: none;
@@ -102,3 +105,17 @@
   }
 }
 
+.parallax-container {
+  transform-origin: center top;
+  transform: scale3d(1, calc(1 - #{$scale}), 1);
+
+  & > * {
+    transform-origin: center top;
+    transform: scale3d(1, calc(1 / (1 - #{$scale})), 1);
+  }
+}
+
+.parallax-item {
+  position: sticky;
+  top: 0;
+}

@@ -3,13 +3,17 @@ import { FadeInSlideUp } from 'components/IntersectionAnimator'
 import { Lang } from 'App'
 import { text } from 'data/text'
 import cocoDream from 'images/coco_dream.gif'
+import cocoDreamWebp from 'images/coco_dream.webp'
 
 export function Playlist () {
   return (
     <div id="playlist-section">
       <div id="playlist-video-wrapper">
         <FadeInSlideUp innerProps={animationInnerProps} >
-          <img src={cocoDream} alt="" />
+          <picture>
+            <source type="image/webp" srcSet={cocoDreamWebp} />
+            <img src={cocoDream} alt="" />
+          </picture>
           <Lang.Consumer>
             {lang => <span>{text.playlist.himeCocoPlaylist[lang]}</span>}
           </Lang.Consumer>

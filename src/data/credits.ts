@@ -103,6 +103,10 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
       name: 'こーでー', url: 'https://twitter.com/kody_lu',
       details: 'Translation',
       icon: process.env.PUBLIC_URL + '/avatars/kody_lu.jpg'
+    }, {
+      name: 'Chunky', url: 'https://twitter.com/Chunkeeh',
+      details: 'Contributor',
+      icon: process.env.PUBLIC_URL + '/avatars/Chunkeeh.jpg'
     },
   ],
   Clipping: [

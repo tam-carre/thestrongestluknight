@@ -9,7 +9,7 @@ import { IntroductionText } from 'components/IntroductionText'
 import { Playlist } from 'components/Playlist'
 import { ScrollNotifier } from 'components/ScrollNotifier'
 import classNames from 'classnames'
-import cocoLuna from 'images/coco_with_luna_back_tatoo.png'
+import cocoLuna from 'images/coco_with_luna_back_tatoo.avif'
 import kanaCoco from 'images/kanata_looking_at_dragon.png'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import { AssetLoader, AssetLoaderProps, LoadStatus } from 'components/AssetLoader'
@@ -30,8 +30,8 @@ export function App () {
 ///////////////////////////////////////////////////////////////////////////////
 
 const preloadAssets: AssetLoaderProps['assets'] = [
-  { href: cocoLuna, as: 'image' },
-  { href: kanaCoco, as: 'image' },
+  // { href: cocoLuna, as: 'image' },
+  // { href: kanaCoco, as: 'image' },
 ]
 
 function LoadedApp (status: LoadStatus) {
@@ -63,7 +63,7 @@ function LoadedApp (status: LoadStatus) {
           <ScrollNotifier callback={setAtPlaylist} threshold={30}>
             <Playlist />
             <Messages />
-          <Credits />
+            <Credits />
           </ScrollNotifier>
         </div>
       </Lang.Provider>

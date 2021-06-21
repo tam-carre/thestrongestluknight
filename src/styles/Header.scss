@@ -79,8 +79,10 @@
 
     #cocoTatooCircle {
       position: fixed;
-      width: Min(60vw, 600px);
-      height: Min(90vh, 650px);
+      width: 60vw;
+      max-width: 650px;
+      height: 90vh;
+      max-height: 650px;
       top: 0;
       left: 0;
       right: 0;

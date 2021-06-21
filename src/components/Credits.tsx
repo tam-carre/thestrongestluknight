@@ -2,7 +2,7 @@ import { Contributor, credits } from 'data/credits'
 import 'styles/Credits.scss'
 import 'images/coco_looking_at_horizon.png'
 import { FadeInSlideUp } from 'components/IntersectionAnimator'
-import combinedEmoji from 'images/message_images/combined_emoji.png'
+import combinedEmoji from 'images/combined_emoji.png'
 import { Lang } from 'App'
 import { text } from 'data/text'
 

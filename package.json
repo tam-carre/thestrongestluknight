@@ -26,6 +26,7 @@
     "react-scroll-parallax": "^2.4.0",
     "react-scrollspy": "^3.4.3",
     "react-scrollspy-navigation": "^1.0.2",
+    "react-tooltip": "^4.2.21",
     "react-use-scroll-indicator": "^1.1.1",
     "typescript": "^4.3.2",
     "web-vitals": "^1.1.2"

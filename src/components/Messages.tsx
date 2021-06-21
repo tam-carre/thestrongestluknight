@@ -6,7 +6,6 @@ import Masonry from 'react-masonry-css'
 import { Lang } from 'App'
 import { text } from 'data/text'
 import { insertEveryN } from 'utils/general'
-import ReactTooltip from 'react-tooltip'
 import runningLuna from 'images/message_images/running_luna.png'
 import comfyCoco from 'images/message_images/comfy_coco2.png'
 import runningCoco from 'images/message_images/running_coco.png'
@@ -14,29 +13,20 @@ import runningCoco from 'images/message_images/running_coco.png'
 import comfyLuna from 'images/message_images/comfy_luna2.png'
 import pixartCoco from 'images/message_images/pixart_coco.png'
 import pixartLuna from 'images/message_images/pixart_luna.png'
+import { SourcedImage, SourcedImageProps } from 'components/SourcedImage'
 
-interface Image {
-  src: string,
-  author: string,
-  title: string,
-  url?: string
-}
-
-const images: Image[] = [
-  {src: runningCoco, author: 'エニモ', title: 'ほろふぉーす愛', url: 'https://www.pixiv.net/en/artworks/89232325'},
-  {src: runningLuna, author: 'エニモ', title: 'ほろふぉーす愛', url: 'https://www.pixiv.net/en/artworks/89232325'},
-  {src: pixartLuna, author: '銀鏡にと', title: '4期生アイドル衣装', url: 'https://www.pixiv.net/en/artworks/88113908'},
-  {src: comfyLuna, author: 'Yuusachii', title: 'Cozy Gen 4', url: 'https://www.pixiv.net/en/artworks/89126212'},
-  {src: comfyCoco, author: 'Yuusachii', title: 'Cozy Gen 4', url: 'https://www.pixiv.net/en/artworks/89126212'},
-  {src: pixartCoco, author: '銀鏡にと', title: '4期生アイドル衣装', url: 'https://www.pixiv.net/en/artworks/89232325'},
+const images: SourcedImageProps[] = [
+  {id: 'tip0', src: runningCoco, author: 'エニモ', title: 'ほろふぉーす愛', url: 'https://www.pixiv.net/en/artworks/89232325'},
+  {id: 'tip1', src: runningLuna, author: 'エニモ', title: 'ほろふぉーす愛', url: 'https://www.pixiv.net/en/artworks/89232325'},
+  {id: 'tip2', src: pixartLuna, author: '銀鏡にと', title: '4期生アイドル衣装', url: 'https://www.pixiv.net/en/artworks/88113908'},
+  {id: 'tip3', src: comfyLuna, author: 'Yuusachii', title: 'Cozy Gen 4', url: 'https://www.pixiv.net/en/artworks/89126212'},
+  {id: 'tip4', src: comfyCoco, author: 'Yuusachii', title: 'Cozy Gen 4', url: 'https://www.pixiv.net/en/artworks/89126212'},
+  {id: 'tip5', src: pixartCoco, author: '銀鏡にと', title: '4期生アイドル衣装', url: 'https://www.pixiv.net/en/artworks/89232325'},
 ]
 
-const imageEls = images .map (({src, author, title, url}, i) => (
-  <FadeInSlideUp key={src}>
-    <a href={url}>
-      <img data-tip={title+' — '+author} src={src} alt="" data-for={'tip'+i} />
-      <ReactTooltip effect="solid" type="warning" id={'tip'+i} />
-    </a>
+const imageEls = images.map ((props, i) => (
+  <FadeInSlideUp key={i}>
+    <SourcedImage {...props} />
   </FadeInSlideUp>
 ))
 

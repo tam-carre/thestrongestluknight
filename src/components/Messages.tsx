@@ -31,14 +31,15 @@ const images: Image[] = [
   {src: pixartCoco, author: '銀鏡にと', title: '4期生アイドル衣装', url: 'https://www.pixiv.net/en/artworks/89232325'},
 ]
 
-const imageEls = images.map (({src, author, title, url}) => (
+const imageEls = images .map (({src, author, title, url}, i) => (
   <FadeInSlideUp key={src}>
     <a href={url}>
-      <img data-tip={title + ' — ' + author} src={src} alt=""/>
-      <ReactTooltip effect="solid" type="warning" />
+      <img data-tip={title+' — '+author} src={src} alt="" data-for={'tip'+i} />
+      <ReactTooltip effect="solid" type="warning" id={'tip'+i} />
     </a>
   </FadeInSlideUp>
 ))
+
 
 const messageEls = messages.map ((msg, i) => (
   <Message

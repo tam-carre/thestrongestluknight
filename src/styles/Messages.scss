@@ -62,7 +62,7 @@
     @media (max-width: 450px) {
       font-size: 26px;
     }
-    span {
+    span.messages-title {
       background: -webkit-linear-gradient(45deg, $dark1, $med1);
       background-clip: text;
       //Other fix, delete if no longer needed

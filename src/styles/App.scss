@@ -42,3 +42,9 @@ a, a:visited {
 img::selection {
   background: transparent;
 }
+
+span.tooltip-text {
+  font: $normal-font;
+  color: white;
+  -webkit-text-fill-color: white !important;
+}

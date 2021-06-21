@@ -52,9 +52,15 @@ export function Messages () {
   return (
     <div id="messages">
       <FadeInSlideUp innerProps={messageInnerProps} >
-        <img src={chibiYonkisei} alt="" />
+        <SourcedImage
+          id="chibi4sei"
+          src={chibiYonkisei}
+          author="colonel_AKI"
+          title="Chibi Hololive #6"
+          url="https://www.pixiv.net/en/artworks/84002989"
+        />
         <Lang.Consumer>
-          {lang => <span>{text.messages.messagesFromLuknights[lang]}</span>}
+          {lang => <span className="messages-title">{text.messages.messagesFromLuknights[lang]}</span>}
         </Lang.Consumer>
       </FadeInSlideUp>
 

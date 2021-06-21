@@ -1,34 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.6f5de8c7.chunk.css",
-    "main.js": "/static/js/main.a98fcdc4.chunk.js",
-    "main.js.map": "/static/js/main.a98fcdc4.chunk.js.map",
+    "main.css": "/static/css/main.3c3cbb26.chunk.css",
+    "main.js": "/static/js/main.21e23dd8.chunk.js",
+    "main.js.map": "/static/js/main.21e23dd8.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c3b4cd9b.js",
     "runtime-main.js.map": "/static/js/runtime-main.c3b4cd9b.js.map",
-    "static/js/2.9cd2245c.chunk.js": "/static/js/2.9cd2245c.chunk.js",
-    "static/js/2.9cd2245c.chunk.js.map": "/static/js/2.9cd2245c.chunk.js.map",
+    "static/js/2.99e8b6f5.chunk.js": "/static/js/2.99e8b6f5.chunk.js",
+    "static/js/2.99e8b6f5.chunk.js.map": "/static/js/2.99e8b6f5.chunk.js.map",
     "static/js/3.c308309b.chunk.js": "/static/js/3.c308309b.chunk.js",
     "static/js/3.c308309b.chunk.js.map": "/static/js/3.c308309b.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.6f5de8c7.chunk.css.map": "/static/css/main.6f5de8c7.chunk.css.map",
-    "static/js/2.9cd2245c.chunk.js.LICENSE.txt": "/static/js/2.9cd2245c.chunk.js.LICENSE.txt",
-    "static/media/chibi_yonkisei.c7668e4d.png": "/static/media/chibi_yonkisei.c7668e4d.png",
+    "static/css/main.3c3cbb26.chunk.css.map": "/static/css/main.3c3cbb26.chunk.css.map",
+    "static/js/2.99e8b6f5.chunk.js.LICENSE.txt": "/static/js/2.99e8b6f5.chunk.js.LICENSE.txt",
     "static/media/coco_dream.6bb12db3.gif": "/static/media/coco_dream.6bb12db3.gif",
-    "static/media/Credits.scss": "/static/media/coco_looking_at_horizon.4e949e71.png",
-    "static/media/coco_with_luna_back_tatoo.51614d13.png": "/static/media/coco_with_luna_back_tatoo.51614d13.png",
-    "static/media/combined_emoji.a606dea4.png": "/static/media/combined_emoji.a606dea4.png",
-    "static/media/comfy_coco2.8e82c8b0.png": "/static/media/comfy_coco2.8e82c8b0.png",
-    "static/media/comfy_luna2.1901ccaf.png": "/static/media/comfy_luna2.1901ccaf.png",
-    "static/media/kanata_looking_at_dragon.a0d94e77.png": "/static/media/kanata_looking_at_dragon.a0d94e77.png",
-    "static/media/pixart_coco.39da0a2c.png": "/static/media/pixart_coco.39da0a2c.png",
-    "static/media/pixart_luna.48fb6180.png": "/static/media/pixart_luna.48fb6180.png",
-    "static/media/running_coco.707e3f79.png": "/static/media/running_coco.707e3f79.png",
-    "static/media/running_luna.ce930366.png": "/static/media/running_luna.ce930366.png"
+    "static/media/coco_dream.cf8b4d94.webp": "/static/media/coco_dream.cf8b4d94.webp",
+    "static/media/Credits.scss": "/static/media/coco_looking_at_horizon.8585979a.png",
+    "static/media/comfy_coco2.25b991af.png": "/static/media/comfy_coco2.25b991af.png",
+    "static/media/kanata_looking_at_dragon.540de874.webp": "/static/media/kanata_looking_at_dragon.540de874.webp",
+    "static/media/kanata_looking_at_dragon.9223c225.avif": "/static/media/kanata_looking_at_dragon.9223c225.avif",
+    "static/media/kanata_looking_at_dragon.bd0e4476.jpg": "/static/media/kanata_looking_at_dragon.bd0e4476.jpg",
+    "static/media/running_coco.e8908992.png": "/static/media/running_coco.e8908992.png",
+    "static/media/running_luna.5c71de58.png": "/static/media/running_luna.5c71de58.png"
   },
   "entrypoints": [
     "static/js/runtime-main.c3b4cd9b.js",
-    "static/js/2.9cd2245c.chunk.js",
-    "static/css/main.6f5de8c7.chunk.css",
-    "static/js/main.a98fcdc4.chunk.js"
+    "static/js/2.99e8b6f5.chunk.js",
+    "static/css/main.3c3cbb26.chunk.css",
+    "static/js/main.21e23dd8.chunk.js"
   ]
 }

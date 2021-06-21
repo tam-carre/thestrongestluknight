@@ -1,7 +1,7 @@
 {
   "name": "thestrongestluknight",
   "version": "0.1.0",
-  "homepage": "https://tam-carre.github.io/thestrongestluknight/",
+  "homepage": "https://thestrongestluknight.com",
   "private": true,
   "dependencies": {
     "@react-spring/parallax": "^9.2.3",

@@ -115,11 +115,11 @@ $scale: 0.1;
 
 .parallax-container {
   transform-origin: center top;
-  transform: scale3d(1, calc(1 - #{$scale}), 1);
+  transform: scaleY(calc(1 - #{$scale}));
 
   & > * {
     transform-origin: center top;
-    transform: scale3d(1, calc(1 / (1 - #{$scale})), 1);
+    transform: scaleY(calc(1 / (1 - #{$scale})));
   }
 }
 

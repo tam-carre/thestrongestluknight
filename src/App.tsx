@@ -36,6 +36,7 @@ function LoadedApp (status: LoadStatus) {
   const [atTop, setAtTop]           = useState (true)
   const [atIntro, setAtIntro]       = useState (false)
   const [atPlaylist, setAtPlaylist] = useState (false)
+  const [atCredits, setAtCredits]   = useState (false)
 
   return status === LoadStatus.PENDING
     ? <div>Loading!!!</div>
@@ -43,15 +44,15 @@ function LoadedApp (status: LoadStatus) {
         <Navbar className={classNames ({
             'at-top': atTop,
             'at-intro': atIntro,
-            'at-playlist': atPlaylist,
+            'at-playlist': atPlaylist || atCredits,
           })} />
-        <div id="site" className={classNames('parallax-container', {
-          jp: language === 'jp'
-        })}>
         <LanguageButton
           className={classNames ({ 'at-top': atTop })}
           callback={setLanguage}
         />
+        <div id="site" className={classNames('parallax-container', {
+          jp: language === 'jp'
+        })}>
           <ScrollNotifier callback={setAtTop}>
             <div id="top" />
           </ScrollNotifier>
@@ -60,12 +61,14 @@ function LoadedApp (status: LoadStatus) {
             <ScrollNotifier callback={setAtIntro} threshold={60}>
               <IntroductionText className={classNames ({ 'at-top': atTop })} />
             </ScrollNotifier>
-            <ScrollNotifier callback={setAtPlaylist} threshold={30}>
-              <Playlist />
-              <Messages />
-            <Credits />
-            </ScrollNotifier>
           </div>
+          <ScrollNotifier callback={setAtPlaylist} threshold={30}>
+            <Playlist />
+            <Messages />
+          </ScrollNotifier>
         </div>
+        <ScrollNotifier callback={setAtCredits} threshold={30}>
+          <Credits />
+        </ScrollNotifier>
       </Lang.Provider>
 }

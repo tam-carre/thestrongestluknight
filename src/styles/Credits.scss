@@ -15,7 +15,7 @@
 
   #credits-title {
     // @include gradient-title-dark;
-    @include gradient-title;
+    @extend .gradient-title;
     font: $stylized-font;
     font-size: 46px;
     text-align: center;
@@ -64,7 +64,7 @@
       margin-bottom: 20px;
 
       .credit-category {
-        @include gradient-title;
+        @extend .gradient-title;
         // @include gradient-title-dark;
         color: black;
         font: $stylized-font;

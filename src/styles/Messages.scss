@@ -49,12 +49,12 @@
   }
 
   #messages-title {
+    @extend .gradient-title;
     margin: 30px auto 10px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    @include gradient-title;
     font: $stylized-font;
     font-size: 46px;
     text-rendering: optimizeLegibility;
@@ -66,7 +66,7 @@
       background: -webkit-linear-gradient(45deg, $dark1, $med1);
       background-clip: text;
       //Other fix, delete if no longer needed
-      //@include gradient-title;
+      //@extend gradient-title;
       //font-size: 46px;
       margin-left: 30px;
     }

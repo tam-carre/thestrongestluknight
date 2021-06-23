@@ -1,20 +1,10 @@
-$header-text-color: #310C00;
+// colors
 
 $dark0: #310700;
 $dark1: #8E2800;
-
-$faded1: #755F56;
-
 $med1: #DB8428;
-
 $light1: #FFF0A5;
-
-$text-border: #FFF;
-// $page-bg: #FFFCFD;
-$page-bg: #FDF6F3;
-
-$stylized-font: var(--title-style) 500 12px 'Playfair Display', serif;
-$normal-font: normal 16px 'Abyssinica SIL', 'Noto Sans JP', sans;
+$faded1: #755F56;
 
 $red-at-night-1: #FFF587;
 $red-at-night-2: #FF8C64;
@@ -22,25 +12,27 @@ $red-at-night-3: #FF665A;
 $red-at-night-4: #7D6B7D;
 $red-at-night-5: #A3A1A8;
 
-// $playlist-bg: $red-at-night-3;
+// specific elements
+$header-text-color: #310C00;
+$page-bg: #FDF6F3;
 $playlist-bg: $red-at-night-2;
+$text-border: #FFF;
 
-@mixin gradient-title {
-  font: $stylized-font;
-  background: linear-gradient(45deg, $dark1, $med1);
+// fonts 
+$normal-font: normal 16px 'Abyssinica SIL', 'Noto Sans JP', sans;
+$stylized-font: var(--title-style) 500 12px 'Playfair Display', serif;
+
+@mixin gradient-mixin($to-color) {
+  background: linear-gradient(45deg, $dark1, $to-color);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  font: $stylized-font;
 }
 
-// @mixin gradient-title {
-  // font: $stylized-font;
-  // color: $dark1;
-// }
+.gradient-title {
+  @include gradient-mixin($med1)
+}
 
-
-@mixin gradient-title-dark {
-  font: $stylized-font;
-  background: linear-gradient(45deg, $dark1, $dark0);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+.gradient-title-dark {
+  @include gradient-mixin($dark0)
 }

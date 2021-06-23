@@ -1,5 +1,6 @@
 import 'styles/App.scss'
-import { createContext, useState, Context } from 'react'
+import 'styles/Parallax.scss'
+import { createContext, useState, Context, useRef, createRef } from 'react'
 import { Header } from 'components/Header'
 import { Credits } from 'components/Credits'
 import { Messages } from 'components/Messages'
@@ -11,7 +12,6 @@ import { ScrollNotifier } from 'components/ScrollNotifier'
 import classNames from 'classnames'
 import cocoLuna from 'images/coco_with_luna_back_tatoo.avif'
 import kanaCoco from 'images/kanata_looking_at_dragon.png'
-import { ParallaxProvider } from 'react-scroll-parallax'
 import { AssetLoader, AssetLoaderProps, LoadStatus } from 'components/AssetLoader'
 import { LanguageCode } from 'data/text'
 
@@ -19,11 +19,9 @@ export const Lang: Context<LanguageCode> = createContext ('en' as LanguageCode)
 
 export function App () {
   return (
-    <ParallaxProvider>
-      <AssetLoader assets={preloadAssets}>
-        {LoadedApp}
-      </AssetLoader>
-    </ParallaxProvider>
+    <AssetLoader assets={preloadAssets}>
+      {LoadedApp}
+    </AssetLoader>
   )
 }
 
@@ -35,25 +33,26 @@ const preloadAssets: AssetLoaderProps['assets'] = [
 ]
 
 function LoadedApp (status: LoadStatus) {
-  const [language, setLanguage]     = useState ('en' as LanguageCode)
-  const [atTop, setAtTop]           = useState (true)
-  const [atIntro, setAtIntro]       = useState (false)
-  const [atPlaylist, setAtPlaylist] = useState (false)
+  const [language, setLanguage]           = useState ('en' as LanguageCode)
+  const [atTop, setAtTop]                 = useState (true)
+  const [atIntro, setAtIntro]             = useState (false)
+  const [atPlaylist, setAtPlaylist]       = useState (false)
+  const [scrollElement, setScrollElement] = useState<HTMLDivElement | null>(null);
 
   return status === LoadStatus.PENDING
     ? <div>Loading!!!</div>
     : <Lang.Provider value={language}>
-        <div id="site" className={language === 'jp' ? 'jp' : ''}>
-          <Navbar className={classNames ({
-            'at-top': atTop,
-            'at-intro': atIntro,
-            'at-playlist': atPlaylist,
-          })} />
-        <LanguageButton
-          className={classNames ({ 'at-top': atTop })}
-          callback={setLanguage}
-        />
-          <ScrollNotifier callback={setAtTop}>
+        <div id="site" className={language === 'jp' ? 'jp' : ''} ref={setScrollElement}>
+          <Navbar
+            className={classNames ({
+              'at-top': atTop,
+              'at-intro': atIntro,
+              'at-playlist': atPlaylist,
+            })}
+            scrollElement={scrollElement || undefined}
+            setLanguage={setLanguage}
+          />
+          <ScrollNotifier callback={setAtTop} element={scrollElement || undefined}>
             <div id="top"></div>
           </ScrollNotifier>
           <Header />

@@ -16,10 +16,11 @@
 
   height: 49px;
   padding: 0;
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100%;
   z-index:9;
-
+  margin-bottom: -49px;
   a {
     color: var(--inactive-items);
     &.is-current { color: var(--active-item); }

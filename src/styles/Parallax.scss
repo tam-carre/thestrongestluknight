@@ -27,9 +27,9 @@ $parallax-ios         : true !default;
       -webkit-overflow-scrolling: touch;
     }
     // Preserve 3D
-    // &, & > * {
-      // transform-style: preserve-3d;
-    // }
+    &, & > * {
+      transform-style: preserve-3d;
+    }
   }
 }
 

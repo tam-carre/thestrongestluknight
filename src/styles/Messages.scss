@@ -62,9 +62,6 @@
     font: $stylized-font;
     text-rendering: optimizeLegibility;
     padding: 36px 30px 0;
-    @media (max-width: 450px) {
-      font-size: 26px;
-    }
     span.messages-title {
       background: -webkit-linear-gradient(45deg, $dark1, $med1);
       background-clip: text;
@@ -73,6 +70,9 @@
       //@include gradient-title;
       //font-size: 46px;
       margin-left: 30px;
+    @media (max-width: 450px) {
+      font-size: 26px;
+    }
     }
     img.sourced-img {
       width: 130px;

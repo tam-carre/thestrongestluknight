@@ -1,9 +1,9 @@
 @import './theme';
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Noto+Sans+JP&display=block');
+// @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Noto+Sans+JP&display=block');
 @import url('https://fonts.cdnfonts.com/css/abyssinica-sil');
 
 :root {
-  --title-style: normal;
+  --title-style: italic;
 }
 
 html {

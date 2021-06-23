@@ -51,6 +51,7 @@ const messageInnerProps = {id: 'messages-title'};
 export function Messages () {
   return (
     <div id="messages">
+      <div id="messages-container">
       <FadeInSlideUp innerProps={messageInnerProps} >
         <SourcedImage
           id="chibi4sei"
@@ -78,6 +79,7 @@ export function Messages () {
         </Parallax>
       </div>
       */}
+    </div>
     </div>
   )
 }

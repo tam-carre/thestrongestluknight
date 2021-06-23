@@ -3,10 +3,10 @@
 
 #playlist-introduction-wrapper {
   background: $playlist-bg;
-  padding: 50px 0 50px;
+  padding: 50px 0;
   position: relative;
-  top: -35px;
-  transform-style: preserve-3d;
+  // top: -35px;
+  // transform-style: preserve-3d;
   z-index: 4;
 
   #flags {

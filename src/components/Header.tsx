@@ -14,7 +14,7 @@ import kanataLookingAtDragonAvif from 'images/kanata_looking_at_dragon.avif'
 
 export function Header () {
   const [loaded, setLoaded] = useState (false)
-  const [ref, inView] = useInView ({ threshold: .95, initialInView: true })
+  const [ref, inView] = useInView ({ threshold: 1, initialInView: true })
   const topTextStyle = useSpring (getTextAnim ('left', inView));
   const bottomTextStyle = useSpring (getTextAnim ('right', inView));
 
@@ -44,16 +44,6 @@ export function Header () {
         </animated.div>
      </div>
       <div id="cocoTatooContainer">
-        <div id="cocoTatooCircle">
-          {/*<animated.div style={fade}>*/}
-            {/*<picture>*/}
-            {/*<source type="image/avif" srcSet={cocoWithLunaTatooAvif} />*/}
-            {/*<source type="image/webp" srcSet={cocoWithLunaTatooWebp} />*/}
-              {/*<img src={cocoWithLunaTatoo} alt="Coco with a Luna tatoo"/>*/}
-            {/*</picture>*/}
-            {/*</animated.div>*/}
-        </div>
-
         <Lang.Consumer>
           {lang => (
             <div id="header-text-container">

@@ -42,6 +42,10 @@ function LoadedApp (status: LoadStatus) {
   return status === LoadStatus.PENDING
     ? <div>Loading!!!</div>
     : <Lang.Provider value={language}>
+        <LanguageButton
+          className={classNames ({ 'at-top': atTop })}
+          callback={setLanguage}
+        />
         <div id="site" className={language === 'jp' ? 'jp' : ''} ref={setScrollElement}>
           <Navbar
             className={classNames ({
@@ -50,16 +54,15 @@ function LoadedApp (status: LoadStatus) {
               'at-playlist': atPlaylist,
             })}
             scrollElement={scrollElement || undefined}
-            setLanguage={setLanguage}
           />
           <ScrollNotifier callback={setAtTop} element={scrollElement || undefined}>
             <div id="top"></div>
           </ScrollNotifier>
           <Header />
-          <ScrollNotifier callback={setAtIntro} threshold={45}>
+          <ScrollNotifier callback={setAtIntro} threshold={45} element={scrollElement || undefined}>
             <IntroductionText className={classNames ({ 'at-top': atTop })} />
           </ScrollNotifier>
-          <ScrollNotifier callback={setAtPlaylist} threshold={45}>
+          <ScrollNotifier callback={setAtPlaylist} threshold={45} element={scrollElement || undefined}>
             <Playlist />
             <Messages />
             <Credits />

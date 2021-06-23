@@ -1,23 +1,23 @@
 export const configs = {
   longEaseOut: {
-    tension: 800,
-    friction: 820,
+    tension: 8,
+    friction: 8,
     mass: .6,
-    precision: 0.001
+    precision: 0.01
   },
   mediumEaseOut: {
-    tension: 800,
-    friction: 420,
+    tension: 8,
+    friction: 4,
     mass: .6,
   },
   shortEaseOut: {
-    tension: 800,
-    friction: 120,
+    tension: 8,
+    friction: 1,
     mass: .6,
   },
   veryShortEaseOut: {
-    tension: 800,
-    friction: 80,
+    tension: 80,
+    friction: 8,
     mass: .6,
   }
 }

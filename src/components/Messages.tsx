@@ -25,7 +25,7 @@ const images: SourcedImageProps[] = [
 ]
 
 const imageEls = images.map ((props, i) => (
-  <FadeInSlideUp key={i}>
+  <FadeInSlideUp key={i+'img'}>
     <SourcedImage {...props} />
   </FadeInSlideUp>
 ))

@@ -17,3 +17,12 @@ $textBorder4pxPageBg: $page-bg 4px 0px 0px, $page-bg 3.87565px 0.989616px 0px, $
     top: 0;
     left: 0;
 }
+
+.invisible {
+  opacity: 0;
+}
+.fade-in {
+  animation: fade-in 0.8s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
+}
+@keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+

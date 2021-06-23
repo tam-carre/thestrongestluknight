@@ -23,16 +23,11 @@ export function Header () {
     config: configs.veryShortEaseOut
   })
 
-  const onLoadFade = useSpring ({
-    from: { opacity: 0 }, to: { opacity: loaded ? 1 : 0 },
-    config: configs.mediumEaseOut
-  })
-
   return (<>
     <div id="header" ref={ref}>
       <div className="header-bg">
-        <animated.div id="dark-overlay" style={fade}></animated.div>
-        <animated.div style={onLoadFade}>
+        <div id="dark-overlay" className={loaded ? 'fade-in' : 'invisible'}></div>
+        <div className={loaded ? 'fade-in' : 'invisible'}>
           <picture>
             <source srcSet={kanataLookingAtDragonAvif} type="image/avif"/>
             <source srcSet={kanataLookingAtDragonWebp} type="image/webp"/>
@@ -41,7 +36,7 @@ export function Header () {
               onLoad={() => setLoaded (true)}
             />
           </picture>
-        </animated.div>
+        </div>
      </div>
       <div id="cocoTatooContainer">
         <Lang.Consumer>
@@ -78,5 +73,3 @@ const getTextAnim = (prop: 'right'|'left', inView: boolean) => ({
              : { from: { [prop]: '50%' }, to: { [prop]: '40%' } }),
   config: configs.longEaseOut
 })
-
-const parallaxValues = [-75, 60];

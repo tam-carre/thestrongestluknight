@@ -6,14 +6,18 @@
 
 #messages {
   margin: 0 auto;
-  width: 1200px;
-  @media (max-width: 1200px) {
-    width: 100%;
-    max-width: 850px;
-  }
-  @media (max-width: 850px) {
-    left: 0;
-    max-width: 600px;
+  width: 100%;
+  #messages-container {
+    margin: 0 auto;
+    width: 1200px;
+    @media (max-width: 1200px) {
+      width: 100%;
+      max-width: 850px;
+    }
+    @media (max-width: 850px) {
+      left: 0;
+      max-width: 600px;
+    }
   }
   #message-images {
     width: 100%;

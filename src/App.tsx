@@ -56,10 +56,10 @@ function LoadedApp (status: LoadStatus) {
             <div id="top"></div>
           </ScrollNotifier>
           <Header />
-          <ScrollNotifier callback={setAtIntro} threshold={60} element={scrollElement || undefined}>
+          <ScrollNotifier callback={setAtIntro} threshold={45}>
             <IntroductionText className={classNames ({ 'at-top': atTop })} />
           </ScrollNotifier>
-          <ScrollNotifier callback={setAtPlaylist} threshold={30} element={scrollElement || undefined}>
+          <ScrollNotifier callback={setAtPlaylist} threshold={45}>
             <Playlist />
             <Messages />
             <Credits />

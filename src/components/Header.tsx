@@ -2,6 +2,7 @@ import cocoWithLunaTatoo from 'images/coco_with_luna_back_tatoo.png'
 import cocoWithLunaTatooAvif from 'images/coco_with_luna_back_tatoo.avif'
 import cocoWithLunaTatooWebp from 'images/coco_with_luna_back_tatoo.webp'
 import 'styles/Header.scss'
+import { useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { useSpring, animated } from 'react-spring'
 import { configs, anims } from 'utils/springs'
@@ -12,26 +13,36 @@ import kanataLookingAtDragonJpg from 'images/kanata_looking_at_dragon.jpg'
 import kanataLookingAtDragonAvif from 'images/kanata_looking_at_dragon.avif'
 
 export function Header () {
+  const [loaded, setLoaded] = useState (false)
   const [ref, inView] = useInView ({ threshold: .95, initialInView: true })
   const topTextStyle = useSpring (getTextAnim ('left', inView));
   const bottomTextStyle = useSpring (getTextAnim ('right', inView));
-
 
   const fade = useSpring ({
     ...(inView ? anims.fadeIn : anims.fadeOut),
     config: configs.veryShortEaseOut
   })
 
+  const onLoadFade = useSpring ({
+    from: { opacity: 0 }, to: { opacity: loaded ? 1 : 0 },
+    config: configs.mediumEaseOut
+  })
+
   return (<>
     <div id="header" ref={ref}>
-    <div className="header-bg" >
-      <animated.div id="dark-overlay" style={fade}></animated.div>
-      <picture>
-        <source srcSet={kanataLookingAtDragonAvif} type="image/avif"/>
-        <source srcSet={kanataLookingAtDragonWebp} type="image/webp"/>
-        <img src={kanataLookingAtDragonJpg} alt=""/>
-      </picture>
-   </div>
+      <div className="header-bg">
+        <animated.div id="dark-overlay" style={fade}></animated.div>
+        <animated.div style={onLoadFade}>
+          <picture>
+            <source srcSet={kanataLookingAtDragonAvif} type="image/avif"/>
+            <source srcSet={kanataLookingAtDragonWebp} type="image/webp"/>
+            <img
+              src={kanataLookingAtDragonJpg} alt=""
+              onLoad={() => setLoaded (true)}
+            />
+          </picture>
+        </animated.div>
+     </div>
       <div id="cocoTatooContainer">
         <div id="cocoTatooCircle">
           {/*<animated.div style={fade}>*/}

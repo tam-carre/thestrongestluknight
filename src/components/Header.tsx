@@ -5,7 +5,6 @@ import 'styles/Header.scss'
 import { useInView } from 'react-intersection-observer'
 import { useSpring, animated } from 'react-spring'
 import { configs, anims } from 'utils/springs'
-import { Parallax } from 'react-scroll-parallax'
 import { text } from 'data/text'
 import { Lang } from 'App'
 import kanataLookingAtDragonWebp from 'images/kanata_looking_at_dragon.webp'
@@ -25,14 +24,14 @@ export function Header () {
 
   return (<>
     <div id="header" ref={ref}>
-    <Parallax className="header-bg" y={parallaxValues} >
+    <div className="header-bg" >
       <animated.div id="dark-overlay" style={fade}></animated.div>
       <picture>
         <source srcSet={kanataLookingAtDragonAvif} type="image/avif"/>
         <source srcSet={kanataLookingAtDragonWebp} type="image/webp"/>
         <img src={kanataLookingAtDragonJpg} alt=""/>
       </picture>
-   </Parallax>
+   </div>
       <div id="cocoTatooContainer">
         <div id="cocoTatooCircle">
           {/*<animated.div style={fade}>*/}

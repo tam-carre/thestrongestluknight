@@ -42,16 +42,16 @@ function LoadedApp (status: LoadStatus) {
   return status === LoadStatus.PENDING
     ? <div>Loading!!!</div>
     : <Lang.Provider value={language}>
-        <Navbar
-          className={classNames ({
-            'at-top': atTop,
-            'at-intro': atIntro,
-            'at-playlist': atPlaylist,
-          })}
-          scrollElement={scrollElement || undefined}
-          setLanguage={setLanguage}
-        />
         <div id="site" className={language === 'jp' ? 'jp' : ''} ref={setScrollElement}>
+          <Navbar
+            className={classNames ({
+              'at-top': atTop,
+              'at-intro': atIntro,
+              'at-playlist': atPlaylist,
+            })}
+            scrollElement={scrollElement || undefined}
+            setLanguage={setLanguage}
+          />
           <ScrollNotifier callback={setAtTop} element={scrollElement || undefined}>
             <div id="top"></div>
           </ScrollNotifier>

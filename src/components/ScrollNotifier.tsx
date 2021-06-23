@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react'
 
 export function ScrollNotifier ({
-  children, callback, threshold = 0, bottomThreshold = 0, element = window
+  children, callback, threshold = 0, bottomThreshold = 0, element = window, className,
 }: ScrollNotifierProps) {
   const watchedElRef = useRef <HTMLDivElement | null> (null)
   const isAtTop      = useRef <boolean | undefined>   (undefined)
@@ -25,7 +25,7 @@ export function ScrollNotifier ({
     return () => element.removeEventListener ('scroll', handleScroll)
   }, [callback, threshold, bottomThreshold, element])
 
-  return <div ref={watchedElRef}> {children} </div>
+  return <div ref={watchedElRef} className={className}> {children} </div>
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -42,5 +42,6 @@ interface ScrollNotifierProps {
 
   /** Scroll element to listen to */
   element?: HTMLElement | Window;
+  className?: string;
   children: React.ReactNode
 }

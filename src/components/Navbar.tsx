@@ -3,8 +3,11 @@ import 'styles/Navbar.scss'
 import { Lang } from 'App'
 import { text } from 'data/text'
 import { useEffect, useState } from 'react'
+import { LanguageButton } from './LanguageButton'
+import { LanguageCode } from 'data/text'
 
-export function Navbar ({ className, scrollElement }: { className?: string, scrollElement?: HTMLDivElement }) {
+export function Navbar ({ className, scrollElement, setLanguage }: 
+  { className?: string, scrollElement?: HTMLDivElement, setLanguage: React.Dispatch<React.SetStateAction<LanguageCode>> }) {
   const [scroll, setScroll] = useState(0);
   useEffect(() => {
     if (!scrollElement) {
@@ -25,7 +28,7 @@ export function Navbar ({ className, scrollElement }: { className?: string, scro
         <div id="progress-bar-elapsed" style={{width: scroll+'%'}}></div>
       </div>
       <Lang.Consumer>
-        {lang => (
+        {lang => (<>
           <Scrollspy
             rootEl="#site"
             items={['header', 'playlist-section', 'messages', 'credit-wrapper']}
@@ -37,7 +40,11 @@ export function Navbar ({ className, scrollElement }: { className?: string, scro
             <a href="#messages">{text.navbar.messages[lang]}</a>
             <a href="#credit-wrapper">{text.navbar.credits[lang]}</a>
           </Scrollspy>
-        )}
+          <LanguageButton
+              className={className}
+              callback={setLanguage}
+            />
+        </>)}
       </Lang.Consumer>
     </div>
   )

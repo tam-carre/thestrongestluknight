@@ -19,7 +19,7 @@
   position: fixed;
   width: 100%;
   z-index:9;
-
+  margin-left: -20px;
   a {
     color: var(--inactive-items);
     &.is-current { color: var(--active-item); }

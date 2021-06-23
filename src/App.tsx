@@ -49,12 +49,9 @@ function LoadedApp (status: LoadStatus) {
             'at-playlist': atPlaylist,
           })}
           scrollElement={scrollElement || undefined}
+          setLanguage={setLanguage}
         />
         <div id="site" className={language === 'jp' ? 'jp' : ''} ref={setScrollElement}>
-        <LanguageButton
-          className={classNames ({ 'at-top': atTop })}
-          callback={setLanguage}
-        />
           <ScrollNotifier callback={setAtTop} element={scrollElement || undefined}>
             <div id="top"></div>
           </ScrollNotifier>

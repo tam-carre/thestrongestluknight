@@ -1,20 +1,27 @@
-import ReactTooltip from 'react-tooltip'
+import { ReactNode } from 'react'
+import 'styles/SourcedImage.scss'
 
 export interface SourcedImageProps {
-  id: string,
-  src: string,
   author: string,
   title: string,
-  url?: string
+  src?: string,
+  icon?: string,
+  url?: string,
+  children?: ReactNode
+  className?: string
 }
 
 export function SourcedImage (props: SourcedImageProps) {
-  const { id, src, author, title, url } = props
-  const image = <>
-    <img data-tip src={src} alt="" data-for={id} />
-    <ReactTooltip effect="solid" type="warning" id={id}>
-      <span className="tooltip-text">{title+' — '+author}</span>
-    </ReactTooltip>
-  </>
+  const { src, author, title, url, icon, children } = props
+  const avatar = icon ? <img className="avatar" src={icon} alt="" /> : ' — '
+  const image = (
+    <div className="item-with-tooltip">
+      {src ? <img className="sourced-img" src={src} alt="" /> : children}
+      <div className="tooltip-container">
+        <span className="tooltip-text">{title}{avatar}{author}</span>
+        <div className="arrow-down"></div>
+      </div>
+    </div>
+  )
   return url ? <a href={url}>{image}</a> : image
 }

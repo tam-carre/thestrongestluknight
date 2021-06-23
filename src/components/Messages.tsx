@@ -16,12 +16,21 @@ import pixartLuna from 'images/message_images/pixart_luna.png'
 import { SourcedImage, SourcedImageProps } from 'components/SourcedImage'
 
 const images: SourcedImageProps[] = [
-  {id: 'tip0', src: runningCoco, author: 'エニモ', title: 'ほろふぉーす愛', url: 'https://www.pixiv.net/en/artworks/89232325'},
-  {id: 'tip1', src: runningLuna, author: 'エニモ', title: 'ほろふぉーす愛', url: 'https://www.pixiv.net/en/artworks/89232325'},
-  {id: 'tip2', src: pixartLuna, author: '銀鏡にと', title: '4期生アイドル衣装', url: 'https://www.pixiv.net/en/artworks/88113908'},
-  {id: 'tip3', src: comfyLuna, author: 'Yuusachii', title: 'Cozy Gen 4', url: 'https://www.pixiv.net/en/artworks/89126212'},
-  {id: 'tip4', src: comfyCoco, author: 'Yuusachii', title: 'Cozy Gen 4', url: 'https://www.pixiv.net/en/artworks/89126212'},
-  {id: 'tip5', src: pixartCoco, author: '銀鏡にと', title: '4期生アイドル衣装', url: 'https://www.pixiv.net/en/artworks/89232325'},
+  {src: runningCoco, author: 'エニモ', title: 'ほろふぉーす愛', url: 'https://www.pixiv.net/en/artworks/89232325', icon: process.env.PUBLIC_URL + '/avatars/ANYMORE_vvv.jpg',},
+  {src: runningLuna, author: 'エニモ', title: 'ほろふぉーす愛', url: 'https://www.pixiv.net/en/artworks/89232325', icon: process.env.PUBLIC_URL + '/avatars/ANYMORE_vvv.jpg'
+  },
+  {src: pixartLuna, author: '銀鏡にと', title: '4期生アイドル衣装', url: 'https://www.pixiv.net/en/artworks/88113908',
+    icon: process.env.PUBLIC_URL + '/avatars/shiromi_nito.jpg',
+  },
+  {src: comfyLuna, author: 'Yuusachii', title: 'Cozy Gen 4', url: 'https://www.pixiv.net/en/artworks/89126212',
+      icon: process.env.PUBLIC_URL + '/avatars/SachiiHappy.jpg',
+  },
+  {src: comfyCoco, author: 'Yuusachii', title: 'Cozy Gen 4', url: 'https://www.pixiv.net/en/artworks/89126212',
+      icon: process.env.PUBLIC_URL + '/avatars/SachiiHappy.jpg',
+  },
+  {src: pixartCoco, author: '銀鏡にと', title: '4期生アイドル衣装', url: 'https://www.pixiv.net/en/artworks/89232325',
+    icon: process.env.PUBLIC_URL + '/avatars/shiromi_nito.jpg',
+  },
 ]
 
 const imageEls = images.map ((props, i) => (
@@ -54,9 +63,10 @@ export function Messages () {
       <div id="messages-container">
       <FadeInSlideUp innerProps={messageInnerProps} >
         <SourcedImage
-          id="chibi4sei"
+          className="title-image"
           src={chibiYonkisei}
           author="colonel_AKI"
+          icon={process.env.PUBLIC_URL + '/avatars/ColonelAki.jpg'}
           title="Chibi Hololive #6"
           url="https://www.pixiv.net/en/artworks/84002989"
         />

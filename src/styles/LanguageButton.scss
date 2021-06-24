@@ -9,6 +9,11 @@
   transition: .5s;
   z-index: 9;
 
+  img {
+    height: 25px;
+    width: 30px;
+  }
+
   &.at-top {
     opacity: .4;
   }

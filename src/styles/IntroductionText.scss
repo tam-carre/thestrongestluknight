@@ -3,9 +3,8 @@
 
 #playlist-introduction-wrapper {
   background: $playlist-bg;
-  padding: 50px 0 50px;
+  padding: 50px 0;
   position: relative;
-  top: -35px;
   transform-style: preserve-3d;
   z-index: 4;
 
@@ -28,8 +27,8 @@
     content: '';
     height: 30px;
     position: absolute;
+    // z-index: 999999999;
     top: -30px;
-    transform: translate3d(0, 0, 1px);
     width: 100%;
   }
 

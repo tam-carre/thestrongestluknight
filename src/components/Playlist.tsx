@@ -5,16 +5,22 @@ import ReactTooltip from 'react-tooltip'
 import { text } from 'data/text'
 import cocoDream from 'images/coco_dream.gif'
 import cocoDreamWebp from 'images/coco_dream.webp'
+import { SourcedImage } from 'components/SourcedImage'
 
 export function Playlist () {
   return (
     <div id="playlist-section">
       <div id="playlist-video-wrapper">
         <FadeInSlideUp innerProps={animationInnerProps} >
-          <picture data-tip data-for="playlist-tooltip">
-            <source type="image/webp" srcSet={cocoDreamWebp} />
-            <img src={cocoDream} alt="" />
-          </picture>
+          <SourcedImage
+            title="coco dream"
+            author="Razlonard"
+          >
+            <picture>
+              <source type="image/webp" srcSet={cocoDreamWebp} />
+              <img src={cocoDream} alt="" />
+            </picture>
+          </SourcedImage>
           <ReactTooltip effect="solid" type="warning" id="playlist-tooltip">
             <span className="tooltip-text">coco dream - Razlonard</span>
           </ReactTooltip>

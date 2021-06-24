@@ -1,19 +1,36 @@
 import Scrollspy from 'react-scrollspy'
 import 'styles/Navbar.scss'
-import { useScrollIndicator } from 'react-use-scroll-indicator'
 import { Lang } from 'App'
 import { text } from 'data/text'
+import { useEffect, useState } from 'react'
 
-export function Navbar ({ className }: { className?: string}) {
-  const [scroll] = useScrollIndicator ()
+export function Navbar ({ className, scrollElement }:
+  { className?: string, scrollElement?: HTMLDivElement}) {
+  const [scroll, setScroll] = useState(0);
+  useEffect(() => {
+    if (!scrollElement) {
+      return;
+    }
+    
+    const scrollUpdateFn = () => {
+      const { scrollTop, scrollHeight } = scrollElement
+      setScroll((scrollTop + window.innerHeight) / scrollHeight * 100);
+    }
+
+    scrollUpdateFn();
+    scrollElement.addEventListener('scroll', scrollUpdateFn);
+    return () => scrollElement.removeEventListener('scroll', scrollUpdateFn);
+  }, [scrollElement])
+
   return (
     <div id="navbar" className={className ?? ''}>
       <div id="progress-bar">
-        <div id="progress-bar-elapsed" style={{width: scroll.value+'%'}}></div>
+        <div id="progress-bar-elapsed" style={{width: scroll+'%'}}></div>
       </div>
       <Lang.Consumer>
-        {lang => (
+        {lang => (<>
           <Scrollspy
+            rootEl="#site"
             items={['header', 'playlist-section', 'messages', 'credit-wrapper']}
             currentClassName="is-current"
             offset={-50}
@@ -23,7 +40,7 @@ export function Navbar ({ className }: { className?: string}) {
             <a href="#messages">{text.navbar.messages[lang]}</a>
             <a href="#credit-wrapper">{text.navbar.credits[lang]}</a>
           </Scrollspy>
-        )}
+        </>)}
       </Lang.Consumer>
     </div>
   )

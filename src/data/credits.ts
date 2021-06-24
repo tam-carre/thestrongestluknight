@@ -33,6 +33,8 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
       // { title: 'New Year Hololive Gen4 Comfy', url: 'https://www.pixiv.net/en/artworks/86730174' }
       ]
     }, {
+      name: 'Razlonard', artworks: [{ title: 'coco dream', }, ]
+    }, {
       name: 'エニモ', url: 'https://twitter.com/ANYMORE_vvv',
       icon: process.env.PUBLIC_URL + '/avatars/ANYMORE_vvv.jpg',
       artworks: [{

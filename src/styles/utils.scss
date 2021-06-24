@@ -17,3 +17,19 @@ $textBorder4pxPageBg: $page-bg 4px 0px 0px, $page-bg 3.87565px 0.989616px 0px, $
     top: 0;
     left: 0;
 }
+
+.invisible {
+  opacity: 0;
+}
+
+$easeOutQuart: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+
+.fade-in { animation: fade-in 3s $easeOutQuart both; }
+@keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+
+// .left-to-center { animation: left-to-center 5s $easeOutQuart both; }
+// @keyframes left-to-center { 0% { left: 45%; } 100% { left: 50%; } }
+// .center-to-left { animation: center-to-left 5s $easeOutQuart both; }
+// @keyframes center-to-left { 0% { left: 50%; } 100% { left: 45%; } }
+
+

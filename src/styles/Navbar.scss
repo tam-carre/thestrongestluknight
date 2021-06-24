@@ -16,17 +16,18 @@
 
   height: 49px;
   padding: 0;
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100%;
   z-index:9;
-
+  margin-bottom: -49px;
   a {
     color: var(--inactive-items);
     &.is-current { color: var(--active-item); }
   }
 
   &.at-top {
-    --elapsed-scroll: #dab6b6;
+    --elapsed-scroll: #946969;
     --remaining-scroll: #5a3b38;
     --active-item: #99675A;
     --inactive-items: #907361;

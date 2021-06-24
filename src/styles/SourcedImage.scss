@@ -1,0 +1,47 @@
+@import './theme';
+.item-with-tooltip {
+  position: relative;
+  &:hover .tooltip-container {
+    opacity: 1;
+  }
+  .tooltip-container {
+    transition: .3s;
+    opacity: 0;
+    background: #FF8C64;
+    border-radius: 4px;
+    position: absolute;
+    top: -44px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    padding: 3px 10px;
+    height: 24px;
+    margin: 0 auto;
+    .arrow-down {
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid #FF8C64;
+      margin: auto;
+      position: relative;
+      top: 4px;
+    }
+    .tooltip-text {
+      font: $normal-font;
+      font-size: 14px;
+      line-height: 14px;
+      color: white;
+      -webkit-text-fill-color: white !important;
+      img.avatar {
+        width: 18px;
+        height: 18px;
+        margin: 0 5px 0 15px !important;
+        position: relative;
+        top: 3px;
+        display: inline-block !important;
+        border-radius: 50%;
+      }
+    }
+  }
+}

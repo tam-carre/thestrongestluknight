@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.9179dc68.chunk.css",
-    "main.js": "/static/js/main.c07c51a5.chunk.js",
-    "main.js.map": "/static/js/main.c07c51a5.chunk.js.map",
+    "main.css": "/static/css/main.2fa16c14.chunk.css",
+    "main.js": "/static/js/main.f28b11e8.chunk.js",
+    "main.js.map": "/static/js/main.f28b11e8.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.259b8380.js",
     "runtime-main.js.map": "/static/js/runtime-main.259b8380.js.map",
     "static/js/2.2ee48924.chunk.js": "/static/js/2.2ee48924.chunk.js",
@@ -10,15 +10,17 @@
     "static/js/3.f00e65a6.chunk.js": "/static/js/3.f00e65a6.chunk.js",
     "static/js/3.f00e65a6.chunk.js.map": "/static/js/3.f00e65a6.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.9179dc68.chunk.css.map": "/static/css/main.9179dc68.chunk.css.map",
+    "static/css/main.2fa16c14.chunk.css.map": "/static/css/main.2fa16c14.chunk.css.map",
     "static/js/2.2ee48924.chunk.js.LICENSE.txt": "/static/js/2.2ee48924.chunk.js.LICENSE.txt",
+    "static/media/Credits.scss": "/static/media/coco_looking_at_horizon.8585979a.png",
     "static/media/coco_dream.6bb12db3.gif": "/static/media/coco_dream.6bb12db3.gif",
     "static/media/coco_dream.cf8b4d94.webp": "/static/media/coco_dream.cf8b4d94.webp",
-    "static/media/Credits.scss": "/static/media/coco_looking_at_horizon.8585979a.png",
     "static/media/coco_with_luna_back_tatoo.7304af7e.png": "/static/media/coco_with_luna_back_tatoo.7304af7e.png",
     "static/media/comfy_coco.f0bc7089.png": "/static/media/comfy_coco.f0bc7089.png",
     "static/media/comfy_coco2.25b991af.png": "/static/media/comfy_coco2.25b991af.png",
     "static/media/comfy_luna.728006ed.png": "/static/media/comfy_luna.728006ed.png",
+    "static/media/gb.880efdae.svg": "/static/media/gb.880efdae.svg",
+    "static/media/jp.4ecbd30a.svg": "/static/media/jp.4ecbd30a.svg",
     "static/media/kanata_looking_at_dragon.540de874.webp": "/static/media/kanata_looking_at_dragon.540de874.webp",
     "static/media/kanata_looking_at_dragon.9223c225.avif": "/static/media/kanata_looking_at_dragon.9223c225.avif",
     "static/media/kanata_looking_at_dragon.bd0e4476.jpg": "/static/media/kanata_looking_at_dragon.bd0e4476.jpg",
@@ -28,7 +30,7 @@
   "entrypoints": [
     "static/js/runtime-main.259b8380.js",
     "static/js/2.2ee48924.chunk.js",
-    "static/css/main.9179dc68.chunk.css",
-    "static/js/main.c07c51a5.chunk.js"
+    "static/css/main.2fa16c14.chunk.css",
+    "static/js/main.f28b11e8.chunk.js"
   ]
 }

@@ -7,8 +7,8 @@ export const messages: Message[] = [
   {
     content: 'Thank you for making us laugh and supporting the Princess. We all love you!! I wish for your happiness always.',
     signature: '@tam_vaccount',
-    "imageUrl": process.env.PUBLIC_URL + "/avatars/tam_vaccount.jpg"
-
+    "imageUrl": process.env.PUBLIC_URL + "/avatars/tam_vaccount.jpg",
+    "twitterUrl": "https://twitter.com/tam_vaccount"
   },
   {
     "content": "Kaichou, thanks so much as the spear head of hololive, I get to know luna thanks to your intro livestream and videos with Luna on learning \"english\". have been a fan ever since.",

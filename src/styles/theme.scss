@@ -1,24 +1,19 @@
 // colors
 
-$dark0: #310700;
-$dark1: #8E2800;
-$med1: #DB8428;
-$light1: #FFF0A5;
-<<<<<<< HEAD
-$faded1: #755F56;
-=======
-
-$text-border: #FFF;
-// $page-bg: #FFFCFD;
-$page-bg: #FDF6F3;
-
->>>>>>> 378157fcfd76eabf68e0afcd907804ef6676c16e
+$dark-0: #310700;
+$dark-1: #8E2800;
+$med-1: #DB8428;
+$light-1: #FFF0A5;
+$faded-1: #755F56;
 
 $red-at-night-1: #FFF587;
 $red-at-night-2: #FF8C64;
 $red-at-night-3: #FF665A;
 $red-at-night-4: #7D6B7D;
 $red-at-night-5: #A3A1A8;
+
+$eggshell: #F6E6BD;
+$white: white;
 
 // specific elements
 $header-text-color: #310C00;
@@ -31,16 +26,16 @@ $normal-font: normal 16px 'Abyssinica SIL', 'Noto Sans JP', sans;
 $stylized-font: var(--title-style) 500 12px 'Playfair Display', 'Noto Sans JP', serif;
 
 @mixin gradient-mixin($to-color) {
-  background: linear-gradient(45deg, $dark1, $to-color);
+  background: linear-gradient(45deg, $dark-1, $to-color);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font: $stylized-font;
 }
 
-.gradient-title {
-  @include gradient-mixin($med1)
+@mixin gradient-title {
+  @include gradient-mixin($med-1)
 }
 
-.gradient-title-dark {
-  @include gradient-mixin($dark0)
+@mixin gradient-title-dark {
+  @include gradient-mixin($dark-0)
 }

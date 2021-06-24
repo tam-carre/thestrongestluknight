@@ -15,7 +15,7 @@
 
   #credits-title {
     // @include gradient-title-dark;
-    @extend .gradient-title;
+    @include gradient-title;
     font: $stylized-font;
     font-size: 46px;
     text-align: center;
@@ -25,8 +25,7 @@
     padding-top: 78px;
     margin-top: -20px;
     span {
-      background: -webkit-linear-gradient(45deg, $dark1, $med1);
-      background-clip: text;
+      @include gradient-title;
       margin-left: 15px;
     }
     img {
@@ -64,8 +63,7 @@
       margin-bottom: 20px;
 
       .credit-category {
-        @extend .gradient-title;
-        // @include gradient-title-dark;
+        @include gradient-title;
         color: black;
         font: $stylized-font;
         font-size: 38px;
@@ -82,7 +80,6 @@
             width: 20px;
             position: relative;
             bottom: -3px;
-            // left: -4px;
             margin-right: 8px;
             img {
               width: 100%;
@@ -95,7 +92,7 @@
         .credit-details, .credit-artworks {
           margin-top: 3px;
           font-size: 12px;
-          color: $faded1;
+          color: $faded-1;
         }
       }
     }

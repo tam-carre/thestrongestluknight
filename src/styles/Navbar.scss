@@ -45,21 +45,11 @@
   }
 
   &.at-playlist, &.at-messages, &.at-credits {
-    background: $page-bg;
-    // background: linear-gradient(180deg,
-      // $page-bg 0px,
-      // $page-bg 48px,
-      // rgba($page-bg, 0), 78px
-    // );
-    --elapsed-scroll: #{$med1};
+    background: $page-bg;-scroll: #{$med-1};
     --remaining-scroll: #F2E1D7;
     --active-item: #E38E10;
     --inactive-items: #C9A488;
   }
-  // &.at-messages {
-    // background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
-  // }
-
 
   #progress-bar {
     border-radius: 10%;

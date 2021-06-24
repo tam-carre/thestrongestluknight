@@ -1,5 +1,4 @@
 @import './theme';
-// @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Noto+Sans+JP&display=block');
 @import url('https://fonts.cdnfonts.com/css/abyssinica-sil');
 
 :root {
@@ -22,21 +21,8 @@ a, a:visited {
   color: inherit;
   text-decoration: none;
 }
-
-#top {
-  z-index:99;
-  position: absolute;
-  height: 20px;
-  width: 100%;
-  top: 0px;
-}
-
-#site.jp {
-  --title-style: normal;
-}
-
 ::selection {
-  background: #F6E6BD;
+  background: $eggshell;
 }
 
 img::selection {
@@ -45,6 +31,18 @@ img::selection {
 
 span.tooltip-text {
   font: $normal-font;
-  color: white;
-  -webkit-text-fill-color: white !important;
+  color: $white;
+  -webkit-text-fill-color: $white !important;
+}
+
+#site.jp {
+  --title-style: normal;
+}
+
+#top {
+  z-index:99;
+  position: absolute;
+  height: 20px;
+  width: 100%;
+  top: 0px;
 }

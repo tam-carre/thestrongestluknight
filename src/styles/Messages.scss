@@ -53,7 +53,7 @@
   }
 
   #messages-title {
-    @extend .gradient-title;
+    @include gradient-title;
     margin: 30px auto 10px;
     text-align: center;
     display: flex;
@@ -63,12 +63,8 @@
     text-rendering: optimizeLegibility;
     padding: 36px 30px 0;
     span.messages-title {
-      background: -webkit-linear-gradient(45deg, $dark1, $med1);
-      background-clip: text;
-    font-size: 46px;
-      //Other fix, delete if no longer needed
-      //@extend gradient-title;
-      //font-size: 46px;
+      @include gradient-title;
+      font-size: 46px;
       margin-left: 30px;
     @media (max-width: 450px) {
       font-size: 26px;
@@ -84,7 +80,6 @@
 
   .messages-list {
     @include message-size;
-    // text-shadow: $textBorder4pxPageBg;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -92,25 +87,21 @@
     left: -20px;
     .messages-column {
       padding-left: 40px;
-      // @media (max-width: 850px) {
-        // padding-right: 20px;
-      // }
       img {
-        // max-width: 100%;
         max-width: 200px;
         margin: 0 auto;
         display: block;
       }
     }
       .message {
-      margin: 25% auto;
-      width: 100%;
-      max-width: 600px;
-      position: relative;
-        p {
-          margin-block-start: 0em;
-          margin-block-end: 0em;
-        }
+        margin: 25% auto;
+        width: 100%;
+        max-width: 600px;
+        position: relative;
+          p {
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+          }
 
       &::before {
         content: '“';
@@ -128,7 +119,7 @@
         &::before {
           content: '— ';
         }
-        color: $faded1;
+        color: $faded-1;
         .message-icon {
           display: inline-block;
           width: 20px;

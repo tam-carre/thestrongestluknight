@@ -25,7 +25,7 @@
     z-index: 2;
     height: 100%;
     width: 100%;
-    transition: 3s $easeOutQuart;
+    transition: 3s $ease-out-quart;
     opacity: 1;
   }
 }
@@ -48,10 +48,10 @@
     position: relative;
     z-index: 3;
     white-space: nowrap;
-    text-shadow: $textBorder4px;
+    text-shadow: $text-border-4px;
 
     @media (max-width: 500px) {
-      text-shadow: $textBorder2px;
+      text-shadow: $text-border-2px;
     }
   }
 
@@ -62,7 +62,7 @@
     top: 50%;
     margin-left: -43%;
     transform: translateY(-200%);
-    transition: 4s $easeOutQuart;
+    transition: 4s $ease-out-quart;
     left: 45%;
     opacity: 0;
     // transform: translateY(-280%) translateX(-83%) translateZ(0);
@@ -76,7 +76,7 @@
     margin-right: -43%;
     // margin-left: -43%;
     // left: 50%;
-    transition: 4s $easeOutQuart;
+    transition: 4s $ease-out-quart;
     left: 60%;
     opacity: 0;
   }

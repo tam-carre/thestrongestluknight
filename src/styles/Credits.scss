@@ -94,6 +94,18 @@
           font-size: 12px;
           color: $faded-1;
         }
+        .credit-artworks a[href]:not([href=""])::before {
+          opacity: .5;
+          position: relative;
+          top: 1px;
+          content: '';
+          background: url('/images/anchor.svg');
+          background-size: 10px 10px;
+          display: inline-block;
+          height: 10px;
+          width: 10px;
+          margin-right: 4px;
+        }
       }
     }
   }
@@ -109,11 +121,37 @@
   min-width: 700px;
   left: 50%;
   transform: translateX(-50%);
+  display: flex;
+  align-items: flex-end;
 
   @media (max-width: 768px) {
     min-height: 280px;
   }
   @media (max-width: 600px) {
     min-height: 200px;
+  }
+  
+  #related-sites {
+    font-size: 12px;
+    color: #FDF6F3;
+    text-shadow: 0px 0px 2px #000, 0px 0px 2px #000;
+    margin: 0 auto 5px;
+    text-align: center;
+    a {
+      margin: 0 10px;
+    }
+    a::before {
+      filter: invert(1);
+      opacity: .9;
+      position: relative;
+      top: 1px;
+      content: '';
+      background: url('/images/anchor.svg');
+      background-size: 10px 10px;
+      display: inline-block;
+      height: 10px;
+      width: 10px;
+      margin-right: 4px;
+    }
   }
 }

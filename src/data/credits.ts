@@ -3,13 +3,6 @@ import { OrderedMap } from 'immutable'
 export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
   Artwork: [
     {
-      name: 'mop', url: 'https://www.pixiv.net/en/users/2083795',
-      icon: process.env.PUBLIC_URL + '/avatars/mop.png',
-      artworks: [{
-        title: 'どこの組のもんじゃい？',
-        url: 'https://www.pixiv.net/en/artworks/79038147'
-      }]
-    }, {
       name: 'advarcher', url: 'https://twitter.com/Anonamos_701',
       icon: process.env.PUBLIC_URL + '/avatars/Anonamos_701.jpg',
       artworks: [{
@@ -24,23 +17,30 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
         url: 'https://www.pixiv.net/en/artworks/90510056'
       }]
     }, {
-      name: 'Yuusachii', url: 'https://twitter.com/SachiiHappy',
-      icon: process.env.PUBLIC_URL + '/avatars/SachiiHappy.jpg',
-      artworks: [{
-        title: 'Cozy Gen 4',
-        url: 'https://www.pixiv.net/en/artworks/89126212'
-      },
-      // { title: 'New Year Hololive Gen4 Comfy', url: 'https://www.pixiv.net/en/artworks/86730174' }
-      ]
-    }, {
-      name: 'Razlonard', artworks: [{ title: 'coco dream', }, ]
-    }, {
       name: 'エニモ', url: 'https://twitter.com/ANYMORE_vvv',
       icon: process.env.PUBLIC_URL + '/avatars/ANYMORE_vvv.jpg',
       artworks: [{
         title: 'ほろふぉーす愛',
         url: 'https://www.pixiv.net/en/artworks/89232325'
       }]
+    }, {
+      name: 'mop', url: 'https://www.pixiv.net/en/users/2083795',
+      icon: process.env.PUBLIC_URL + '/avatars/mop.png',
+      artworks: [{
+        title: 'どこの組のもんじゃい？',
+        url: 'https://www.pixiv.net/en/artworks/79038147'
+      }]
+    }, {
+      name: 'Yuusachii', url: 'https://twitter.com/SachiiHappy',
+      icon: process.env.PUBLIC_URL + '/avatars/SachiiHappy.jpg',
+      artworks: [{
+        title: 'Cozy Gen 4',
+        url: 'https://www.pixiv.net/en/artworks/89126212'
+      },
+      { title: 'New Year Hololive Gen4 Comfy', url: 'https://www.pixiv.net/en/artworks/86730174' }
+      ]
+    }, {
+      name: 'Razlonard', artworks: [{ title: 'coco dream', }, ]
     }, {
       name: '銀鏡にと', url: 'https://twitter.com/shiromi_nito',
       icon: process.env.PUBLIC_URL + '/avatars/shiromi_nito.jpg',
@@ -54,6 +54,13 @@ export const credits: OrderedMap<CreditCategory, Contributor[]> = OrderedMap({
       artworks: [{
         title: 'Chibi Hololive #6',
         url: 'https://www.pixiv.net/en/artworks/84002989'
+      }]
+    }, {
+      name: 'Leonato Ieiri', url: 'https://twitter.com/leonatoieiri',
+      icon: process.env.PUBLIC_URL + '/avatars/leonatoieiri.jpg',
+      artworks: [{
+        title: 'Coco pixel art',
+        url: 'https://twitter.com/leonatoieiri/status/1402836379671879680'
       }]
     }
   ],

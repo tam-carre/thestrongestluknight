@@ -1,6 +1,8 @@
 import { LanguageCode } from 'data/text'
 import { Lang } from 'App'
 import 'styles/LanguageButton.scss'
+import jpFlag from 'images/jp.svg'
+import gbFlag from 'images/gb.svg'
 
 export function LanguageButton ({className, callback}: LanguageButtonProps) {
   const toggleLang = (current: LanguageCode) => {
@@ -8,6 +10,9 @@ export function LanguageButton ({className, callback}: LanguageButtonProps) {
                                      : 'en'
     callback (newLang)
   }
+  const jp = <img src={jpFlag} alt="JP" />
+  const en = <img src={gbFlag} alt="EN" />
+
   return (
     <Lang.Consumer>
       {lang => (
@@ -16,7 +21,7 @@ export function LanguageButton ({className, callback}: LanguageButtonProps) {
           className={className ?? ''}
           onClick={() => toggleLang (lang)}
         >
-          {lang === 'en' ? '\u{1F1EF}\u{1F1F5}' : '\u{1F1EC}\u{1F1E7}'}
+          {lang === 'en' ? jp : en}
         </div>
       )}
     </Lang.Consumer>

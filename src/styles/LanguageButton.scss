@@ -9,6 +9,13 @@
   transition: .5s;
   z-index: 9;
 
+  img {
+    height: 25px;
+    width: 40px;
+    border: 1px solid rgba(#333, .2);
+    object-fit: cover;
+  }
+
   &.at-top {
     opacity: .4;
   }

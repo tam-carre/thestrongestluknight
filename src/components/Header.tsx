@@ -9,7 +9,7 @@ import kanataLookingAtDragonAvif from 'images/kanata_looking_at_dragon.avif'
 
 export function Header () {
   const [loaded, setLoaded] = useState (false)
-  const [ref, inView] = useInView ({ threshold: 1, initialInView: true })
+  const [ref, inView] = useInView ({ threshold: .95, initialInView: true })
 
   return (<>
     <div id="header" ref={ref}>

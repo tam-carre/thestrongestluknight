@@ -106,6 +106,7 @@
       &::before {
         content: '“';
         font: $stylized-font;
+        font-style: italic; // override jp
         font-size: 150px;
         position: absolute;
         top: -60px;

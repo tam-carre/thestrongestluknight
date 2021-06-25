@@ -26,7 +26,11 @@ export function Credits () {
       {creditList}
     </div>
 
-    <div id="coco-looking-at-horizon"></div>
+    <div id="coco-looking-at-horizon">
+      <div id="related-sites">
+        <a href="https://www.reddit.com/r/Hololive/comments/nwvq6t/coco_graduation_project_and_resource_for_others/">Main project</a> <a href="https://www.random-co.co/">Random Coco</a>
+      </div>
+    </div>
   </div>)
 }
 

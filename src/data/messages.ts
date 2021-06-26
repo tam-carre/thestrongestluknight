@@ -42,7 +42,9 @@ export const messages: Message[] = [
   },
   {
     "content": "Coco is a legend to all of us. We really love you so much. I really like Coco's Reddit shitpost review. Thank you Coco for bringing us so many happiness and Kusa. Thank you so much for Coco's hard work. Thanks for always supporting all the 4th Gen members, thanks for always supporting Luna. All of us will miss you so much, all the good and warm memories you brought to us, we will never forget. Wish you always be happy.",
-    "signature": "Lau Kinney (@LightningKL)"
+    "signature": "Lau Kinney (@LightningKL)",
+    "imageUrl": process.env.PUBLIC_URL + "/avatars/LightningKL.jpg",
+    "twitterUrl": "https://twitter.com/LightningKL"
   },
   {
     "content": "we can never express the full extent of our gratitude for what you have done for our princess luna and others, but we'll get an A for effort <3 we salute you kaichou!!!",

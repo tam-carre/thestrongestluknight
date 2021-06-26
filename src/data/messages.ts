@@ -37,7 +37,7 @@ export const messages: Message[] = [
   {
     "content": "\"What is wave without the ocean ? A beginning without an end ? They are different but they are go together. Now you go among the stars, and i go among the sands.\"\n\n- sea emperor (subnautica)\n\nI hope for the best of the best in everything for coco-kaicho, from this very moment till beyond. Have fortune at your side for all the time. I hope i can found you again like the first time i trapped in the rabbit hole. Thanks for everything from the shittiest to the wholesomeness thing that you give to us.",
     "signature": "@_Ounseen",
-    "imageUrl": process.env.PUBLIC_URL + "/avatars/_ounseen.jpg",
+    "imageUrl": process.env.PUBLIC_URL + "/avatars/ounseen.jpg",
     "twitterUrl": "https://twitter.com/_ounseen"
   },
   {
@@ -65,7 +65,7 @@ export const messages: Message[] = [
   {
     "content": "I think to all of your fans, including me, you were like a pillar of Hololive. There was the entirety of Hololive on one side and you on the other. It is extremely heart breaking to see you go, every Luknight will remember you as \"The Strongest Luknight\". Goodbye Kaichou.",
     "signature": "@_Luknight",
-    "imageUrl": process.env.PUBLIC_URL + "/avatars/_Luknight.jpg",
+    "imageUrl": process.env.PUBLIC_URL + "/avatars/Luknight.jpg",
     "twitterUrl": "https://twitter.com/_Luknight"
   },
   {
@@ -357,7 +357,7 @@ export const messages: Message[] = [
   {
     "content": "It was because of Kaichou’s Asacoco segment “Sickly Sweet English Lesson with Luna” that I found out the existence of Himemori Luna. It was somewhat poetic or like straight out of a fairy tale that a dragon, standing tall, proud, but goofy, has behind her a sweet little Princess. And ever since that chance meeting, I have become a loyal and a full-fledged Luknight. Thank you, Coco, for all the hard work and for bridging us overseas fans to the world of Hololive. It will not be the same without you. Thank you Coco and we will always miss you.",
     "signature": "@_AeMV",
-    "imageUrl": process.env.PUBLIC_URL + "/avatars/_AeMV.jpg",
+    "imageUrl": process.env.PUBLIC_URL + "/avatars/AeMV.jpg",
     "twitterUrl": "https://twitter.com/_AeMV"
   },
   {

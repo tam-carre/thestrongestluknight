@@ -28,7 +28,10 @@ export function Credits () {
 
     <div id="coco-looking-at-horizon">
       <div id="related-sites">
-        <a href="https://www.reddit.com/r/Hololive/comments/nwvq6t/coco_graduation_project_and_resource_for_others/">Main project</a> <a href="https://www.random-co.co/">Random Coco</a>
+        <a href="https://nextme.me">Main project</a>
+        <a href="https://www.random-co.co/">Random Coco</a>
+        <a href="https://arigathanks.manotomo.com/home">MASS</a>
+        <a href="https://kcgp.tw/en">2D2C</a>
       </div>
     </div>
   </div>)

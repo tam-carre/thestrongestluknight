@@ -8,72 +8,68 @@
   }
 }
 
-#navbar {
-  --elapsed-scroll: #d69f95;
-  --remaining-scroll: #ab8591;
-  --active-item: #FFFFFF;
-  --inactive-items: #d8c4c3;
-
+#site > nav {
+  --active-item: #E38E10;
+  --elapsed-scroll: #{$med1};
+  --inactive-items: #C9A488;
+  --remaining-scroll: #F2E1D7;
+  background: $page-bg;
   height: 49px;
+  margin-bottom: -49px;
   padding: 0;
   position: sticky;
   top: 0;
   width: 100%;
   z-index:9;
-  margin-bottom: -49px;
+
   a {
     color: var(--inactive-items);
-    &.is-current { color: var(--active-item); }
+    &.is-current {
+      color: var(--active-item);
+    }
   }
 
   &.at-top {
-    --elapsed-scroll: #946969;
-    --remaining-scroll: #5a3b38;
     --active-item: #99675A;
+    --elapsed-scroll: #946969;
     --inactive-items: #907361;
+    --remaining-scroll: #5a3b38;
+    background: transparent;
+
     #language-switcher {
       opacity: .5;
     }
   }
 
-  &.at-intro {
-    background: $playlist-bg;
-    --elapsed-scroll: #F9F7F4;
-    --remaining-scroll: #ECBAAC;
+  &.at-header {
     --active-item: #FFFFFF;
+    --elapsed-scroll: #d69f95;
+    --inactive-items: #d8c4c3;
+    --remaining-scroll: #ab8591;
+    background: transparent;
+  }
+
+  &.at-intro {
+    --active-item: #FFFFFF;
+    --elapsed-scroll: #F9F7F4;
     --inactive-items: #FFDDCF;
+    --remaining-scroll: #ECBAAC;
+    background: $playlist-bg;
   }
-
-  &.at-playlist, &.at-messages, &.at-credits {
-    background: $page-bg;
-    // background: linear-gradient(180deg,
-      // $page-bg 0px,
-      // $page-bg 48px,
-      // rgba($page-bg, 0), 78px
-    // );
-    --elapsed-scroll: #{$med1};
-    --remaining-scroll: #F2E1D7;
-    --active-item: #E38E10;
-    --inactive-items: #C9A488;
-  }
-  // &.at-messages {
-    // background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
-  // }
-
 
   #progress-bar {
-    border-radius: 10%;
-    top: 10px;
-    position: relative;
-    width: 90%;
-    max-width: 600px;
     background: var(--remaining-scroll);
+    border-radius: 10%;
     height: 3px;
     margin: auto;
+    max-width: 600px;
+    position: relative;
+    top: 10px;
+    width: 90%;
 
     #progress-bar-elapsed {
-      border-radius: 10%;
       background: var(--elapsed-scroll);
+      border-radius: 10%;
       height: 3px;
     }
   }
@@ -88,4 +84,3 @@
     max-width: 600px;
   }
 }
-

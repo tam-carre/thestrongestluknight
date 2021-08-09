@@ -1,52 +1,47 @@
 @import './theme';
 @import './utils';
 
-#credit-wrapper {
-  #credits-strip-under-nav {
-    @include strip-under-nav;
-    background: $page-bg;
-    z-index: 4;
-  }
-
+#credits {
+  background: $page-bg;
   overflow-x: hidden;
   position: relative;
   z-index: 3;
-  background: $page-bg;
 
   #credits-title {
-    // @include gradient-title-dark;
     @include gradient-title;
+    align-items: center;
+    display: flex;
     font: $stylized-font;
     font-size: 46px;
-    text-align: center;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    padding-top: 78px;
     margin-top: -20px;
+    padding-top: 78px;
+    text-align: center;
+
     span {
       background: -webkit-linear-gradient(45deg, $dark1, $med1);
       background-clip: text;
       margin-left: 15px;
     }
+
     img {
-      width: 60px;
+      display: inline-block;
       height: 60px;
       position: relative;
       top: 5px;
-      display: inline-block;
+      width: 60px;
     }
   }
 
-  #credits {
-    width: 100%;
-    max-width: 1060px;
-    margin: 0 auto -230px;
-    text-align: center;
+  #credit-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin: 0 auto -230px;
+    max-width: 1060px;
     position: relative;
+    text-align: center;
+    width: 100%;
     z-index: 2;
 
     @media (max-width: 1000px) {
@@ -60,12 +55,11 @@
     }
 
     .credit-block {
-      width: 300px;
       margin-bottom: 20px;
+      width: 300px;
 
       .credit-category {
         @include gradient-title;
-        // @include gradient-title-dark;
         color: black;
         font: $stylized-font;
         font-size: 38px;
@@ -78,83 +72,85 @@
 
         .credit-name {
           .credit-avatar {
-            display: inline-block;
-            width: 20px;
-            position: relative;
             bottom: -3px;
-            // left: -4px;
+            display: inline-block;
             margin-right: 8px;
+            position: relative;
+            width: 20px;
+
             img {
-              width: 100%;
-              height: auto;
               border-radius: 50%;
+              height: auto;
+              width: 100%;
             }
           }
         }
-
         .credit-details, .credit-artworks {
-          margin-top: 3px;
-          font-size: 12px;
           color: $faded1;
+          font-size: 12px;
+          margin-top: 3px;
         }
+
         .credit-artworks a[href]:not([href=""])::before {
+          background-size: 10px 10px;
+          background: url('/images/anchor.svg');
+          content: '';
+          display: inline-block;
+          height: 10px;
+          margin-right: 4px;
           opacity: .5;
           position: relative;
           top: 1px;
-          content: '';
-          background: url('/images/anchor.svg');
-          background-size: 10px 10px;
-          display: inline-block;
-          height: 10px;
           width: 10px;
-          margin-right: 4px;
         }
       }
     }
   }
-}
 
-#coco-looking-at-horizon {
-  background: center bottom / contain no-repeat url(../images/coco_looking_at_horizon.png);
-  width: 100%;
-  max-width: 1400px;
-  height: auto;
-  min-height: 350px;
-  position: relative;
-  min-width: 700px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: flex-end;
+  #footer-background {
+    align-items: flex-end;
+    background: center bottom / contain no-repeat url(../images/coco_looking_at_horizon.png);
+    display: flex;
+    height: auto;
+    left: 50%;
+    max-width: 1400px;
+    min-height: 350px;
+    min-width: 700px;
+    position: relative;
+    transform: translateX(-50%);
+    width: 100%;
 
-  @media (max-width: 768px) {
-    min-height: 280px;
-  }
-  @media (max-width: 600px) {
-    min-height: 200px;
-  }
-  
-  #related-sites {
-    font-size: 12px;
-    color: #FDF6F3;
-    text-shadow: 0px 0px 2px #000, 0px 0px 2px #000;
-    margin: 0 auto 5px;
-    text-align: center;
-    a {
-      margin: 0 10px;
+    @media (max-width: 768px) {
+      min-height: 280px;
     }
-    a::before {
-      filter: invert(1);
-      opacity: .9;
-      position: relative;
-      top: 1px;
-      content: '';
-      background: url('/images/anchor.svg');
-      background-size: 10px 10px;
-      display: inline-block;
-      height: 10px;
-      width: 10px;
-      margin-right: 4px;
+    @media (max-width: 600px) {
+      min-height: 200px;
+    }
+    
+    #related-sites {
+      color: #FDF6F3;
+      font-size: 12px;
+      margin: 0 auto 5px;
+      text-align: center;
+      text-shadow: 0px 0px 2px #000, 0px 0px 2px #000;
+
+      a {
+        margin: 0 10px;
+      }
+
+      a::before {
+        background-size: 10px 10px;
+        background: url('/images/anchor.svg');
+        content: '';
+        display: inline-block;
+        filter: invert(1);
+        height: 10px;
+        margin-right: 4px;
+        opacity: .9;
+        position: relative;
+        top: 1px;
+        width: 10px;
+      }
     }
   }
 }

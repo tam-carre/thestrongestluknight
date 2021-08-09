@@ -1,150 +1,115 @@
 @import 'theme.scss';
 @import 'utils.scss';
 
-@mixin message-size {
-}
-
 #messages {
-  margin: 0 auto;
-  width: 100%;
-  #messages-container {
-    margin: 0 auto;
-    width: 1200px;
-    @media (max-width: 1200px) {
-      width: 100%;
-      max-width: 850px;
-    }
-    @media (max-width: 850px) {
-      left: 0;
-      max-width: 600px;
-    }
-  }
-  #message-images {
-    width: 100%;
-    height: calc(100% - 400px);
-    position: absolute;
-    top: 400px;
-    left: 0;
-    opacity: .2;
-    z-index: -1;
-    .message-image-container {
-      text-align: center;
-    }
-    img {
-      position: relative;
-      height: auto;
-    }
-   .comfy-coco {
-      text-align: left;
-      margin-left: 40px;
-      img {
-        width: 300px;
-      }
-    }
-  }
-  // margin-top: 5vh;
-  padding-top: 40px;
   background: $page-bg;
+  padding-top: 40px;
   position: relative;
+  width: 100%;
   z-index: 3;
-  #messages-strip-under-nav {
-    @include strip-under-nav;
-    background: $page-bg;
-  }
 
   #messages-title {
-    margin: 30px auto 10px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     @include gradient-title;
+    align-items: center;
+    display: flex;
     font: $stylized-font;
-    text-rendering: optimizeLegibility;
+    justify-content: center;
+    margin: 30px auto 10px;
     padding: 36px 30px 0;
+    text-align: center;
+    text-rendering: optimizeLegibility;
+
     span.messages-title {
       background: -webkit-linear-gradient(45deg, $dark1, $med1);
       background-clip: text;
-    font-size: 46px;
-      //Other fix, delete if no longer needed
-      //@include gradient-title;
-      //font-size: 46px;
+      font-size: 46px;
       margin-left: 30px;
-    @media (max-width: 450px) {
-      font-size: 26px;
+
+      @media (max-width: 450px) {
+        font-size: 26px;
+      }
     }
-    }
+
     img.sourced-img {
       width: 130px;
       height: 130px;
       display: inline-block;
     }
+
     .arrow-down { top: 6px; }
   }
 
   .messages-list {
-    @include message-size;
-    // text-shadow: $textBorder4pxPageBg;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    position: relative;
     left: -20px;
+    margin: 0 auto;
+    position: relative;
+    width: 1200px;
+
+    @media (max-width: 1200px) {
+      max-width: 850px;
+      width: 100%;
+    }
+    @media (max-width: 850px) {
+      max-width: 600px;
+    }
+
     .messages-column {
       padding-left: 40px;
-      // @media (max-width: 850px) {
-        // padding-right: 20px;
-      // }
+
       img {
-        // max-width: 100%;
-        max-width: 200px;
-        margin: 0 auto;
         display: block;
+        margin: 0 auto;
+        max-width: 200px;
       }
     }
-      .message {
+
+    .message {
       margin: 25% auto;
-      width: 100%;
       max-width: 600px;
       position: relative;
-        p {
-          margin-block-start: 0em;
-          margin-block-end: 0em;
-        }
+      width: 100%;
+
+      p {
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+      }
 
       &::before {
-        content: '“';
-        font: $stylized-font;
-        font-style: italic; // override jp
-        font-size: 150px;
-        position: absolute;
-        top: -60px;
-        left: -30px;
         color: rgba(0,0,0,.05);
-        z-index: -1;
+        content: '“';
+        font-size: 150px;
+        font-style: italic; // override jp
+        font: $stylized-font;
+        left: -30px;
+        position: absolute;
         text-shadow: none;
+        top: -60px;
+        z-index: -1;
       }
 
       .message-signature {
-        &::before {
-          content: '— ';
-        }
         color: $faded1;
+
+        &::before { content: '— '; }
+
         .message-icon {
           display: inline-block;
-          width: 20px;
           height: 20px;
           margin-right: 5px;
+          width: 20px;
+
           img {
+            border-radius: 50%;
+            height: auto;
+            margin-right: 3px;
             position: relative;
             top: 5px;
-            margin-right: 3px;
-            border-radius: 50%;
             width: 100%;
-            height: auto;
           }
         }
       }
-      
+    }
   }
-}}
+}

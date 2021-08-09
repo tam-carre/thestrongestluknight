@@ -1,4 +1,4 @@
-export type LanguageCode = 'en' | 'jp'
+export type LangCode = 'en' | 'jp'
 
 export const text: TranslationData = {
   navbar: {
@@ -103,7 +103,7 @@ export const text: TranslationData = {
 
 type TranslationData  = Record<TranslationCategory, ItemTranslations>
 type ItemTranslations = Record<ItemName, Translation>
-type Translation      = Record<LanguageCode, string>
+type Translation      = Record<LangCode, string>
 
 type TranslationCategory = string
 type ItemName            = string

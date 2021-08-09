@@ -1,20 +1,22 @@
 @import 'theme.scss';
 @import 'utils.scss';
 
-#playlist-introduction-wrapper {
+#intro {
   background: $playlist-bg;
+  color: white;
+  font-size: Clamp(22px, 2.75vw, 36px);
   padding: 50px 0;
   position: relative;
   transform-style: preserve-3d;
   z-index: 4;
 
-  #flags {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    div {
-      margin: 0 1em;
-      font-size: 28px;
+  p {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 25px;
+
+    &:nth-of-type(2) {
+      margin-top: 25px;
     }
   }
 
@@ -27,7 +29,6 @@
     content: '';
     height: 30px;
     position: absolute;
-    // z-index: 999999999;
     top: -30px;
     width: 100%;
   }
@@ -48,17 +49,5 @@
 
   &.at-top::after {
     opacity: 1;
-  }
-
-  #playlist-introduction {
-    color: white;
-    font-size: Clamp(22px, 2.75vw, 36px);
-    margin: 0 auto;
-    max-width: 800px;
-    padding: 0 25px;
-
-    #playlist-introduction-paragraph-2 {
-      margin-top: 25px;
-    }
   }
 }

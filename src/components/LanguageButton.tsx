@@ -1,27 +1,19 @@
-import { LanguageCode } from 'data/text'
+import { LangCode } from 'data/text'
 import { Lang } from 'App'
 import 'styles/LanguageButton.scss'
-import jpFlag from 'images/jp.svg'
-import gbFlag from 'images/gb.svg'
+import jp from 'images/jp.svg'
+import gb from 'images/gb.svg'
 
 export function LanguageButton ({className, callback}: LanguageButtonProps) {
-  const toggleLang = (current: LanguageCode) => {
-    const newLang = current === 'en' ? 'jp'
-                                     : 'en'
-    callback (newLang)
-  }
-  const jp = <img src={jpFlag} alt="JP" />
-  const en = <img src={gbFlag} alt="EN" />
-
   return (
     <Lang.Consumer>
       {lang => (
         <div
-          id="language-switcher"
+          id="lang-switcher"
           className={className ?? ''}
-          onClick={() => toggleLang (lang)}
+          onClick={() => callback (lang === 'en' ? 'jp' : 'en')}
         >
-          {lang === 'en' ? jp : en}
+          {lang === 'en' ? <img src={jp} alt="JP" /> : <img src={gb} alt="EN" />}
         </div>
       )}
     </Lang.Consumer>
@@ -32,5 +24,5 @@ export function LanguageButton ({className, callback}: LanguageButtonProps) {
 
 interface LanguageButtonProps {
   className?: string,
-  callback: React.Dispatch<React.SetStateAction<LanguageCode>>
+  callback: React.Dispatch<React.SetStateAction<LangCode>>
 }

@@ -1,6 +1,6 @@
 import 'styles/App.scss'
 import 'styles/Parallax.scss'
-import { createContext, useState, Context, useRef, createRef } from 'react'
+import { createContext, useState, Context } from 'react'
 import { Header } from 'components/Header'
 import { Credits } from 'components/Credits'
 import { Messages } from 'components/Messages'
@@ -10,63 +10,49 @@ import { IntroductionText } from 'components/IntroductionText'
 import { Playlist } from 'components/Playlist'
 import { ScrollNotifier } from 'components/ScrollNotifier'
 import classNames from 'classnames'
-import cocoLuna from 'images/coco_with_luna_back_tatoo.avif'
-import kanaCoco from 'images/kanata_looking_at_dragon.png'
-import { AssetLoader, AssetLoaderProps, LoadStatus } from 'components/AssetLoader'
-import { LanguageCode } from 'data/text'
+import { LangCode } from 'data/text'
 
-export const Lang: Context<LanguageCode> = createContext ('en' as LanguageCode)
+export const Lang: Context<LangCode> = createContext ('en' as LangCode)
 
 export function App () {
+  const [lang, setLang]         = useState ('en' as LangCode)
+  const [atTop, setAtTop]       = useState (true)
+  const [atIntro, setAtIntro]   = useState (false)
+  const [atHead, setAtHead]     = useState (false)
+  const [scrollEl, setScrollEl] = useState <HTMLDivElement | null> (null)
+
   return (
-    <AssetLoader assets={preloadAssets}>
-      {LoadedApp}
-    </AssetLoader>
-  )
-}
+    <Lang.Provider value={lang}>
+      <LanguageButton className={atTop ? 'at-top' : ''} callback={setLang} />
 
-///////////////////////////////////////////////////////////////////////////////
+      <div id="site" className={lang} ref={setScrollEl}>
+        <ScrollNotifier id="top" callback={setAtTop} el={scrollEl} />
 
-const preloadAssets: AssetLoaderProps['assets'] = [
-  // { href: cocoLuna, as: 'image' },
-  // { href: kanaCoco, as: 'image' },
-]
-
-function LoadedApp (status: LoadStatus) {
-  const [language, setLanguage]           = useState ('en' as LanguageCode)
-  const [atTop, setAtTop]                 = useState (true)
-  const [atIntro, setAtIntro]             = useState (false)
-  const [atPlaylist, setAtPlaylist]       = useState (false)
-  const [scrollElement, setScrollElement] = useState<HTMLDivElement | null>(null);
-
-  return status === LoadStatus.PENDING
-    ? <div>Loading!!!</div>
-    : <Lang.Provider value={language}>
-        <LanguageButton
-          className={classNames ({ 'at-top': atTop })}
-          callback={setLanguage}
+        <Navbar
+          scrollElement={scrollEl}
+          className={classNames ({
+            'at-top': atTop, 'at-header': atHead, 'at-intro': atIntro
+          })}
         />
-        <div id="site" className={language === 'jp' ? 'jp' : ''} ref={setScrollElement}>
-          <Navbar
-            className={classNames ({
-              'at-top': atTop,
-              'at-intro': atIntro,
-              'at-playlist': atPlaylist,
-            })}
-            scrollElement={scrollElement || undefined}
-          />
-          <ScrollNotifier callback={setAtTop} element={scrollElement || undefined}>
-            <div id="top"></div>
-          </ScrollNotifier>
+
+        <ScrollNotifier tag="header" id="header" callback={setAtHead} el={scrollEl} >
           <Header />
-          <ScrollNotifier callback={setAtIntro} threshold={45} element={scrollElement || undefined}>
-            <IntroductionText className={classNames ({ 'at-top': atTop })} />
+        </ScrollNotifier>
+
+        <main>
+          <ScrollNotifier
+            tag="section" id="intro" callback={setAtIntro} el={scrollEl}
+            className={atTop ? 'at-top' : ''}
+          >
+            <IntroductionText />
           </ScrollNotifier>
-          <ScrollNotifier callback={setAtPlaylist} threshold={45} element={scrollElement || undefined}>
-            <Playlist />
-            <Messages />
-            <Credits />
-          </ScrollNotifier>
-        </div>
-      </Lang.Provider>
+
+          <Playlist />
+          <Messages />
+        </main>
+
+        <Credits />
+      </div>
+    </Lang.Provider>
+  )
 }

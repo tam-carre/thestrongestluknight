@@ -1,16 +1,18 @@
 import { useRef, useEffect } from 'react'
 
 export function ScrollNotifier ({
-  children, callback, threshold = 0, bottomThreshold = 0, element = window, className,
+  children, callback, threshold = 45, el: element, id, tag: Wrapper = 'div',
+  className = ''
 }: ScrollNotifierProps) {
   const watchedElRef = useRef <HTMLDivElement | null> (null)
   const isAtTop      = useRef <boolean | undefined>   (undefined)
+  const watcher      = element ?? window
 
   useEffect (() => {
     const handleScroll = () => {
       if (watchedElRef.current == null) return
-      const { top, height } = watchedElRef.current!.getBoundingClientRect ()
-      const isNotTooFarUp   = top + height >= bottomThreshold
+      const { top, height } = watchedElRef?.current!.getBoundingClientRect ()
+      const isNotTooFarUp   = top + height >= 0
       const hasBecomeAtTop  = top <= threshold && isNotTooFarUp
 
       if (hasBecomeAtTop !== isAtTop.current) {
@@ -20,12 +22,17 @@ export function ScrollNotifier ({
     }
 
     handleScroll ()
-    element.addEventListener ('scroll', handleScroll)
+    watcher.addEventListener ('scroll', handleScroll)
 
-    return () => element.removeEventListener ('scroll', handleScroll)
-  }, [callback, threshold, bottomThreshold, element])
+    return () => watcher.removeEventListener ('scroll', handleScroll)
+  }, [callback, threshold, watcher, isAtTop])
 
-  return <div ref={watchedElRef} className={className}> {children} </div>
+  return (
+    <Wrapper ref={watchedElRef} id={id} className={className}>
+      {children}
+    </Wrapper>
+  )
+    
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -35,13 +42,16 @@ interface ScrollNotifierProps {
   threshold?: number,
 
   /** 50 => calls false when el's bottom is 50px above page top. Default: 0 */
-  bottomThreshold?: number,
+  // bottomThreshold?: number,
 
   /** Callback which is passed true when el is within specified thresholds */
   callback: (inPosition: boolean) => void,
 
   /** Scroll element to listen to */
-  element?: HTMLElement | Window;
-  className?: string;
-  children: React.ReactNode
+  el?: HTMLElement | Window | null,
+
+  tag?: 'div' | 'section' | 'main' | 'footer' | 'header',
+  children?: React.ReactNode
+  id?: string
+  className?: string
 }

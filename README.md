@@ -4,7 +4,7 @@
 
 It is written in React + TypeScript + SCSS.
 
-Following Coco's sudden announcement, the website was created under a nerve-wracking deadline with the help of many community members as credited. [The issue tracker](https://github.com/tam-carre/thestrongestluknight/issues?q=is%3Aissue+is%3Aclosed) now serves as a memory of the rushed organizing process I carried out.
+Following Coco's sudden announcement, the website was created under a nerve-wracking deadline with the help of many community members as credited. [The issue tracker](https://github.com/tam-carre/thestrongestluknight/issues?q=is%3Aissue+is%3Aclosed) now serves as a memory of a fraction of the rushed organizing process I carried out.
 
 I am greatly satisfied with the slick and performant outcome. Though the code was quite messy on release, I've since then been able to clean it up significantly.
 

@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.20e5fede.chunk.css",
-    "main.js": "/static/js/main.37b1e964.chunk.js",
-    "main.js.map": "/static/js/main.37b1e964.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.259b8380.js",
-    "runtime-main.js.map": "/static/js/runtime-main.259b8380.js.map",
-    "static/js/2.2ee48924.chunk.js": "/static/js/2.2ee48924.chunk.js",
-    "static/js/2.2ee48924.chunk.js.map": "/static/js/2.2ee48924.chunk.js.map",
-    "static/js/3.f00e65a6.chunk.js": "/static/js/3.f00e65a6.chunk.js",
-    "static/js/3.f00e65a6.chunk.js.map": "/static/js/3.f00e65a6.chunk.js.map",
+    "main.css": "/static/css/main.6b0a205a.chunk.css",
+    "main.js": "/static/js/main.59824c7f.chunk.js",
+    "main.js.map": "/static/js/main.59824c7f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6a53325d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6a53325d.js.map",
+    "static/js/2.4e580b5d.chunk.js": "/static/js/2.4e580b5d.chunk.js",
+    "static/js/2.4e580b5d.chunk.js.map": "/static/js/2.4e580b5d.chunk.js.map",
+    "static/js/3.af7e7eff.chunk.js": "/static/js/3.af7e7eff.chunk.js",
+    "static/js/3.af7e7eff.chunk.js.map": "/static/js/3.af7e7eff.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.20e5fede.chunk.css.map": "/static/css/main.20e5fede.chunk.css.map",
-    "static/js/2.2ee48924.chunk.js.LICENSE.txt": "/static/js/2.2ee48924.chunk.js.LICENSE.txt",
+    "static/css/main.6b0a205a.chunk.css.map": "/static/css/main.6b0a205a.chunk.css.map",
+    "static/js/2.4e580b5d.chunk.js.LICENSE.txt": "/static/js/2.4e580b5d.chunk.js.LICENSE.txt",
     "static/media/Credits.scss": "/static/media/coco_looking_at_horizon.8585979a.png",
     "static/media/coco_dream.6bb12db3.gif": "/static/media/coco_dream.6bb12db3.gif",
     "static/media/coco_dream.cf8b4d94.webp": "/static/media/coco_dream.cf8b4d94.webp",
@@ -21,16 +21,14 @@
     "static/media/comfy_luna.728006ed.png": "/static/media/comfy_luna.728006ed.png",
     "static/media/gb.880efdae.svg": "/static/media/gb.880efdae.svg",
     "static/media/jp.4ecbd30a.svg": "/static/media/jp.4ecbd30a.svg",
-    "static/media/kanata_looking_at_dragon.540de874.webp": "/static/media/kanata_looking_at_dragon.540de874.webp",
-    "static/media/kanata_looking_at_dragon.9223c225.avif": "/static/media/kanata_looking_at_dragon.9223c225.avif",
     "static/media/kanata_looking_at_dragon.bd0e4476.jpg": "/static/media/kanata_looking_at_dragon.bd0e4476.jpg",
     "static/media/running_coco.e8908992.png": "/static/media/running_coco.e8908992.png",
     "static/media/running_luna.5c71de58.png": "/static/media/running_luna.5c71de58.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.259b8380.js",
-    "static/js/2.2ee48924.chunk.js",
-    "static/css/main.20e5fede.chunk.css",
-    "static/js/main.37b1e964.chunk.js"
+    "static/js/runtime-main.6a53325d.js",
+    "static/js/2.4e580b5d.chunk.js",
+    "static/css/main.6b0a205a.chunk.css",
+    "static/js/main.59824c7f.chunk.js"
   ]
 }
